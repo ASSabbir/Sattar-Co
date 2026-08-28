@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "sameer-sattar",
+    "name": "Sameer Sattar",
+    "role": "Head of Firm",
+    "group": "Head of Firm",
+    "practiceAreas": ["Corporate & Commercial", "Dispute Resolution", "Banking & Finance"],
+    "bio": "Barrister Sameer Sattar leads the firm's corporate and dispute resolution practice, advising domestic and multinational clients on high-value transactions, banking litigation and international arbitration. He is regularly recognised by the leading legal directories for his work in the technology, media, telecommunications, aviation, energy and employment sectors."
+  },
+  {
+    "slug": "mamun-chowdhury",
+    "name": "Mamun Chowdhury",
+    "role": "Consultant",
+    "group": "Consultants",
+    "practiceAreas": ["Banking & Finance", "Corporate Advisory"],
+    "bio": "Mamun Chowdhury advises on banking, finance and corporate advisory matters, drawing on a long-standing practice before Bangladesh's commercial courts."
+  },
+  {
+    "slug": "rafiqul-alam",
+    "name": "Rafiqul Alam",
+    "role": "Consultant",
+    "group": "Consultants",
+    "practiceAreas": ["Litigation", "Admiralty"],
+    "bio": "Rafiqul Alam brings decades of litigation experience, with a particular focus on admiralty and shipping-related commercial disputes."
+  },
+  {
+    "slug": "yadnan-rafique",
+    "name": "Md. Yadnan Rafique Rossy",
+    "role": "Consultant",
+    "group": "Consultants",
+    "practiceAreas": ["Corporate", "Regulatory"],
+    "bio": "Yadnan Rafique Rossy advises corporate clients on regulatory compliance and day-to-day corporate governance matters."
+  },
+  {
+    "slug": "khademul-islam-choyon",
+    "name": "Md. Khademul Islam Choyon",
+    "role": "Senior Associate",
+    "group": "Associates",
+    "practiceAreas": ["Corporate Transactions", "M&A"],
+    "bio": "Khademul Islam Choyon works on corporate transactions and M&A mandates for domestic and international clients."
+  },
+  {
+    "slug": "mahbub-hasan",
+    "name": "Mahbub Hasan",
+    "role": "Senior Associate",
+    "group": "Associates",
+    "practiceAreas": ["Dispute Resolution", "Banking Litigation"],
+    "bio": "Mahbub Hasan focuses on commercial disputes and banking litigation before the Supreme Court of Bangladesh."
+  },
+  {
+    "slug": "mariha-zaman-khan",
+    "name": "Mariha Zaman Khan",
+    "role": "Associate",
+    "group": "Associates",
+    "practiceAreas": ["Employment", "Corporate"],
+    "bio": "Mariha Zaman Khan advises on employment and general corporate matters for local and multinational employers."
+  },
+  {
+    "slug": "sajid-hossain",
+    "name": "Sajid Hossain",
+    "role": "Associate",
+    "group": "Associates",
+    "practiceAreas": ["Energy", "Project Finance"],
+    "bio": "Sajid Hossain works on energy and project finance mandates, including power purchase agreements and project documentation."
+  },
+  {
+    "slug": "tareq-hasan",
+    "name": "Tareq Hasan",
+    "role": "Research Associate",
+    "group": "Associates",
+    "practiceAreas": ["Research", "Regulatory"],
+    "bio": "Tareq Hasan supports the firm's advisory teams with legal research across regulatory and transactional matters."
+  },
+  {
+    "slug": "sadat-islam",
+    "name": "Sadat Islam",
+    "role": "Research Associate",
+    "group": "Associates",
+    "practiceAreas": ["Research", "Litigation"],
+    "bio": "Sadat Islam supports litigation and arbitration teams with case research and preparation."
+  }
+]

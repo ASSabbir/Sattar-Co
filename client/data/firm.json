@@ -1,0 +1,22 @@
+{
+  "name": "Sattar&Co.",
+  "tagline": "Corporate & Commercial Law",
+  "location": "Dhaka, Bangladesh",
+  "phone": "+88 (02) 883 6629",
+  "email": "info@sattarandco.com",
+  "heroStatement": "A high-calibre legal practice built around expertise, integrity and practical understanding.",
+  "introStatement": "Experience. Insight. Resolve.",
+  "introBody": "Sattar&Co. advises the business community in Bangladesh and the international counsel and investors who work alongside it. The practice is built on specialist legal skill, a close reading of Bangladesh's regulatory landscape, and the judgment to apply both under pressure.",
+  "aboutBody": [
+    "Sattar&Co. is a corporate, financial and arbitration practice headquartered in Dhaka, advising local and multinational clients across the country's principal industries.",
+    "The firm's approach is collaborative rather than transactional: matters are led by senior counsel from first instruction to resolution, with the same discretion a firm of this standing is expected to carry.",
+    "That standard has been recognised by the international legal directories for consecutive years, and reflected in mandates spanning banking and finance, energy, aviation, technology, media, telecommunications and cross-border investment."
+  ],
+  "founded": "Head of Firm — Barrister Sameer Sattar",
+  "stats": [
+    { "label": "Years of Practice", "value": "20+" },
+    { "label": "Directory Recognitions", "value": "3" },
+    { "label": "Practice Areas", "value": "30+" },
+    { "label": "Counsel & Advocates", "value": "12" }
+  ]
+}

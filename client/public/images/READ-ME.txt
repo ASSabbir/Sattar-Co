@@ -1,0 +1,4 @@
+Drop approved photography here (e.g. dhaka-office.jpg, sameer-sattar.jpg).
+
+See the README.md ("Where to add real photography") for how to wire a photo
+into the site using Next.js's <Image /> component in place of a <Plate /> placeholder.

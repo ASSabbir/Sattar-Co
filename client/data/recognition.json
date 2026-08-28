@@ -1,0 +1,21 @@
+{
+  "directories": ["Chambers and Partners", "The Legal 500", "Who's Who Legal"],
+  "quotes": [
+    {
+      "quote": "Recognised for a versatile corporate and commercial practice advising multinational clients across energy, employment and technology matters.",
+      "source": "Chambers and Partners"
+    },
+    {
+      "quote": "Noted for a disciplined approach to dispute resolution, with particular strength before the Supreme Court of Bangladesh.",
+      "source": "The Legal 500"
+    },
+    {
+      "quote": "Cited for depth in banking litigation, admiralty and company law on behalf of financial institutions.",
+      "source": "The Legal 500"
+    },
+    {
+      "quote": "Singled out for project development work spanning renewable and non-renewable power, including power purchase agreements.",
+      "source": "Chambers and Partners"
+    }
+  ]
+}

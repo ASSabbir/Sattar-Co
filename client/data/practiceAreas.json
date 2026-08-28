@@ -1,0 +1,82 @@
+[
+  {
+    "id": "corporate-commercial",
+    "index": "01",
+    "category": "Corporate & Commercial",
+    "description": "Advisory and transactional work for companies, investors and financial institutions operating in and into Bangladesh — from formation through to complex cross-border transactions.",
+    "areas": [
+      "Mergers & Acquisitions",
+      "Company Law",
+      "Corporate Transactions & Capital Markets",
+      "Foreign Investment",
+      "Commercial Contracts",
+      "Corporate Insolvency",
+      "E-Commerce"
+    ]
+  },
+  {
+    "id": "dispute-resolution",
+    "index": "02",
+    "category": "Dispute Resolution",
+    "description": "Litigation and arbitration before the Supreme Court of Bangladesh and arbitral tribunals in Bangladesh and abroad, for banks, corporates and public-sector clients.",
+    "areas": [
+      "Litigation",
+      "Domestic Arbitration",
+      "International Arbitration",
+      "Commercial Disputes",
+      "Admiralty",
+      "Alternative Dispute Resolution"
+    ]
+  },
+  {
+    "id": "industry-regulatory",
+    "index": "03",
+    "category": "Industry & Regulatory",
+    "description": "Sector-specific counsel for regulated industries, drawing on close working knowledge of the relevant Bangladeshi regulatory bodies and licensing regimes.",
+    "areas": [
+      "Energy & Oil and Gas",
+      "Banking Law and Regulation",
+      "Technology, Media & Telecommunications",
+      "Aviation",
+      "Real Estate",
+      "Competition Law"
+    ]
+  },
+  {
+    "id": "employment-people",
+    "index": "04",
+    "category": "Employment & People",
+    "description": "Advice to domestic and multinational employers on the full employment lifecycle, workforce structuring and labour compliance in Bangladesh.",
+    "areas": [
+      "Employment Law",
+      "Labour Compliance",
+      "Workforce Restructuring",
+      "Trusts"
+    ]
+  },
+  {
+    "id": "international-trade",
+    "index": "05",
+    "category": "International Trade & Investment",
+    "description": "Guidance for foreign counsel, investors and trading partners navigating market entry, cross-border trade and international regulatory exposure.",
+    "areas": [
+      "Laws of Foreign Investment",
+      "International Trade",
+      "International Environmental Law",
+      "Project Finance Documentation",
+      "Concessions"
+    ]
+  },
+  {
+    "id": "ip-technology",
+    "index": "06",
+    "category": "IP & Technology",
+    "description": "Protection and commercialisation of intangible assets, and counsel on emerging digital and financial-technology regulation.",
+    "areas": [
+      "Intellectual Property",
+      "Information Technology & Cyber Law",
+      "Mobile & Digital Financial Services",
+      "Media, Entertainment & Gaming Law"
+    ]
+  }
+]
