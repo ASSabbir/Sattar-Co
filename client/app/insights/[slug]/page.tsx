@@ -6,15 +6,16 @@ import Plate from "@/components/ui/Plate";
 import insights from "@/data/insights.json";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
   return insights.map((item) => ({ slug: item.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const item = insights.find((i) => i.slug === params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const item = insights.find((i) => i.slug === slug);
   if (!item) return {};
   return { title: item.title, description: item.excerpt };
 }
@@ -27,8 +28,9 @@ function formatDate(iso: string) {
   });
 }
 
-export default function InsightArticlePage({ params }: Props) {
-  const item = insights.find((i) => i.slug === params.slug);
+export default async function InsightArticlePage({ params }: Props) {
+  const { slug } = await params;
+  const item = insights.find((i) => i.slug === slug);
   if (!item) notFound();
 
   return (

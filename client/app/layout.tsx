@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/footer/Footer";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
+import PageLoader from "@/components/loader/PageLoader";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -45,14 +46,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
-      <body>
+      <body suppressHydrationWarning>
+        <PageLoader />
         <SmoothScrollProvider>
           <Navbar />
           <main>{children}</main>

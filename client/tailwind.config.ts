@@ -8,7 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Core palette — deliberately narrow. Gold is a detail, never a fill color.
+        // Core palette — deliberately narrow. gold is a detail, never a fill color.
         navy: {
           DEFAULT: "#0A0E1A",
           soft: "#111527",
@@ -24,9 +24,9 @@ const config: Config = {
           soft: "#2B2A26",
         },
         gold: {
-          DEFAULT: "#A9824C",
-          soft: "#C7A874",
-          dim: "#8A6B3E",
+          DEFAULT: "#DC2626",
+          soft: "#EF4444",
+          dim: "#B91C1C",
         },
         stone: {
           DEFAULT: "#8B8677",

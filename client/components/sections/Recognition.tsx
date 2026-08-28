@@ -101,7 +101,7 @@ export default function Recognition() {
             {recognition.quotes.map((q, i) => (
               <div
                 key={i}
-                className="rec-quote border-l border-gold/40 pl-6 md:pl-8"
+                className="rec-quote border-l border-red-600/40 pl-6 md:pl-8"
               >
                 <p className="text-ivory/75 text-lg md:text-xl leading-relaxed font-display italic">
                   &ldquo;{q.quote}&rdquo;

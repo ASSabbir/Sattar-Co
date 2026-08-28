@@ -3,18 +3,19 @@ import { notFound } from "next/navigation";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ArrowLink from "@/components/ui/ArrowLink";
 import Plate from "@/components/ui/Plate";
-import news from "@/data/news.json";
+import news from "@/data/publications.json";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
   return news.map((item) => ({ slug: item.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const item = news.find((n) => n.slug === params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const item = news.find((n) => n.slug === slug);
   if (!item) return {};
   return { title: item.title, description: item.summary };
 }
@@ -28,8 +29,9 @@ function formatDate(iso: string) {
   });
 }
 
-export default function NewsArticlePage({ params }: Props) {
-  const item = news.find((n) => n.slug === params.slug);
+export default async function NewsArticlePage({ params }: Props) {
+  const { slug } = await params;
+  const item = news.find((n) => n.slug === slug);
   if (!item) notFound();
 
   return (

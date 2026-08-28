@@ -59,7 +59,7 @@ export default function ContactForm() {
               name={field.name}
               type={field.type}
               required={field.required}
-              className="bg-transparent border-b border-ivory/25 focus:border-gold outline-none py-2 text-ivory placeholder:text-ivory/30 transition-colors duration-300"
+              className="bg-transparent border-b border-ivory/25 focus:border-red-600 outline-none py-2 text-ivory placeholder:text-ivory/30 transition-colors duration-300"
             />
           </div>
         ))}
@@ -74,7 +74,7 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          className="bg-transparent border-b border-ivory/25 focus:border-gold outline-none py-2 text-ivory placeholder:text-ivory/30 resize-none transition-colors duration-300"
+          className="bg-transparent border-b border-ivory/25 focus:border-red-600 outline-none py-2 text-ivory placeholder:text-ivory/30 resize-none transition-colors duration-300"
         />
       </div>
 

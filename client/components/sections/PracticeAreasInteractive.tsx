@@ -103,7 +103,7 @@ export default function PracticeAreasInteractive() {
                   <ul className="flex flex-wrap gap-x-6 gap-y-3 mb-8">
                     {current.areas.map((a: string) => (
                       <li key={a} className="text-sm text-charcoal/60 flex items-center gap-2">
-                        <span className="w-1 h-1 rounded-full bg-gold" />
+                        <span className="w-1 h-1 rounded-full bg-red-600" />
                         {a}
                       </li>
                     ))}

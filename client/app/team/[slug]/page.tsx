@@ -6,15 +6,16 @@ import Plate from "@/components/ui/Plate";
 import team from "@/data/team.json";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
   return team.map((member) => ({ slug: member.slug }));
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const member = team.find((m) => m.slug === params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const member = team.find((m) => m.slug === slug);
   if (!member) return {};
   return {
     title: member.name,
@@ -22,8 +23,9 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
-export default function TeamMemberPage({ params }: Props) {
-  const member = team.find((m) => m.slug === params.slug);
+export default async function TeamMemberPage({ params }: Props) {
+  const { slug } = await params;
+  const member = team.find((m) => m.slug === slug);
   if (!member) notFound();
 
   return (

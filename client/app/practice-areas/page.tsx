@@ -43,7 +43,7 @@ export default function PracticeAreasPage() {
                 <ul className="flex flex-col gap-3">
                   {area.areas.map((a) => (
                     <li key={a} className="text-charcoal/70 text-sm flex items-center gap-3">
-                      <span className="w-1 h-1 rounded-full bg-gold shrink-0" />
+                      <span className="w-1 h-1 rounded-full bg-red-600 shrink-0" />
                       {a}
                     </li>
                   ))}

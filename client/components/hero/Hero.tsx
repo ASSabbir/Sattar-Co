@@ -6,6 +6,7 @@ import { gsap } from "@/lib/gsap";
 import { ArrowDown } from "lucide-react";
 import firm from "@/data/firm.json";
 import img from "../../public/images/hero.webp";
+import { onLoaderComplete } from "@/lib/loaderEvents";
 
 /**
  * Homepage hero section.
@@ -16,8 +17,12 @@ import img from "../../public/images/hero.webp";
  * - Includes an additional gradient for text readability
  * - Uses GSAP for the entrance animation
  * - Includes a subtle continuous background zoom/drift
+ *
+ * Entrance timing: everything here now waits for the intro PageLoader to
+ * finish (via onLoaderComplete) instead of animating immediately on mount —
+ * otherwise the hero would already be sitting there fully revealed while
+ * the loader panels are still covering the screen.
  */
-
 export default function Hero() {
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -26,112 +31,75 @@ export default function Hero() {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        defaults: {
-          ease: "power4.out",
-        },
-      });
+    // Hide everything immediately so there's no flash of the final,
+    // fully-visible state before the loader finishes and this plays.
+    gsap.set(
+      [".hero-mark", ".hero-line > span", ".hero-plate", ".hero-sub", ".hero-scroll"],
+      { opacity: 0 }
+    );
 
-      if (prefersReducedMotion) {
-        gsap.set(
-          [
-            ".hero-mark",
-            ".hero-line > span",
-            ".hero-plate",
-            ".hero-sub",
-            ".hero-scroll",
-          ],
-          {
-            opacity: 1,
-            y: 0,
-            yPercent: 0,
-            scale: 1,
-          }
-        );
+    let ctx: ReturnType<typeof gsap.context> | null = null;
 
-        return;
-      }
+    const playEntrance = () => {
+      ctx = gsap.context(() => {
+        if (prefersReducedMotion) {
+          gsap.set(
+            [".hero-mark", ".hero-line > span", ".hero-plate", ".hero-sub", ".hero-scroll"],
+            { opacity: 1, y: 0, yPercent: 0, scale: 1 }
+          );
+          return;
+        }
 
-      // Initial background state
-      tl.set(".hero-plate", {
-        scale: 1.12,
-        opacity: 0,
-      })
-
-        // Eyebrow animation
-        .to(
-          ".hero-mark",
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
+        const tl = gsap.timeline({
+          defaults: {
+            ease: "power4.out",
           },
-          0.1
-        )
+        });
 
-        // Main heading animation
-        .to(
-          ".hero-line > span",
-          {
-            yPercent: 0,
-            opacity: 1,
-            duration: 1.1,
-            stagger: 0.09,
-          },
-          0.25
-        )
+        // Initial background state
+        tl.set(".hero-plate", {
+          scale: 1.12,
+          opacity: 0,
+        })
 
-        // Background image animation
-        .to(
-          ".hero-plate",
-          {
-            opacity: 1,
-            scale: 1,
-            duration: 1.6,
-            ease: "power3.out",
-          },
-          0.35
-        )
+          // Eyebrow animation
+          .to(".hero-mark", { opacity: 1, y: 0, duration: 0.8 }, 0.1)
 
-        // Supporting content
-        .to(
-          ".hero-sub",
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.9,
-          },
-          "-=0.9"
-        )
+          // Main heading animation
+          .to(".hero-line > span", { yPercent: 0, opacity: 1, duration: 1.1, stagger: 0.09 }, 0.25)
 
-        // Scroll indicator
-        .to(
-          ".hero-scroll",
-          {
-            opacity: 1,
-            duration: 0.8,
-          },
-          "-=0.4"
-        );
+          // Background image animation
+          .to(".hero-plate", { opacity: 1, scale: 1, duration: 0.9, ease: "power3.out" }, 0.0)
 
-      // Slow cinematic background movement
-      gsap.to(".hero-image", {
-        scale: 1.06,
-        duration: 14,
-        ease: "none",
-        repeat: -1,
-        yoyo: true,
-      });
-    }, rootRef);
+          // Supporting content
+          .to(".hero-sub", { opacity: 1, y: 0, duration: 0.9 }, "-=0.9")
 
-    return () => ctx.revert();
+          // Scroll indicator
+          .to(".hero-scroll", { opacity: 1, duration: 0.8 }, "-=0.4");
+
+        // Slow cinematic background movement
+        gsap.to(".hero-image", {
+          scale: 1.06,
+          duration: 14,
+          ease: "none",
+          repeat: -1,
+          yoyo: true,
+        });
+      }, rootRef);
+    };
+
+    const unsubscribe = onLoaderComplete(playEntrance);
+
+    return () => {
+      unsubscribe();
+      ctx?.revert();
+    };
   }, []);
 
   return (
     <section
       ref={rootRef}
-      className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-navy grain"
+      className="relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-black"
     >
       {/* =========================================================
           BACKGROUND IMAGE
@@ -146,13 +114,13 @@ export default function Hero() {
         />
 
         {/* Main black cinematic overlay */}
-        <div className="absolute inset-0 bg-black/25" />
+        <div className="absolute inset-0 bg-black/55" />
 
         {/* Bottom gradient for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/55" />
 
         {/* Subtle side vignette */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-black/40" />
       </div>
 
       {/* =========================================================
@@ -168,7 +136,7 @@ export default function Hero() {
         <h1 className="font-display text-ivory">
           <span className="reveal-line hero-line">
             <span className="block text-display-xl">
-              Sattar&amp;Co.
+              Sattar<span className="text-red-600">&amp;Co.</span>
             </span>
           </span>
         </h1>

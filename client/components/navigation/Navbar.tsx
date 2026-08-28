@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { gsap } from "@/lib/gsap";
+import { onLoaderComplete } from "@/lib/loaderEvents";
 
 const NAV_LINKS = [
   { href: "/practice-areas", label: "Practice Areas" },
@@ -17,13 +19,39 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
+  const headerRef = useRef<HTMLElement>(null);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  // Home is the only page with a dark, full-bleed hero behind the navbar,
-  // so it's the only page where the bar should start transparent.
   const isHome = pathname === "/";
+
+  // Hide the navbar the instant it mounts — before the loader even starts
+  // its slide — so there's nothing to "suddenly" reveal underneath it.
+  useLayoutEffect(() => {
+    if (headerRef.current) {
+      gsap.set(headerRef.current, { opacity: 0, y: -16 });
+    }
+  }, []);
+
+  // Fade it in only once the loader has finished.
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    return onLoaderComplete(() => {
+      gsap.to(header, {
+        opacity: 1,
+        y: 0,
+        duration: prefersReducedMotion ? 0.01 : 0.8,
+        ease: "power3.out",
+      });
+    });
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -41,6 +69,7 @@ export default function Navbar() {
   return (
     <>
       <header
+        ref={headerRef}
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ease-editorial",
           solid ? "bg-ivory/95 backdrop-blur-sm border-b border-charcoal/10" : "bg-transparent"
@@ -54,7 +83,7 @@ export default function Navbar() {
               solid ? "text-charcoal" : "text-ivory"
             )}
           >
-            Sattar<span className="text-red-600">&amp;</span>Co.
+            Sattar<span className="text-red-600">&amp;Co.</span>
           </Link>
 
           <ul
