@@ -53,7 +53,8 @@ export default function RevealText({
           ease: "power4.out",
           scrollTrigger: {
             trigger: wrapper,
-            start: "top 85%",
+            start: "top 75%",
+            
             toggleActions: "play none none reverse",
           },
         });

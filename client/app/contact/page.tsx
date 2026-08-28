@@ -21,18 +21,18 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
           <div className="lg:col-span-4 flex flex-col gap-10">
             <div>
-              <p className="eyebrow text-gold mb-3">Office</p>
+              <p className="eyebrow text-red-600 mb-3">Office</p>
               <p className="font-display text-2xl text-ivory mb-1">Sattar&amp;Co.</p>
               <p className="text-ivory/60">{firm.location}</p>
             </div>
             <div>
-              <p className="eyebrow text-gold mb-3">Phone</p>
+              <p className="eyebrow text-red-600 mb-3">Phone</p>
               <a href={`tel:${firm.phone.replace(/\s/g, "")}`} className="text-ivory/80 link-underline">
                 {firm.phone}
               </a>
             </div>
             <div>
-              <p className="eyebrow text-gold mb-3">Email</p>
+              <p className="eyebrow text-red-600 mb-3">Email</p>
               <a href={`mailto:${firm.email}`} className="text-ivory/80 link-underline">
                 {firm.email}
               </a>

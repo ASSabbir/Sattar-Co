@@ -32,7 +32,7 @@ export default function TeamPage() {
 
             return (
               <div key={group}>
-                <p className="eyebrow text-gold mb-10">{group}</p>
+                <p className="eyebrow text-red-600 mb-10">{group}</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
                   {members.map((member) => (
                     <Link
@@ -41,7 +41,7 @@ export default function TeamPage() {
                       className="group block"
                     >
                       <Plate label={member.name} className="aspect-[4/5] w-full mb-5" />
-                      <h3 className="font-display text-xl text-charcoal group-hover:text-gold transition-colors duration-300">
+                      <h3 className="font-display text-xl text-charcoal group-hover:text-red-600 transition-colors duration-300">
                         {member.name}
                       </h3>
                       <p className="text-charcoal/50 text-sm mt-1">{member.role}</p>

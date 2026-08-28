@@ -52,7 +52,7 @@ export default function ContactForm() {
           <div key={field.name} className="flex flex-col">
             <label htmlFor={field.name} className="eyebrow text-ivory/50 mb-3">
               {field.label}
-              {field.required && <span className="text-gold"> *</span>}
+              {field.required && <span className="text-red-600"> *</span>}
             </label>
             <input
               id={field.name}
@@ -67,7 +67,7 @@ export default function ContactForm() {
 
       <div className="flex flex-col">
         <label htmlFor="message" className="eyebrow text-ivory/50 mb-3">
-          Message <span className="text-gold">*</span>
+          Message <span className="text-red-600">*</span>
         </label>
         <textarea
           id="message"

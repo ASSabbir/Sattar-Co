@@ -36,7 +36,7 @@ export default function NewsArticlePage({ params }: Props) {
     <article className="bg-ivory pt-40 pb-24 md:pt-52 md:pb-32">
       <div className="max-w-content mx-auto px-6 md:px-10">
         <SectionLabel label="News" className="mb-8" />
-        <p className="eyebrow text-gold mb-6">
+        <p className="eyebrow text-red-600 mb-6">
           {item.category} · {formatDate(item.date)}
         </p>
         <h1 className="font-display text-display-md text-charcoal max-w-3xl mb-14">
@@ -50,7 +50,7 @@ export default function NewsArticlePage({ params }: Props) {
         </div>
 
         <div className="mt-16">
-          <ArrowLink href="/news">All News</ArrowLink>
+          <ArrowLink href="/publications">All News</ArrowLink>
         </div>
       </div>
     </article>

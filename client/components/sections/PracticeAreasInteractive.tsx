@@ -62,7 +62,7 @@ export default function PracticeAreasInteractive() {
                   onClick={() => setActive(i)}
                   className="text-left w-full py-6 group"
                 >
-                  <span className="eyebrow text-gold block mb-3">{area.index}</span>
+                  <span className="eyebrow text-red-600 block mb-3">{area.index}</span>
                   <span
                     className={`font-display block transition-all duration-500 ease-editorial ${
                       active === i
@@ -78,13 +78,14 @@ export default function PracticeAreasInteractive() {
           </div>
 
           {/* Right: sticky detail pane */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 ">
             <div className="lg:sticky lg:top-32">
               <div className="mb-8">
-                <Plate
+                <img src='https://sattarandco.com/wp-content/uploads/2021/06/Firm-rotate-4.jpg' className=" h-96" alt="" />
+                {/* <Plate
                   label={`Practice — ${current.category}`}
                   className="aspect-[16/10] w-full"
-                />
+                /> */}
               </div>
 
               <AnimatePresence mode="wait">

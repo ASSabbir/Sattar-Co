@@ -36,17 +36,17 @@ export default function NewsPage() {
           {news.map((item) => (
             <Link
               key={item.slug}
-              href={`/news/${item.slug}`}
+              href={`/publications/${item.slug}`}
               className="group grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center py-10 border-t border-charcoal/10 last:border-b"
             >
               <div className="lg:col-span-3">
                 <p className="text-charcoal/40 text-sm">{formatDate(item.date)}</p>
               </div>
               <div className="lg:col-span-2">
-                <p className="eyebrow text-gold">{item.category}</p>
+                <p className="eyebrow text-red-600">{item.category}</p>
               </div>
               <div className="lg:col-span-6">
-                <h2 className="font-display text-xl md:text-2xl text-charcoal group-hover:text-gold transition-colors duration-300">
+                <h2 className="font-display text-xl md:text-2xl text-charcoal group-hover:text-red-600 transition-colors duration-300">
                   {item.title}
                 </h2>
               </div>

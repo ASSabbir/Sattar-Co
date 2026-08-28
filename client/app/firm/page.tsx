@@ -36,7 +36,7 @@ export default function FirmPage() {
                   {p}
                 </p>
               ))}
-              <p className="eyebrow text-gold mt-4">{firm.founded}</p>
+              <p className="eyebrow text-red-600 mt-4">{firm.founded}</p>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function FirmPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
             {firm.stats.map((stat) => (
               <div key={stat.label} className="border-t border-ivory/15 pt-6">
-                <p className="font-display text-display-sm text-gold mb-2">{stat.value}</p>
+                <p className="font-display text-display-sm text-red-600 mb-2">{stat.value}</p>
                 <p className="text-ivory/50 text-sm uppercase tracking-wide">{stat.label}</p>
               </div>
             ))}

@@ -36,10 +36,10 @@ export default function InsightsPreview() {
             <Plate label={featured.category} className="aspect-[16/10] w-full" />
           </div>
           <div className="lg:col-span-5">
-            <p className="eyebrow text-gold mb-4">
+            <p className="eyebrow text-red-600 mb-4">
               {featured.category} · {formatDate(featured.date)}
             </p>
-            <h3 className="font-display text-2xl md:text-3xl text-charcoal mb-4 group-hover:text-gold transition-colors duration-300">
+            <h3 className="font-display text-2xl md:text-3xl text-charcoal mb-4 group-hover:text-red-600 transition-colors duration-300">
               {featured.title}
             </h3>
             <p className="text-charcoal/60 leading-relaxed mb-4">{featured.excerpt}</p>
@@ -53,10 +53,10 @@ export default function InsightsPreview() {
           {rest.map((item) => (
             <Link key={item.slug} href={`/insights/${item.slug}`} className="group">
               <Plate label={item.category} className="aspect-[4/3] w-full mb-6" />
-              <p className="eyebrow text-gold mb-3">
+              <p className="eyebrow text-red-600 mb-3">
                 {item.category} · {formatDate(item.date)}
               </p>
-              <h3 className="font-display text-xl text-charcoal group-hover:text-gold transition-colors duration-300">
+              <h3 className="font-display text-xl text-charcoal group-hover:text-red-600 transition-colors duration-300">
                 {item.title}
               </h3>
             </Link>

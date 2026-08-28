@@ -35,10 +35,10 @@ export default function InsightsPage() {
           {insights.map((item) => (
             <Link key={item.slug} href={`/insights/${item.slug}`} className="group">
               <Plate label={item.category} className="aspect-[4/3] w-full mb-6" />
-              <p className="eyebrow text-gold mb-3">
+              <p className="eyebrow text-red-600 mb-3">
                 {item.category} · {formatDate(item.date)}
               </p>
-              <h2 className="font-display text-xl text-charcoal mb-3 group-hover:text-gold transition-colors duration-300">
+              <h2 className="font-display text-xl text-charcoal mb-3 group-hover:text-red-600 transition-colors duration-300">
                 {item.title}
               </h2>
               <p className="text-charcoal/55 text-sm leading-relaxed">{item.excerpt}</p>

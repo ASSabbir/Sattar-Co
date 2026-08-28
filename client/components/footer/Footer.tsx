@@ -14,7 +14,7 @@ const FOOTER_LINKS = [
     heading: "Read",
     links: [
       { href: "/insights", label: "Insights" },
-      { href: "/news", label: "News & Events" },
+      { href: "/publications", label: "News & Events" },
     ],
   },
   {
@@ -33,7 +33,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12 lg:gap-8 pb-16 border-b border-ivory/10">
           <div>
             <p className="font-display text-3xl mb-4">
-              Sattar<span className="text-gold">&amp;</span>Co.
+              Sattar<span className="text-red-600">&amp;</span>Co.
             </p>
             <p className="text-ivory/55 text-sm leading-relaxed max-w-xs">
               {firm.heroStatement}

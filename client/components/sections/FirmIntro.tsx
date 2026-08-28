@@ -3,6 +3,7 @@ import ArrowLink from "@/components/ui/ArrowLink";
 import Plate from "@/components/ui/Plate";
 import RevealText from "@/components/ui/RevealText";
 import firm from "@/data/firm.json";
+import img1 from '../../public/images/about.webp'
 
 export default function FirmIntro() {
   return (
@@ -21,7 +22,8 @@ export default function FirmIntro() {
           </div>
 
           <div className="lg:col-span-6 lg:col-start-7">
-            <Plate label="Leadership — Barrister Sameer Sattar" className="aspect-[4/5] w-full" />
+            <img src={img1.src} alt="" />
+            {/* <Plate label="Leadership — Barrister Sameer Sattar" className="aspect-[4/5] w-full" /> */}
           </div>
         </div>
       </div>

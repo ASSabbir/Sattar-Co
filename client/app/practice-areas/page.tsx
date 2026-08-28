@@ -29,7 +29,7 @@ export default function PracticeAreasPage() {
               className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start pt-12 border-t border-charcoal/10"
             >
               <div className="lg:col-span-4">
-                <span className="eyebrow text-gold block mb-4">{area.index}</span>
+                <span className="eyebrow text-red-600 block mb-4">{area.index}</span>
                 <h2 className="font-display text-3xl md:text-4xl text-charcoal">
                   {area.category}
                 </h2>

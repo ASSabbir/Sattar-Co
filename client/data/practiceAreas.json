@@ -3,6 +3,7 @@
     "id": "corporate-commercial",
     "index": "01",
     "category": "Corporate & Commercial",
+    "imgs":"https://www.sattarandco.com/wp-content/uploads/2021/06/About-Sameer-Sattar-Small.jpg",
     "description": "Advisory and transactional work for companies, investors and financial institutions operating in and into Bangladesh — from formation through to complex cross-border transactions.",
     "areas": [
       "Mergers & Acquisitions",
@@ -17,6 +18,7 @@
   {
     "id": "dispute-resolution",
     "index": "02",
+    "imgs":"https://sattarandco.com/wp-content/uploads/2021/06/Firm-rotate-2.jpg",
     "category": "Dispute Resolution",
     "description": "Litigation and arbitration before the Supreme Court of Bangladesh and arbitral tribunals in Bangladesh and abroad, for banks, corporates and public-sector clients.",
     "areas": [
@@ -31,6 +33,7 @@
   {
     "id": "industry-regulatory",
     "index": "03",
+    "imgs":"https://www.sattarandco.com/wp-content/uploads/2021/06/About-Sameer-Sattar-Small.jpg",
     "category": "Industry & Regulatory",
     "description": "Sector-specific counsel for regulated industries, drawing on close working knowledge of the relevant Bangladeshi regulatory bodies and licensing regimes.",
     "areas": [
@@ -45,6 +48,7 @@
   {
     "id": "employment-people",
     "index": "04",
+    "imgs":"https://sattarandco.com/wp-content/uploads/2021/06/Firm-rotate-2.jpg",
     "category": "Employment & People",
     "description": "Advice to domestic and multinational employers on the full employment lifecycle, workforce structuring and labour compliance in Bangladesh.",
     "areas": [
@@ -57,6 +61,7 @@
   {
     "id": "international-trade",
     "index": "05",
+    "imgs":"https://www.sattarandco.com/wp-content/uploads/2021/06/About-Sameer-Sattar-Small.jpg",
     "category": "International Trade & Investment",
     "description": "Guidance for foreign counsel, investors and trading partners navigating market entry, cross-border trade and international regulatory exposure.",
     "areas": [
@@ -70,6 +75,7 @@
   {
     "id": "ip-technology",
     "index": "06",
+    "imgs":"https://www.sattarandco.com/wp-content/uploads/2021/06/About-Sameer-Sattar-Small.jpg",
     "category": "IP & Technology",
     "description": "Protection and commercialisation of intangible assets, and counsel on emerging digital and financial-technology regulation.",
     "areas": [

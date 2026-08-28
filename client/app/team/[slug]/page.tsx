@@ -38,7 +38,7 @@ export default function TeamMemberPage({ params }: Props) {
 
           <div className="lg:col-span-6 lg:col-start-7">
             <h1 className="font-display text-display-md text-charcoal mb-3">{member.name}</h1>
-            <p className="eyebrow text-gold mb-8">{member.role}</p>
+            <p className="eyebrow text-red-600 mb-8">{member.role}</p>
             <p className="text-charcoal/70 leading-relaxed text-lg mb-10">{member.bio}</p>
 
             <p className="eyebrow text-charcoal/40 mb-4">Practice Areas</p>

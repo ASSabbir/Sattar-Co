@@ -12,7 +12,7 @@ const NAV_LINKS = [
   { href: "/firm", label: "The Firm" },
   { href: "/team", label: "Team" },
   { href: "/insights", label: "Insights" },
-  { href: "/news", label: "News" },
+  { href: "/publications", label: "Publications" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -54,7 +54,7 @@ export default function Navbar() {
               solid ? "text-charcoal" : "text-ivory"
             )}
           >
-            Sattar<span className="text-gold">&amp;</span>Co.
+            Sattar<span className="text-red-600">&amp;</span>Co.
           </Link>
 
           <ul
@@ -115,7 +115,7 @@ export default function Navbar() {
                   >
                     <Link
                       href={link.href}
-                      className="font-display text-4xl text-charcoal hover:text-gold transition-colors duration-300"
+                      className="font-display text-4xl text-charcoal hover:text-red-600 transition-colors duration-300"
                     >
                       {link.label}
                     </Link>
