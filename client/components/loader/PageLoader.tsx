@@ -3,6 +3,7 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "@/lib/gsap";
 import { markLoaderComplete } from "@/lib/loaderEvents";
+import logo from '../../public/blogo.png'
 
 /**
  * Fullscreen four-panel loader — plays once when the app first mounts.
@@ -109,12 +110,10 @@ export default function PageLoader() {
           {i === 0 && (
             <div
               ref={titleRef}
-              className="absolute bottom-8 left-6 md:bottom-12 md:left-12"
+              className="absolute bottom-8  left-6 md:bottom-12 md:left-12"
             >
-              <p className="font-display text-xl sm:text-2xl md:text-4xl text-charcoal tracking-tight whitespace-nowrap">
-                Sattar<span className="text-red-600">&amp;</span>Co.
-              </p>
-              <p className="eyebrow text-charcoal/40 mt-2 whitespace-nowrap">
+              <img src={logo.src} alt="" className="px-6" />
+              <p className="eyebrow text-charcoal/40 mt-2 px-10 whitespace-nowrap">
                 Corporate &amp; Commercial Law
               </p>
             </div>

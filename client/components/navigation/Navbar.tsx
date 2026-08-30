@@ -8,6 +8,8 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { gsap } from "@/lib/gsap";
 import { onLoaderComplete } from "@/lib/loaderEvents";
+import wlogo from '../../public/wlogo.png'
+import blogo from '../../public/blogo.png'
 
 const NAV_LINKS = [
   { href: "/practice-areas", label: "Practice Areas" },
@@ -75,7 +77,7 @@ export default function Navbar() {
           solid ? "bg-ivory/95 backdrop-blur-sm border-b border-charcoal/10" : "bg-transparent"
         )}
       >
-        <nav className="max-w-content mx-auto flex items-center justify-between px-6 md:px-10 h-20 md:h-24">
+        <nav className="max-w-content mx-auto flex items-center justify-between px-6 md:px-10  h-19 py-4 ">
           <Link
             href="/"
             className={cn(
@@ -83,7 +85,10 @@ export default function Navbar() {
               solid ? "text-charcoal" : "text-ivory"
             )}
           >
-            Sattar<span className="text-red-600">&amp;Co.</span>
+            {solid?<img src={blogo.src} alt="" className="w-32" /> : <img src={wlogo.src} alt="" className="w-32" />}
+          
+           
+           
           </Link>
 
           <ul

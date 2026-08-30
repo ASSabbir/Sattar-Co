@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "display";
+  src: url("/fonts/display.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --font-display: "Fraunces", Georgia, serif;
   --font-sans: "Inter", Helvetica, Arial, sans-serif;
 }
+
 
 * {
   box-sizing: border-box;

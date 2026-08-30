@@ -33,8 +33,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["var(--font-display)", "Georgia", "serif"],
+        // display: ["var(--font-display)", "Georgia", "serif"],
         sans: ["var(--font-sans)", "Helvetica", "Arial", "sans-serif"],
+        display: ["display", "serif"],
       },
       fontSize: {
         "display-xl": ["clamp(3.5rem, 9vw, 9rem)", { lineHeight: "0.98", letterSpacing: "-0.02em" }],
