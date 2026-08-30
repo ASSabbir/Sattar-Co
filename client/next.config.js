@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   reactStrictMode: true,
   images: {
-    // Add real photography domains here later, e.g. your CMS / asset host.
-    remotePatterns: [],
+    unoptimized: true, // required for static export — you're not using next/image anyway
   },
 };
 
