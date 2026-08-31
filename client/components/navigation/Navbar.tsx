@@ -82,7 +82,7 @@ export default function Navbar() {
             href="/"
             className={cn(
               "font-display text-lg md:text-xl tracking-wide transition-colors duration-500",
-              solid ? "text-charcoal" : "text-ivory"
+              solid ? "text-charcoal" : "text-gray-500 "
             )}
           >
             {solid?<img src={blogo.src} alt="" className="w-32" /> : <img src={wlogo.src} alt="" className="w-32" />}

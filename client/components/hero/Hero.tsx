@@ -312,7 +312,7 @@ export default function Hero() {
       <div ref={stickyRef} className="sticky top-0 h-screen w-full overflow-hidden">
         <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
 
-        <div className="absolute inset-0 z-10 bg-navy/25 pointer-events-none" />
+        {/* <div className="absolute inset-0 z-10 bg-navy/25 pointer-events-none" /> */}
 
         <div className="relative z-20 h-full max-w-content mx-auto px-6 md:px-10 flex flex-col justify-end pb-20 md:pb-28">
           <div ref={introInnerRef}>

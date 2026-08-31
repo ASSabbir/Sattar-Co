@@ -11,11 +11,11 @@ export default function HomePage() {
     <>
       <Hero />
       <FirmIntro />
-      <Recognition />
-      <PracticeAreasInteractive />
-      <Leadership />
-      <InsightsPreview />
-      <ContactCTA />
+      {/* <Recognition /> */}
+      {/* <PracticeAreasInteractive /> */}
+      {/* <Leadership /> */}
+      {/* <InsightsPreview /> */}
+      {/* <ContactCTA /> */}
     </>
   );
 }
