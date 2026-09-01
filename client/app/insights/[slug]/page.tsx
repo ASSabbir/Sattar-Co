@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ArrowLink from "@/components/ui/ArrowLink";
-import Plate from "@/components/ui/Plate";
 import insights from "@/data/insights.json";
 
 interface Props {
@@ -45,14 +45,22 @@ export default async function InsightArticlePage({ params }: Props) {
         </h1>
         <p className="text-charcoal/40 text-sm mb-14">By {item.author}</p>
 
-        <Plate label={item.category} className="aspect-[16/9] w-full mb-14" />
+        <div className="relative aspect-[16/9] w-full mb-14 overflow-hidden">
+          <Image
+            src={item.image}
+            alt={item.title}
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+        </div>
 
         <div className="max-w-2xl">
           <p className="text-charcoal/75 text-lg leading-relaxed mb-8">{item.excerpt}</p>
           <p className="text-charcoal/60 leading-relaxed mb-6">
             This is placeholder body copy for the demo build. Replace this section with the
-            approved article content from the firm&rsquo;s editorial team — the layout, rich-text
-            styling and image placement are already wired up for a long-form legal article.
+            approved article content from the firm&rsquo;s editorial team.
           </p>
         </div>
 

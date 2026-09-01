@@ -14,7 +14,7 @@ export default function HomePage() {
       {/* <Recognition /> */}
       {/* <PracticeAreasInteractive /> */}
       {/* <Leadership /> */}
-      {/* <InsightsPreview /> */}
+       <InsightsPreview />
       {/* <ContactCTA /> */}
     </>
   );
