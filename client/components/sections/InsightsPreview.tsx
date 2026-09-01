@@ -16,7 +16,7 @@ function formatDate(item: { date: string | null; year: number }) {
     month: "short",
     year: "numeric",
   });
-}
+} 
 
 export default function InsightsPreview() {
   const testimonials = recognition.quotes;
