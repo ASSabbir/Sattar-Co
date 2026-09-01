@@ -76,6 +76,46 @@ export default function TeamPage() {
     };
   }, [rosterRows.length]);
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.innerWidth < 1024) return;
+
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+
+    let targetScrollTop = scroller.scrollTop;
+    let tween: gsap.core.Tween | null = null;
+
+    const handleWheel = (e: WheelEvent) => {
+      const { scrollHeight, clientHeight } = scroller;
+      const maxScroll = scrollHeight - clientHeight;
+      if (maxScroll <= 0) return;
+
+      targetScrollTop = gsap.utils.clamp(
+        0,
+        maxScroll,
+        targetScrollTop + e.deltaY
+      );
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      tween?.kill();
+      tween = gsap.to(scroller, {
+        scrollTop: targetScrollTop,
+        duration: 0.8,
+        ease: "power3.out",
+        overwrite: true,
+      });
+    };
+
+    scroller.addEventListener("wheel", handleWheel, { passive: false });
+    return () => {
+      scroller.removeEventListener("wheel", handleWheel);
+      tween?.kill();
+    };
+  }, []);
+
 
 
   const handleRosterClick = (index: number) => {
@@ -171,7 +211,8 @@ export default function TeamPage() {
             {/* BOTTOM: only this scrolls (internal scroll container) */}
             <div
               ref={scrollerRef}
-              className="pt-4 lg:flex-1 lg:min-h-0 lg:overflow-y-auto lg:overscroll-contain lg:scroll-smooth [scroll-behavior:smooth] [-webkit-overflow-scrolling:touch] will-change-scroll no-scrollbar"
+              data-lenis-prevent
+              className="pt-4 lg:flex-1 lg:min-h-0 lg:overflow-y-auto lg:overscroll-contain will-change-scroll no-scrollbar"
             >
               {rosterRows.map((row, rowIndex) => {
                 const isRowActive = activeIndex === rowIndex;
