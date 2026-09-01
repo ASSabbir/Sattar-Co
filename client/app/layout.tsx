@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navigation/Navbar";
-import Footer from "@/components/footer/Footer";
+import ConditionalFooter from "@/components/footer/ConditionalFooter";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import PageLoader from "@/components/loader/PageLoader";
 
@@ -54,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SmoothScrollProvider>
           <Navbar />
           <main>{children}</main>
-          <Footer />
+          <ConditionalFooter />
         </SmoothScrollProvider>
       </body>
     </html>
