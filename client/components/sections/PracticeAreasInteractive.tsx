@@ -7,7 +7,7 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Plate from "@/components/ui/Plate";
 import practiceAreas from "@/data/practiceAreas.json";
-
+import ArrowLink from "@/components/ui/ArrowLink";
 /**
  * Signature interaction: a left-hand list of practice categories and a
  * sticky right-hand detail pane. As the visitor scrolls past each category
@@ -42,7 +42,7 @@ export default function PracticeAreasInteractive() {
   return (
     <section ref={rootRef} className="bg-ivory py-24 md:py-36">
       <div className="max-w-content mx-auto px-6 md:px-10">
-        <SectionLabel label="Practice Areas" index="03" className="mb-8" />
+        <SectionLabel label="Practice Areas" index="" className="mb-8" />
         <h2 className="font-display text-display-md text-charcoal mb-16 md:mb-24 max-w-2xl">
           Breadth across the matters that shape Bangladesh&rsquo;s economy
         </h2>
@@ -109,12 +109,8 @@ export default function PracticeAreasInteractive() {
                     ))}
                   </ul>
 
-                  <Link
-                    href="/practice-areas"
-                    className="link-underline text-sm uppercase tracking-wide text-charcoal"
-                  >
-                    View all practice areas
-                  </Link>
+                  
+                  <ArrowLink href="/contact">Talk With Us</ArrowLink>
                 </motion.div>
               </AnimatePresence>
             </div>

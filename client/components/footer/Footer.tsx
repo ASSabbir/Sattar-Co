@@ -20,7 +20,7 @@ const FOOTER_LINKS = [
   {
     heading: "Contact",
     links: [
-      { href: "/contact", label: "Start a Conversation" },
+      { href: "/contact", label: "Start a cConversation" },
       { href: "/disclaimer", label: "Legal Disclaimer" },
     ],
   },
@@ -28,9 +28,9 @@ const FOOTER_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="grain bg-navy text-ivory">
-      <div className="max-w-content mx-auto px-6 md:px-10 pt-20 md:pt-28 pb-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12 lg:gap-8 pb-16 border-b border-ivory/10">
+    <footer className="grain bg-navy py-10 text-ivory">
+      <div className="max-w-content mx-auto px-6 md:px-10 ">
+        {/* <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12 lg:gap-8 pb-16 border-b border-ivory/10">
           <div>
             <p className="font-display text-3xl mb-4">
               Sattar<span className="text-red-600">&amp;</span>Co.
@@ -57,9 +57,9 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-        </div>
+        </div> */}
 
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-8 text-xs text-ivory/40">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4  text-xs text-ivory/40">
           <p>© {new Date().getFullYear()} Sattar&amp;Co. All rights reserved.</p>
           <p>{firm.location} · {firm.phone} · {firm.email}</p>
         </div>

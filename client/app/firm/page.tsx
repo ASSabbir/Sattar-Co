@@ -2,10 +2,17 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ArrowLink from "@/components/ui/ArrowLink";
-import Plate from "@/components/ui/Plate";
 import RevealText from "@/components/ui/RevealText";
+import StatCounter from "@/components/ui/StatCounter";
+import TestimonialSpotlight from "@/components/sections/TestimonialSpotlight";
+import RecognitionMarquee from "@/components/sections/RecognitionMarquee";
+import ImageSlider from "@/components/sections/ImageSlider";
 import firm from "@/data/firm.json";
-import img1 from '../../public/images/5.webp'
+import img1 from "../../public/images/5.webp";
+import img2 from "../../public/images/sattar.webp";
+import img3 from "../../public/images/Firm-rotate-2.jpg";
+import img4 from "../../public/images/Firm-rotate-3 (1).jpg";
+import img5 from "../../public/images/about.webp";
 
 export const metadata: Metadata = {
   title: "The Firm",
@@ -39,7 +46,15 @@ export default function FirmPage() {
         <div className="max-w-content mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
             <div className="lg:col-span-5">
-              <Plate label="Sattar&Co. — Dhaka Office" className="aspect-[4/5] w-full lg:sticky lg:top-32" />
+              <div className="relative aspect-[4/5] w-full lg:sticky lg:top-32 overflow-hidden">
+                <Image
+                  src={img2}
+                  alt="Sattar&Co."
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                />
+              </div>
             </div>
             <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-6">
               {firm.aboutBody.map((p, i) => (
@@ -53,13 +68,13 @@ export default function FirmPage() {
         </div>
       </section>
 
-      {/* Stats */}
+      {/* Stats — count up on scroll into view */}
       <section className="grain bg-charcoal py-20 md:py-28">
         <div className="max-w-content mx-auto px-6 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
             {firm.stats.map((stat) => (
               <div key={stat.label} className="border-t border-ivory/15 pt-6">
-                <p className="font-display text-display-sm text-red-600 mb-2">{stat.value}</p>
+                <StatCounter value={stat.value} />
                 <p className="text-ivory/50 text-sm uppercase tracking-wide">{stat.label}</p>
               </div>
             ))}
@@ -67,8 +82,29 @@ export default function FirmPage() {
         </div>
       </section>
 
+      {/* Testimonial spotlight */}
+      <TestimonialSpotlight />
+
+      {/* Recognised by — logo marquee */}
+      <RecognitionMarquee />
+
       {/* Values */}
-      <section className="bg-ivory py-24 md:py-32">
+     
+
+      {/* Image slider */}
+      <section className="bg-ivory py-24 ">
+        <div className="max-w-content mx-auto px-6 md:px-10">
+          <SectionLabel label="Life At The Firm" className="mb-8" />
+          <ImageSlider
+            images={[
+              { src: img3, label: "Sattar&Co. — Office" },
+              { src: img4, label: "Sattar&Co. — Meeting Room" },
+              { src: img5, label: "Sattar&Co. — Team" },
+            ]}
+          />
+        </div>
+      </section>
+       <section className="bg-ivory pb-24 ">
         <div className="max-w-content mx-auto px-6 md:px-10">
           <SectionLabel label="Approach" className="mb-8" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
@@ -95,16 +131,7 @@ export default function FirmPage() {
         </div>
       </section>
 
-      <section className="grain bg-navy py-24 md:py-32 text-center">
-        <div className="max-w-content mx-auto px-6 md:px-10">
-          <p className="font-display text-display-sm text-ivory mb-8 max-w-xl mx-auto">
-            Meet the team behind the practice.
-          </p>
-          <ArrowLink href="/team" light>
-            View the Team
-          </ArrowLink>
-        </div>
-      </section>
+     
     </>
   );
 }

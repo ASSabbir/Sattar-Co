@@ -3,17 +3,15 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowUpRight, Quote } from "lucide-react";
-import SectionLabel from "@/components/ui/SectionLabel";
-import ArrowLink from "@/components/ui/ArrowLink";
 import insights from "@/data/insights.json";
 import recognition from "@/data/recognition.json";
 
 const AUTOPLAY_INTERVAL = 5000; // ms between testimonial slides
 
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString("en-GB", {
+function formatDate(item: { date: string | null; year: number }) {
+  if (!item.date) return String(item.year);
+  return new Date(item.date).toLocaleDateString("en-GB", {
     day: "2-digit",
     month: "short",
     year: "numeric",
@@ -38,20 +36,14 @@ export default function InsightsPreview() {
   return (
     <section className="bg-ivory pb-24 md:pb-36">
       <div className="max-w-content mx-auto px-6 md:px-10">
-        
-
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-stretch">
           {/* ── Left: autoplay testimonial card ── */}
           <div
-            className="lg:col-span-5 relative grain  overflow-hidden rounded-sm min-h-[440px] md:min-h-[520px] flex flex-col justify-between p-10 md:p-12"
+            className="lg:col-span-7 relative grain overflow-hidden rounded-sm min-h-[440px] md:min-h-[520px] flex flex-col justify-between"
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
           >
-            <Quote
-              size={44}
-              strokeWidth={1}
-              className="text-red-600/40 mb-8 shrink-0"
-            />
+            <Quote size={44} strokeWidth={1} className="text-red-600/40 mb-8 shrink-0" />
 
             <div className="relative flex-1 flex items-center overflow-hidden">
               <AnimatePresence mode="wait">
@@ -99,29 +91,23 @@ export default function InsightsPreview() {
             </div>
           </div>
 
-          {/* ── Right: three news items, flex column ── */}
-          <div className="lg:col-span-7 flex flex-col h-full">
+          {/* ── Right: three news items, no images, flex column ── */}
+          <div className="lg:col-span-5 flex flex-col h-full">
             {newsItems.map((item, i) => (
               <Link
                 key={item.slug}
                 href={`/insights/${item.slug}`}
-                className={`group flex-1 flex items-center gap-6 md:gap-8 py-6 md:py-0 ${
+                className={`group flex-1 flex items-center gap-6 py-7 md:py-0 ${
                   i !== 0 ? "border-t border-charcoal/10" : ""
                 }`}
               >
-                <div className="relative w-28 h-28 md:w-36 md:h-36 shrink-0 overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-500 ease-editorial group-hover:scale-105"
-                    sizes="144px"
-                  />
-                </div>
+                <span className="font-display text-2xl text-charcoal/20 shrink-0 w-10">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
 
                 <div className="min-w-0">
                   <p className="eyebrow text-red-600 mb-2">
-                    {item.category} · {formatDate(item.date)}
+                    {item.category} · {formatDate(item)}
                   </p>
                   <h3 className="font-display text-lg md:text-xl text-charcoal leading-snug group-hover:text-red-600 transition-colors duration-300">
                     {item.title}
@@ -137,10 +123,6 @@ export default function InsightsPreview() {
             ))}
           </div>
         </div>
-
-        <ArrowLink href="/insights" className="md: mt-12">
-          All Insights
-        </ArrowLink>
       </div>
     </section>
   );

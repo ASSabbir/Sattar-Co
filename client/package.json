@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "react-fast-marquee": "^1.6.5",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.9",
     "gsap": "^3.12.5",

@@ -11,11 +11,11 @@ export default function FirmIntro() {
       <div className="max-w-content mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           <div className="lg:col-span-6">
-            <SectionLabel label="The Firm" index="01" className="mb-8" />
+            <SectionLabel label="Trusted Legal Counsel" index="01" className="mb-8" />
             <RevealText as="h2" className="font-display text-display-md text-charcoal mb-8">
               {firm.introStatement}
             </RevealText>
-            <p className="text-charcoal/70 leading-relaxed max-w-lg mb-10">
+            <p className="text-charcoal/70 text-justify leading-relaxed max-w-lg mb-10">
               {firm.introBody}
             </p>
             <ArrowLink href="/firm">Explore the Firm</ArrowLink>

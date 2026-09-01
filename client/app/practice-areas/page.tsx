@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
 import practiceAreas from "@/data/practiceAreas.json";
-import img1 from '../../public/images/6.webp'
+
+import PracticeAreasInteractive from "@/components/sections/PracticeAreasInteractive";
 
 export const metadata: Metadata = {
   title: "Practice Areas",
@@ -15,14 +15,15 @@ export default function PracticeAreasPage() {
   return (
     <>
       <section className="grain relative overflow-hidden bg-navy pt-40 pb-24 md:pt-52 md:pb-32">
-        <Image
-          src={img1}
-          alt=""
-          fill
-          priority
-          className="object-cover object-center"
+        <video
+          src="/videos/video2.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-black/45" />
 
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
           <SectionLabel label="Practice Areas" light className="mb-8" />
@@ -31,8 +32,9 @@ export default function PracticeAreasPage() {
           </RevealText>
         </div>
       </section>
+      <PracticeAreasInteractive />
 
-      <section className="bg-ivory py-24 md:py-32">
+      {/* <section className="bg-ivory py-24 md:py-32">
         <div className="max-w-content mx-auto px-6 md:px-10 flex flex-col gap-20 md:gap-28">
           {practiceAreas.map((area) => (
             <div
@@ -63,7 +65,7 @@ export default function PracticeAreasPage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
