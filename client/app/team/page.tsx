@@ -4,7 +4,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { ArrowDown } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
@@ -76,49 +76,7 @@ export default function TeamPage() {
     };
   }, [rosterRows.length]);
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    if (window.innerWidth < 1024) return;
 
-    const section = sectionRef.current;
-    const scroller = scrollerRef.current;
-    if (!section || !scroller) return;
-
-    let targetScrollTop = scroller.scrollTop;
-    let tween: gsap.core.Tween | null = null;
-
-    const handleWheel = (e: WheelEvent) => {
-      const { scrollHeight, clientHeight } = scroller;
-      const maxScroll = scrollHeight - clientHeight;
-
-      targetScrollTop = gsap.utils.clamp(
-        0,
-        maxScroll,
-        targetScrollTop + e.deltaY
-      );
-
-      const atTop = scroller.scrollTop <= 0;
-      const atBottom = scroller.scrollTop >= maxScroll - 1;
-
-      if ((e.deltaY > 0 && !atBottom) || (e.deltaY < 0 && !atTop)) {
-        e.preventDefault();
-
-        tween?.kill();
-        tween = gsap.to(scroller, {
-          scrollTop: targetScrollTop,
-          duration: 0.9,
-          ease: "power3.out",
-          overwrite: true,
-        });
-      }
-    };
-
-    section.addEventListener("wheel", handleWheel, { passive: false });
-    return () => {
-      section.removeEventListener("wheel", handleWheel);
-      tween?.kill();
-    };
-  }, []);
 
   const handleRosterClick = (index: number) => {
     setActiveIndex(index);
@@ -127,7 +85,7 @@ export default function TeamPage() {
   return (
     <section
       ref={sectionRef as React.RefObject<HTMLElement>}
-      className="relative bg-[#F4F1E8] text-[#1A1A1A] pt-36 pb-24 md:pt-17 md:pb-32 px-6 md:px-12 lg:px-20 overflow-hidden font-sans lg:h-screen lg:fixed lg:inset-0 lg:overflow-hidden"
+      className="relative bg-[#F4F1E8] text-[#1A1A1A] pt-36 pb-24 md:pt-17 md:pb-10 px-6 md:px-12 lg:px-20 overflow-hidden font-sans lg:h-screen lg:fixed lg:inset-0 lg:overflow-hidden"
     >
       <div className="hidden xl:block absolute right-6 top-1/2 -translate-y-1/2 rotate-90 origin-right text-[10px] tracking-[0.3em] uppercase text-charcoal/40 font-medium pointer-events-none select-none">
         COUNSEL • STRATEGY • REPRESENTATION
@@ -148,12 +106,12 @@ export default function TeamPage() {
 
           {/* Left Column: Leader Portrait (fully fixed on desktop) */}
           <div className="lg:col-span-5 relative z-10 lg:h-full">
-            <div className="relative aspect-[3/5] w-full lg:h-full lg:aspect-auto bg-charcoal/10 overflow-hidden">
+            <div className="relative aspect-[3/5] w-full lg:h-full lg:aspect-auto  overflow-hidden">
               <Image
                 src={leader?.image || "/Sameer-Sattar-2.jpg"}
                 alt={leader?.name || "Head of Firm"}
                 fill
-                className="object-cover object-top grayscale contrast-[1.05]"
+                className="object-cover object-top"
                 priority
               />
             </div>
@@ -192,9 +150,12 @@ export default function TeamPage() {
                   )}
 
                   <div className="pt-6">
-                    <span className="inline-flex items-center text-xs uppercase tracking-widest text-charcoal font-medium gap-2">
+                    <Link
+                      href={`/team/${leader?.slug ?? ""}`}
+                      className="inline-flex items-center text-xs uppercase tracking-widest text-charcoal font-medium hover:text-[#C92B2B] transition-colors gap-2"
+                    >
                       VIEW FULL PROFILE <span className="text-sm">→</span>
-                    </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -210,7 +171,7 @@ export default function TeamPage() {
             {/* BOTTOM: only this scrolls (internal scroll container) */}
             <div
               ref={scrollerRef}
-              className="pt-4 lg:flex-1 lg:min-h-0 lg:overflow-y-auto lg:overscroll-contain no-scrollbar"
+              className="pt-4 lg:flex-1 lg:min-h-0 lg:overflow-y-auto lg:overscroll-contain lg:scroll-smooth [scroll-behavior:smooth] [-webkit-overflow-scrolling:touch] will-change-scroll no-scrollbar"
             >
               {rosterRows.map((row, rowIndex) => {
                 const isRowActive = activeIndex === rowIndex;
@@ -229,20 +190,26 @@ export default function TeamPage() {
                     ].join(" ")}
                   >
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-8 w-full">
-                      {row.members.map((member) => (
-                        <div
-                          key={member.slug}
-                          role="button"
-                          tabIndex={0}
-                          onClick={() => handleRosterClick(rowIndex)}
-                          onMouseEnter={() => handleRosterClick(rowIndex)}
-                          onKeyDown={(e) => {
-                            if (e.key === "Enter" || e.key === " ") {
-                              e.preventDefault();
-                              handleRosterClick(rowIndex);
+                      {row.members.map((member) => {
+                        const isViewable = member.group !== "Administration & Accounts";
+                        const Wrapper = (isViewable ? Link : "div") as React.ElementType;
+                        const wrapperProps = isViewable
+                          ? {
+                              href: `/team/${member.slug}`,
+                              onClick: () => handleRosterClick(rowIndex),
+                              onMouseEnter: () => handleRosterClick(rowIndex),
                             }
-                          }}
-                          className="group flex flex-col items-start gap-3 cursor-pointer select-none outline-none"
+                          : {
+                              onMouseEnter: () => handleRosterClick(rowIndex),
+                            };
+                        return (
+                        <Wrapper
+                          key={member.slug}
+                          {...(wrapperProps as Record<string, unknown>)}
+                          className={[
+                            "group flex flex-col items-start gap-3",
+                            isViewable ? "cursor-pointer" : "cursor-default",
+                          ].join(" ")}
                         >
                           <div className="relative w-full aspect-[4/5] bg-charcoal/10 overflow-hidden">
                             <Image
@@ -277,8 +244,9 @@ export default function TeamPage() {
                               {member.role}
                             </span>
                           </div>
-                        </div>
-                      ))}
+                        </Wrapper>
+                        );
+                      })}
                     </div>
                   </div>
                 );

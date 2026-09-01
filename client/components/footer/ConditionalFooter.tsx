@@ -9,8 +9,8 @@ const HIDDEN_FOOTER_ROUTES = ["/team"];
 export default function ConditionalFooter() {
   const pathname = usePathname();
 
-  const shouldHide = HIDDEN_FOOTER_ROUTES.some(
-    (route) => pathname === route || pathname === `${route}/`
+    const shouldHide = HIDDEN_FOOTER_ROUTES.some(
+    (route) => pathname === route || pathname.startsWith(`${route}/`)
   );
 
   if (shouldHide) return null;

@@ -6,7 +6,22 @@
     "image": "/team/Sameer-Sattar-2.jpg",
     "group": "Head of Firm",
     "practiceAreas": ["Corporate & Commercial", "Dispute Resolution", "Banking & Finance"],
-    "bio": "Barrister Sameer Sattar leads the firm's corporate and dispute resolution practice, advising domestic and multinational clients on high-value transactions, banking litigation and international arbitration. He is regularly recognised by the leading legal directories for his work in the technology, media, telecommunications, aviation, energy and employment sectors."
+    "email": "",
+    "bio": [
+      "Sameer Sattar is a Barrister with specific interest in commercial transactions and dispute resolution matters. In Bangladesh, Barrister Sattar's practice primarily involves corporate and commercial advisory work and litigation. This includes, inter alia, acquisition of private companies and banks, setting up limited companies in Bangladesh, advising foreign companies on joint ventures and other commercial issues, loan syndication for projects and drafting commercial documentation generally. Barrister Sattar's practice in London (at Debevoise & Plimpton and, later at, Volterra Fietta) focused on international arbitration. He has worked on and appeared as counsel in several international arbitration held under the auspices of the ICC, UNCITRAL, LCIA, SIAC and ICSID rules. He has extensive experience both in commercial and investment treaty arbitration.",
+      "As a Barrister, Mr. Sattar conducts his own advocacy. He has appeared as an advocate before numerous arbitral tribunals and before the Courts in Bangladesh. Barrister Sattar has particular expertise in public international law and has acted in disputes involving States and State entities. He has advised various multinational companies in relation to their rights under international law.",
+      "Barrister Sattar has worked on arbitration conducted in all major venues around the world arising out of a broad range of transactions including foreign investment, public concessions, energy, natural resources, mining and exploration, banking and financial services, international trade, construction and shareholder disputes.",
+      "Barrister Sattar is ranked in Band 1 by Chambers & Partners: Asia Pacific (2021) and is also recommended by The Legal 500. He is also an advocate of the Bangladesh Supreme Court and is a well-known dispute resolution and litigation expert.",
+      "Apart from his legal expertise and skills, Mr. Sattar was also nominated and chosen by the US government and the European Union for their Leadership Visiting Programmes and was director of the Dhaka Chamber of Commerce, responsible for foreign direct investment. Barrister Sattar was featured in the Asian Legal Business 40 under 40 list for the year 2020, as the first ever entrant from Bangladesh. In 2022, Barrister Sattar was commended as one of the top 50 lawyers in Bangladesh in the A-List: Bangladesh's Top Lawyers, awarded by the Asia Business Law Journal."
+    ],
+    "education": [
+      { "date": "Dec 2021", "description": "Admitted as Advocate in the Appellate Division, Supreme Court of Bangladesh" },
+      { "date": "Nov 2009", "institution": "University College London, London", "course": "Master of Laws (LL.M) in International Business Law", "grade": "Distinction" },
+      { "date": "Aug 2007", "description": "Admitted as Advocate in the High Court Division, Supreme Court of Bangladesh" },
+      { "date": "Oct 2005", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" },
+      { "date": "Jul 2003", "institution": "BPP Law School, London", "course": "Bar Vocational Course", "grade": "Very Competent with Outstanding in Litigation" },
+      { "date": "Jul 2002", "institution": "Queen Mary and Westfield College, University of London, London", "course": "Bachelor of Laws (LL.B)" }
+    ]
   },
   {
     "slug": "mamun-chowdhury",
@@ -15,7 +30,16 @@
     "image": "/team/Mamun-Chowdhury-1.jpg",
     "group": "Consultants",
     "practiceAreas": ["Banking & Finance", "Corporate Advisory"],
-    "bio": "Mamun Chowdhury advises on banking, finance and corporate advisory matters, drawing on a long-standing practice before Bangladesh's commercial courts."
+    "bio": [
+      "Mamun Chowdhury is an Advocate of the Bangladesh Supreme Court with specific expertise in domestic litigation and procedural issues. He is an experienced litigator and an excellent strategist. Mr. Chowdhury's practice primarily involves domestic litigation with a focus on banking, property and civil litigation. This includes representing various banks and companies before the Bangladeshi Courts.",
+      "Mr. Chowdhury's areas of interest include arbitration, banking, company, anti-corruption laws, judicial review and property laws."
+    ],
+    "education": [
+      { "date": "Jan 2006", "description": "Admitted as Advocate in the High Court Division, Supreme Court of Bangladesh" },
+      { "date": "Oct 2002", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" },
+      { "date": "Sep 2001", "institution": "University of Dhaka, Bangladesh", "course": "Master of Laws (LL.M)" },
+      { "date": "Jul 2000", "institution": "University of Dhaka, Bangladesh", "course": "Bachelor of Laws (LL.B)" }
+    ]
   },
   {
     "slug": "rafiqul-alam",
@@ -24,7 +48,13 @@
     "image": "/team/Team-Rafiqul-Alam.jpg",
     "group": "Consultants",
     "practiceAreas": ["Litigation", "Admiralty"],
-    "bio": "Rafiqul Alam brings decades of litigation experience, with a particular focus on admiralty and shipping-related commercial disputes."
+    "bio": [
+      "Mr. Alam is an Advocate of the Dhaka Judge Court with specific expertise in company laws and related matters such as company registration and filings. Mr. Alam's areas of interest include company and intellectual property laws."
+    ],
+    "education": [
+      { "date": "Oct 2008", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" },
+      { "date": "Jul 2006", "institution": "National University, Bangladesh", "course": "Bachelor of Laws (LL.B)" }
+    ]
   },
   {
     "slug": "yadnan-rafique",
@@ -33,7 +63,16 @@
     "image": "/team/Yadnan-Rafique.jpg",
     "group": "Consultants",
     "practiceAreas": ["Corporate", "Regulatory"],
-    "bio": "Yadnan Rafique Rossy advises corporate clients on regulatory compliance and day-to-day corporate governance matters."
+    "bio": [
+      "Md. Yadnan Rafique Rossy is an Advocate of the Bangladesh Supreme Court with specific expertise in commercial and criminal litigation. Mr. Rafique also has a vast array of experience in corporate matters working with renowned national and international companies, and has represented various banks and companies before the Bangladeshi Courts.",
+      "Mr. Rafique's areas of interest include company and commercial law, constitutional matters, civil litigation, banking disputes and property matters."
+    ],
+    "education": [
+      { "date": "2015", "description": "Admitted as Advocate in the High Court Division, Supreme Court of Bangladesh" },
+      { "date": "2012", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" },
+      { "date": "2009", "institution": "University of Dhaka, Bangladesh", "course": "Master of Laws (LL.M)" },
+      { "date": "2008", "institution": "University of Dhaka, Bangladesh", "course": "Bachelor of Laws (LL.B)" }
+    ]
   },
   {
     "slug": "khademul-islam-choyon",
@@ -42,7 +81,16 @@
     "image": "/team/khc.jpg",
     "group": "Associates",
     "practiceAreas": ["Corporate Transactions", "M&A"],
-    "bio": "Khademul Islam Choyon works on corporate transactions and M&A mandates for domestic and international clients."
+    "bio": [
+      "Md. Khademul Islam Choyon is a Senior Associate in the Corporate department of Sattar&Co. After completing his studies, he started his legal career at a leading law firm in Bangladesh. As part of the team of Sattar&Co., he assists in advising local and international clients across a broad range of the firm's practice areas including, inter alia, aviation, corporate & commercial (including M&A), energy, information technology, cyber and telecommunications laws, etc.",
+      "While working at Sattar&Co., Choyon has gained notable experience in structuring foreign direct investments, vetting and negotiating contracts and conducting due diligence on target companies for local or cross-border acquisitions. He routinely liaises with regulators and keeps the firm up-to-date with practical and procedural matters of law and regulations.",
+      "As part of the team, Choyon was involved in dealing with numerous significant matters, which include, inter alia, working with one of the largest aircraft leasing companies in the world which provides leasing and lease management services to airlines worldwide; a prominent American-Canadian entertainment company on the entertainment laws of Bangladesh which include laws relating to on-demand services, video services as well as OTT, broadcasting, etc.; a prominent and popular international online gaming company on the gaming laws of Bangladesh; a leading international solar power company on the risk matrix in relation to power purchase agreements, etc."
+    ],
+    "education": [
+      { "date": "Aug 2022", "description": "Admitted as Advocate in the High Court Division, Supreme Court of Bangladesh" },
+      { "date": "Dec 2018", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" },
+      { "date": "Aug 2014", "institution": "University of Northumbria", "course": "Bachelor of Laws (LL.B)" }
+    ]
   },
   {
     "slug": "mahbub-hasan",
@@ -51,7 +99,17 @@
     "image": "/team/Mahbub-Hasan-1.jpg",
     "group": "Associates",
     "practiceAreas": ["Dispute Resolution", "Banking Litigation"],
-    "bio": "Mahbub Hasan focuses on commercial disputes and banking litigation before the Supreme Court of Bangladesh."
+    "bio": [
+      "Mahbub Hasan is an Associate in the Litigation department of Sattar&Co. Mahbub started his legal career at Sattar&Co., and currently is an integral part of the team and regularly assists in litigation matters.",
+      "While working at Sattar&Co., Mahbub has gained significant experience while assisting in several complex corporate cases before the High Court Division and the Companies Court, including on, inter alia, banking matters, admiralty matters, recovery of loans and acting against defaulter borrowers, as well as a good number of critical company matters including shareholders' disputes. Mahbub also has substantial experience on arbitration-related matters.",
+      "As part of the team, Mahbub was involved in assisting with several significant disputes, which includes, inter alia, cases relating to shareholder protection, cases relating to share rectification; banking disputes relating to recovery of money and other related banking disputes relating to L/Cs and injunctions; cases relating to unlawful classification by the central bank and recovery suits against companies. Mahbub is also involved in arbitration matters arising from breach of contracts."
+    ],
+    "education": [
+      { "date": "Aug 2022", "description": "Admitted as Advocate in the High Court Division, Supreme Court of Bangladesh" },
+      { "date": "Dec 2018", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" },
+      { "date": "Jun 2015", "institution": "University of Rajshahi, Bangladesh", "course": "Master of Laws (LL.M)" },
+      { "date": "Jun 2014", "institution": "BRAC University, Bangladesh", "course": "Bachelor of Laws (LL.B)" }
+    ]
   },
   {
     "slug": "mariha-zaman-khan",
@@ -60,7 +118,14 @@
     "image": "/team/Team-Mariha-Zaman-Khan.jpg",
     "group": "Associates",
     "practiceAreas": ["Employment", "Corporate"],
-    "bio": "Mariha Zaman Khan advises on employment and general corporate matters for local and multinational employers."
+    "bio": [
+      "Mariha Zaman Khan is a Barrister and works with Sattar&Co. After being called to the Bar, Mariha returned to Bangladesh and started her legal career at Sattar&Co. Mariha assists in advising clients on corporate laws and foreign investment matters at Sattar&Co.",
+      "She is also a lecturer at a leading law school in Bangladesh."
+    ],
+    "education": [
+      { "date": "Oct 2014", "institution": "City Law School, City University London, London", "course": "Bar Professional Training Course" },
+      { "date": "Aug 2013", "institution": "University of London (International Programmes)", "course": "Bachelor of Laws (LL.B)" }
+    ]
   },
   {
     "slug": "sajid-hossain",
@@ -69,7 +134,16 @@
     "image": "/team/sajid-hossain.jpg",
     "group": "Associates",
     "practiceAreas": ["Energy", "Project Finance"],
-    "bio": "Sajid Hossain works on energy and project finance mandates, including power purchase agreements and project documentation."
+    "bio": [
+      "Sajid Hossain is an Associate at Sattar&Co. Sajid began his legal career at Sattar&Co. and gained his preliminary exposure to corporate and commercial law practice at the firm. On completing his Master's Degree in Corporate Law (MCL) from the University of Cambridge, Sajid returned to Sattar&Co. as a full-fledged Associate.",
+      "Sajid is admitted to practice law in Bangladesh. At Sattar&Co., he routinely assists in advising both local and international clients across a range of key practice areas which include, inter alia, M&A, employment, projects and energy, oil and gas, cross-border transactions, disputes and arbitration matters and various other corporate advisory and litigious matters.",
+      "As part of the team, Sajid has been involved in a number of significant matters and transactions, which include, inter alia, advising a globally reputed investment conglomerate on complex tax law issues pertaining to multiple turnkey projects in Bangladesh; a leading Bangladeshi corporate giant on the share acquisition and structuring of an SPV for the implementation of a power project; a local company engaged in oil and gas pipeline construction works in a cross-border contractual dispute with its employer in a turnkey project; advising a leading international airline on queries pertaining to various information technology, telecommunications, e-commerce and data protection laws of Bangladesh; assisting in representing a local buying house in an arbitration application filed against it before the High Court Division."
+    ],
+    "education": [
+      { "date": "Mar 2024", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" },
+      { "date": "Jul 2023", "institution": "University of Cambridge", "course": "Master of Corporate Law (MCL)" },
+      { "date": "Dec 2018", "institution": "North South University", "course": "Bachelor of Laws (LL.B)" }
+    ]
   },
   {
     "slug": "tareq-hasan",
@@ -78,7 +152,13 @@
     "image": "/team/tareq-hasan.jpg",
     "group": "Associates",
     "practiceAreas": ["Research", "Regulatory"],
-    "bio": "Tareq Hasan supports the firm's advisory teams with legal research across regulatory and transactional matters."
+    "bio": [
+      "Tareq Hasan is a Research Associate at Sattar&Co. He has prior experience working with a reputed law firm in Bangladesh. At Sattar&Co., Tareq is currently assisting with litigation matters."
+    ],
+    "education": [
+      { "date": "May 2023", "institution": "University of Dhaka", "course": "Master of Laws (LL.M)" },
+      { "date": "Dec 2021", "institution": "University of Dhaka", "course": "Bachelor of Laws (LL.B)" }
+    ]
   },
 {
     "slug": "sadat-islam",
@@ -87,7 +167,12 @@
     "image": "/team/sadat-islam.jpg",
     "group": "Associates",
     "practiceAreas": ["Research", "Litigation"],
-    "bio": "Sadat Islam supports litigation and arbitration teams with case research and preparation."
+    "bio": [
+      "Sadat Islam became a Research Associate at Sattar&Co. after successfully completing his internship at the firm. Sadat is currently assisting the Associates in advising clients on various corporate and litigation matters."
+    ],
+    "education": [
+      { "date": "January 2022", "institution": "BRAC University", "course": "Bachelor of Laws (LL.B)" }
+    ]
   },
   {
     "slug": "francis-gomes",
