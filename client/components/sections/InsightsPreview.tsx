@@ -10,7 +10,7 @@ function formatDate(iso: string) {
     month: "short",
     year: "numeric",
   });
-}
+} 
 
 export default function InsightsPreview() {
   const featured = insights.find((i) => i.featured) ?? insights[0];
