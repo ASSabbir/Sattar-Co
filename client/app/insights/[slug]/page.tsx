@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ArrowLink from "@/components/ui/ArrowLink";
@@ -20,8 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: item.title, description: item.excerpt };
 }
 
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString("en-GB", {
+function formatDate(item: { date: string | null; year: number }) {
+  if (!item.date) return String(item.year);
+  return new Date(item.date).toLocaleDateString("en-GB", {
     day: "2-digit",
     month: "short",
     year: "numeric",
@@ -38,25 +38,14 @@ export default async function InsightArticlePage({ params }: Props) {
       <div className="max-w-content mx-auto px-6 md:px-10">
         <SectionLabel label="Insights" className="mb-8" />
         <p className="eyebrow text-red-600 mb-6">
-          {item.category} · {formatDate(item.date)}
+          {item.category} · {formatDate(item)}
         </p>
         <h1 className="font-display text-display-md text-charcoal max-w-3xl mb-10">
           {item.title}
         </h1>
-        <p className="text-charcoal/40 text-sm mb-14">By {item.author}</p>
+        {item.author && <p className="text-charcoal/40 text-sm mb-14">By {item.author}</p>}
 
-        <div className="relative aspect-[16/9] w-full mb-14 overflow-hidden">
-          <Image
-            src={item.image}
-            alt={item.title}
-            fill
-            priority
-            className="object-cover"
-            sizes="100vw"
-          />
-        </div>
-
-        <div className="max-w-2xl">
+        <div className={item.author ? "max-w-2xl" : "max-w-2xl mt-14"}>
           <p className="text-charcoal/75 text-lg leading-relaxed mb-8">{item.excerpt}</p>
           <p className="text-charcoal/60 leading-relaxed mb-6">
             This is placeholder body copy for the demo build. Replace this section with the

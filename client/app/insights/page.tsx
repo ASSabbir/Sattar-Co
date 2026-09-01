@@ -1,18 +1,16 @@
-import type { Metadata } from "next";
-import Image from "next/image";
+"use client";
+
+import { useMemo, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
 import insights from "@/data/insights.json";
-import heroImg from "../../public/images/2.webp";
 
-export const metadata: Metadata = {
-  title: "Insights",
-  description: "Legal commentary and regulatory updates from Sattar&Co.",
-};
-
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString("en-GB", {
+function formatDate(item: { date: string | null; year: number }) {
+  if (!item.date) return String(item.year);
+  return new Date(item.date).toLocaleDateString("en-GB", {
     day: "2-digit",
     month: "short",
     year: "numeric",
@@ -20,19 +18,35 @@ function formatDate(iso: string) {
 }
 
 export default function InsightsPage() {
+  // Years derived from the data itself, newest first, plus "All".
+  const years = useMemo(() => {
+    const unique = Array.from(new Set(insights.map((i) => i.year))).sort((a, b) => b - a);
+    return ["All", ...unique] as const;
+  }, []);
+
+  const [active, setActive] = useState<string | number>("All");
+
+  const counts = useMemo(() => {
+    const map: Record<string, number> = { All: insights.length };
+    for (const item of insights) {
+      map[item.year] = (map[item.year] ?? 0) + 1;
+    }
+    return map;
+  }, []);
+
+  const filtered = useMemo(() => {
+    const items = active === "All" ? insights : insights.filter((i) => i.year === active);
+    return [...items].sort((a, b) => {
+      if (a.year !== b.year) return b.year - a.year;
+      if (a.date && b.date) return a.date < b.date ? 1 : -1;
+      return 0;
+    });
+  }, [active]);
+
   return (
     <>
-      <section className="grain relative overflow-hidden bg-navy pt-40 pb-24 md:pt-52 md:pb-32">
-        <Image
-          src={heroImg}
-          alt=""
-          fill
-          priority
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black/30" />
-
-        <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
+      <section className="grain bg-navy pt-40 pb-20 md:pt-52 md:pb-24">
+        <div className="max-w-content mx-auto px-6 md:px-10">
           <SectionLabel label="Insights" light className="mb-8" />
           <RevealText as="h1" immediate className="font-display text-display-lg text-ivory max-w-3xl">
             Commentary from the firm
@@ -40,28 +54,85 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      <section className="bg-ivory py-24 md:py-32">
-        <div className="max-w-content mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-          {insights.map((item) => (
-            <Link key={item.slug} href={`/insights/${item.slug}`} className="group">
-              <div className="relative aspect-[4/3] w-full mb-6 overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-500 ease-editorial group-hover:scale-105"
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                />
-              </div>
-              <p className="eyebrow text-red-600 mb-3">
-                {item.category} · {formatDate(item.date)}
-              </p>
-              <h2 className="font-display text-xl text-charcoal mb-3 group-hover:text-red-600 transition-colors duration-300">
-                {item.title}
-              </h2>
-              <p className="text-charcoal/55 text-sm leading-relaxed">{item.excerpt}</p>
-            </Link>
-          ))}
+      <section className="bg-ivory">
+        {/* Year tabs */}
+        <div className="sticky top-20 md:top-24 z-30 bg-ivory/95 backdrop-blur-sm border-b border-charcoal/10">
+          <div className="max-w-content mx-auto px-6 md:px-10">
+            <div className="flex items-center gap-8 md:gap-10 overflow-x-auto no-scrollbar py-6">
+              {years.map((year) => (
+                <button
+                  key={year}
+                  onClick={() => setActive(year)}
+                  className={`relative shrink-0 text-sm uppercase tracking-wide pb-3 transition-colors duration-300 ${
+                    active === year ? "text-charcoal" : "text-charcoal/40 hover:text-charcoal/70"
+                  }`}
+                >
+                  {year}
+                  <span className="ml-2 text-xs text-charcoal/35">{counts[year] ?? 0}</span>
+                  {active === year && (
+                    <motion.span
+                      layoutId="insights-tab-underline"
+                      className="absolute left-0 right-0 -bottom-px h-[2px] bg-red-600"
+                      transition={{ duration: 0.35, ease: [0.65, 0, 0.35, 1] }}
+                    />
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* List */}
+        <div className="max-w-content mx-auto px-6 md:px-10 py-16 md:py-20">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={active}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
+              className="flex flex-col"
+            >
+              {filtered.map((item, i) => (
+                <motion.div
+                  key={item.slug}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: Math.min(i, 8) * 0.04, ease: "easeOut" }}
+                >
+                  <Link
+                    href={`/insights/${item.slug}`}
+                    className="group grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-8 items-start lg:items-center py-7 border-t border-charcoal/10"
+                  >
+                    <div className="lg:col-span-2 order-2 lg:order-1">
+                      <p className="text-charcoal/40 text-sm">{formatDate(item)}</p>
+                    </div>
+
+                    <div className="lg:col-span-2 order-1 lg:order-2">
+                      <p className="eyebrow text-red-600">{item.category}</p>
+                    </div>
+
+                    <div className="lg:col-span-7 order-3">
+                      <h2 className="font-display text-lg md:text-xl text-charcoal leading-snug group-hover:text-red-600 transition-colors duration-300">
+                        {item.title}
+                      </h2>
+                    </div>
+
+                    <div className="lg:col-span-1 order-4 flex lg:justify-end">
+                      <span className="inline-flex items-center gap-1.5 text-charcoal/40 text-xs uppercase tracking-wide group-hover:text-red-600 transition-colors duration-300">
+                        Read
+                        <ArrowUpRight
+                          size={14}
+                          strokeWidth={1.5}
+                          className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                        />
+                      </span>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </section>
     </>

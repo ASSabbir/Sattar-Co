@@ -17,7 +17,7 @@ const NAV_LINKS = [
   { href: "/team", label: "Team" },
   { href: "/insights", label: "Insights" },
   { href: "/publications", label: "Publications" },
-  { href: "/contact", label: "Contact" },
+  // { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
