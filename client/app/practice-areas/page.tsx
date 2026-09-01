@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
 import practiceAreas from "@/data/practiceAreas.json";
+import img1 from '../../public/images/6.webp'
 
 export const metadata: Metadata = {
   title: "Practice Areas",
@@ -12,10 +14,19 @@ export const metadata: Metadata = {
 export default function PracticeAreasPage() {
   return (
     <>
-      <section className="grain bg-navy pt-40 pb-24 md:pt-52 md:pb-32">
-        <div className="max-w-content mx-auto px-6 md:px-10">
+      <section className="grain relative overflow-hidden bg-navy pt-40 pb-24 md:pt-52 md:pb-32">
+        <Image
+          src={img1}
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/35" />
+
+        <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
           <SectionLabel label="Practice Areas" light className="mb-8" />
-          <RevealText as="h1" immediate className="font-display text-display-lg text-ivory max-w-3xl">
+          <RevealText as="h1" immediate className="font-display text-display-lg text-ivory max-w-5xl">
             Comprehensive counsel across Bangladesh&rsquo;s principal industries
           </RevealText>
         </div>

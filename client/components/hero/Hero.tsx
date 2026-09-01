@@ -312,7 +312,7 @@ export default function Hero() {
       <div ref={stickyRef} className="sticky top-0 h-screen w-full overflow-hidden">
         <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
 
-        {/* <div className="absolute inset-0 z-10 bg-navy/25 pointer-events-none" /> */}
+        <div className="absolute inset-0 z-10 bg-navy/25 pointer-events-none" />
 
         <div className="relative z-20 h-full max-w-content mx-auto px-6 md:px-10 flex flex-col justify-end pb-20 md:pb-28">
           <div ref={introInnerRef}>
@@ -338,7 +338,7 @@ export default function Hero() {
         <div className="absolute inset-0 z-10 flex items-center justify-center px-6 pointer-events-none">
           <div ref={text1InnerRef} className="max-w-2xl text-center will-change-transform" style={{ opacity: 0 }}>
             
-            <h2 className="font-display text-display-md text-[#2E351E] font-bold">
+            <h2 className="font-display text-display-md text-ivory font-bold">
               Your Trusted Advisor
             </h2>
           </div>
