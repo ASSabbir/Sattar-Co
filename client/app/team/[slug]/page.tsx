@@ -74,7 +74,7 @@ export default async function TeamMemberPage({ params }: Props) {
       <div className="max-w-[1380px] mx-auto h-full flex flex-col lg:h-full">
 
         {/* 3-Column Editorial Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start relative flex-1 min-h-0 overflow-y-auto lg:overflow-visible no-scrollbar">
+        <div data-lenis-prevent className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start relative flex-1 min-h-0 overflow-y-auto lg:overflow-visible no-scrollbar">
 
           {/* COLUMN 1: Portrait Card with Info Overlay (fixed like head-of-firm image) */}
           <div className="lg:col-span-5 relative lg:h-full lg:sticky lg:top-0">
