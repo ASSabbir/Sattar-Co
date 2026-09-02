@@ -171,11 +171,11 @@ export default function TeamPage() {
                     {leader?.name || "SAMEER SATTAR"}
                   </h2>
                   <p className="text-sm text-charcoal/70 mb-4 font-light">
-                    {leader?.role || "Founder & Head of Firm"}
+                    {/* {leader?.role || "Founder & Head of Firm"} */}
                   </p>
-                  <p className="font-serif italic text-2xl text-charcoal/80 tracking-wider select-none">
+                  {/* <p className="font-serif italic text-2xl text-charcoal/80 tracking-wider select-none">
                     Sameer Sattar
-                  </p>
+                  </p> */}
                 </div>
 
                 <div className="md:col-span-5 text-sm text-charcoal/80 space-y-1 font-light pt-1">

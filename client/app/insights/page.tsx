@@ -3,10 +3,12 @@
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
 import insights from "@/data/insights.json";
+import img1 from '../../public/images/3.webp'
 
 function formatDate(item: { date: string | null; year: number }) {
   if (!item.date) return String(item.year);
@@ -18,16 +20,15 @@ function formatDate(item: { date: string | null; year: number }) {
 }
 
 export default function InsightsPage() {
-  // Years derived from the data itself, newest first, plus "All".
+  // Years derived from the data itself, newest first.
   const years = useMemo(() => {
-    const unique = Array.from(new Set(insights.map((i) => i.year))).sort((a, b) => b - a);
-    return ["All", ...unique] as const;
+    return Array.from(new Set(insights.map((i) => i.year))).sort((a, b) => b - a);
   }, []);
 
-  const [active, setActive] = useState<string | number>("All");
+  const [active, setActive] = useState<number>(years[0]);
 
   const counts = useMemo(() => {
-    const map: Record<string, number> = { All: insights.length };
+    const map: Record<string, number> = {};
     for (const item of insights) {
       map[item.year] = (map[item.year] ?? 0) + 1;
     }
@@ -35,9 +36,8 @@ export default function InsightsPage() {
   }, []);
 
   const filtered = useMemo(() => {
-    const items = active === "All" ? insights : insights.filter((i) => i.year === active);
+    const items = insights.filter((i) => i.year === active);
     return [...items].sort((a, b) => {
-      if (a.year !== b.year) return b.year - a.year;
       if (a.date && b.date) return a.date < b.date ? 1 : -1;
       return 0;
     });
@@ -45,8 +45,17 @@ export default function InsightsPage() {
 
   return (
     <>
-      <section className="grain bg-navy pt-40 pb-20 md:pt-52 md:pb-24">
-        <div className="max-w-content mx-auto px-6 md:px-10">
+      <section className="grain relative overflow-hidden bg-navy pt-40 pb-20 md:pt-52 md:pb-24">
+        <Image
+          src={img1}
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/35" />
+
+        <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
           <SectionLabel label="Insights" light className="mb-8" />
           <RevealText as="h1" immediate className="font-display text-display-lg text-ivory max-w-3xl">
             Commentary from the firm
@@ -58,7 +67,7 @@ export default function InsightsPage() {
         {/* Year tabs */}
         <div className="sticky top-20 md:top-24 z-30 bg-ivory/95 backdrop-blur-sm border-b border-charcoal/10">
           <div className="max-w-content mx-auto px-6 md:px-10">
-            <div className="flex items-center gap-8 md:gap-10 overflow-x-auto no-scrollbar py-6">
+            <div className="flex items-center justify-between gap-8 md:gap-10 overflow-x-auto no-scrollbar py-6">
               {years.map((year) => (
                 <button
                   key={year}
@@ -68,7 +77,7 @@ export default function InsightsPage() {
                   }`}
                 >
                   {year}
-                  <span className="ml-2 text-xs text-charcoal/35">{counts[year] ?? 0}</span>
+                  <span className="ml-2 text-xs text-charcoal/35">({counts[year] ?? 0})</span>
                   {active === year && (
                     <motion.span
                       layoutId="insights-tab-underline"
