@@ -70,7 +70,7 @@ export default function InsightsPreview() {
                   key={i}
                   onClick={() => setActive(i)}
                   aria-label={`Show testimonial ${i + 1}`}
-                  className="relative h-[2px] flex-1 max-w-10 bg-ivory/15 overflow-hidden"
+                  className="relative h-[2px] flex-1 max-w-10 bg-gray-900/10 overflow-hidden"
                 >
                   {i === active && (
                     <motion.span
@@ -85,7 +85,7 @@ export default function InsightsPreview() {
                       className="absolute inset-0 bg-red-600"
                     />
                   )}
-                  {i < active && <span className="absolute inset-0 bg-ivory/40" />}
+                  {i < active && <span className="absolute inset-0 bg-gray-700/40" />}
                 </button>
               ))}
             </div>
