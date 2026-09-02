@@ -81,24 +81,33 @@ export default function TeamPage() {
     if (window.innerWidth < 1024) return;
 
     const scroller = scrollerRef.current;
-    if (!scroller) return;
+    const section = sectionRef.current;
+    if (!scroller || !section) return;
 
     let targetScrollTop = scroller.scrollTop;
     let tween: gsap.core.Tween | null = null;
 
+    // Wheel is captured on the WHOLE fixed section — no matter where the cursor is
+    // (over the leader portrait, the top info block, or the roster) — so the outer
+    // page/viewport never moves. Only the internal roster scroller is driven.
+    const WHEEL_SENSITIVITY = 1.7;
+
     const handleWheel = (e: WheelEvent) => {
       const { scrollHeight, clientHeight } = scroller;
       const maxScroll = scrollHeight - clientHeight;
+
+      // Always swallow the wheel event while this section is active on desktop,
+      // so the fixed section itself can never be scrolled away from.
+      e.preventDefault();
+      e.stopPropagation();
+
       if (maxScroll <= 0) return;
 
       targetScrollTop = gsap.utils.clamp(
         0,
         maxScroll,
-        targetScrollTop + e.deltaY
+        targetScrollTop + e.deltaY * WHEEL_SENSITIVITY
       );
-
-      e.preventDefault();
-      e.stopPropagation();
 
       tween?.kill();
       tween = gsap.to(scroller, {
@@ -106,12 +115,15 @@ export default function TeamPage() {
         duration: 0.8,
         ease: "power3.out",
         overwrite: true,
+        onUpdate: () => {
+          targetScrollTop = scroller.scrollTop;
+        },
       });
     };
 
-    scroller.addEventListener("wheel", handleWheel, { passive: false });
+    section.addEventListener("wheel", handleWheel, { passive: false });
     return () => {
-      scroller.removeEventListener("wheel", handleWheel);
+      section.removeEventListener("wheel", handleWheel);
       tween?.kill();
     };
   }, []);
