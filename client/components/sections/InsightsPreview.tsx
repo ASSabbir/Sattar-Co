@@ -34,18 +34,18 @@ export default function InsightsPreview() {
   }, [paused, testimonials.length]);
 
   return (
-    <section className="bg-ivory pb-24 md:pb-36">
+    <section className="bg-white pt-2 pb-24 md:pb-36">
       <div className="max-w-content mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-stretch">
           {/* ── Left: autoplay testimonial card ── */}
           <div
-            className="lg:col-span-7 relative grain overflow-hidden rounded-sm min-h-[440px] md:min-h-[520px] flex flex-col justify-between"
+            className="lg:col-span-6 mt- relative grain overflow-hidden rounded-sm min-h-[400px]  flex flex-col justify-between"
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
           >
-            <Quote size={44} strokeWidth={1} className="text-red-600/40 mb-8 shrink-0" />
+            <Quote size={44} strokeWidth={1} className="text-red-600/40 mt-10 mb-8 shrink-0" />
 
-            <div className="relative flex-1 flex items-center overflow-hidden">
+            <div className="relative mt- flex-1 flex  overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={active}
@@ -55,7 +55,7 @@ export default function InsightsPreview() {
                   transition={{ duration: 0.7, ease: [0.65, 0, 0.35, 1] }}
                   className="w-full"
                 >
-                  <p className="font-display italic text-xl md:text-2xl leading-relaxed text-gray-800 mb-6">
+                  <p className="font-display italic text-xl md:text-4xl leading-relaxed text-gray-800 mb-6">
                     &ldquo;{testimonials[active].quote}&rdquo;
                   </p>
                   <p className="eyebrow text-red-600">{testimonials[active].source}</p>
@@ -92,16 +92,16 @@ export default function InsightsPreview() {
           </div>
 
           {/* ── Right: three news items, no images, flex column ── */}
-          <div className="lg:col-span-5 flex flex-col h-full">
+          <div className="lg:col-span-6 flex  flex-col h-full">
             {newsItems.map((item, i) => (
               <Link
                 key={item.slug}
                 href={`/insights/${item.slug}`}
-                className={`group flex-1 flex items-center gap-6 py-7 md:py-0 ${
+                className={`group flex-1 flex items-center gap-6  md:py-0 ${
                   i !== 0 ? "border-t border-charcoal/10" : ""
                 }`}
               >
-                <span className="font-display text-2xl text-charcoal/20 shrink-0 w-10">
+                <span className="font-display text-4xl text-charcoal/20 shrink-0 w-10">
                   {String(i + 1).padStart(2, "0")}
                 </span>
 
@@ -109,7 +109,7 @@ export default function InsightsPreview() {
                   <p className="eyebrow text-red-600 mb-2">
                     {item.category} · {formatDate(item)}
                   </p>
-                  <h3 className="font-display text-lg md:text-xl text-charcoal leading-snug group-hover:text-red-600 transition-colors duration-300">
+                  <h3 className="font-display text-lg md:text-2xl text-charcoal leading-snug group-hover:text-red-600 transition-colors duration-300 tracking-wide">
                     {item.title}
                   </h3>
                 </div>

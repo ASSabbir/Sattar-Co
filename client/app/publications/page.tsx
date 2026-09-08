@@ -73,7 +73,7 @@ export default function PublicationsPage() {
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
-          <SectionLabel label="Publications" light className="mb-8" />
+          {/* <SectionLabel label="Publications" light className="mb-8" /> */}
 
           <RevealText
             as="h1"
@@ -88,16 +88,16 @@ export default function PublicationsPage() {
       {/* =========================================================
           PUBLICATIONS CONTENT
       ========================================================== */}
-      <section className="bg-ivory">
+      <section className="bg-white">
         {/* Tabs */}
-        <div className="sticky top-20 md:top-24 z-30 bg-ivory/95 backdrop-blur-sm border-b border-charcoal/10">
+        <div className="sticky top-14  z-30 bg-white backdrop-blur-sm border-b border-charcoal/10">
           <div className="max-w-content mx-auto px-6 md:px-10">
-            <div className="flex items-center gap-8 md:gap-10 overflow-x-auto no-scrollbar py-6">
+            <div className="flex items-center gap-8 md:gap-10 overflow-x-auto no-scrollbar pt-10 pb-4">
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActive(cat)}
-                  className={`relative shrink-0 text-sm uppercase tracking-wide pb-3 transition-colors duration-300 ${
+                  className={`relative shrink-0 text-md uppercase tracking-wide pb-3 transition-colors duration-300 ${
                     active === cat
                       ? "text-charcoal"
                       : "text-charcoal/40 hover:text-charcoal/70"
@@ -105,9 +105,9 @@ export default function PublicationsPage() {
                 >
                   {cat}
 
-                  <span className="ml-2 text-xs text-charcoal/35">
+                  {/* <span className="ml-2 text-xs text-charcoal/35">
                     {counts[cat] ?? 0}
-                  </span>
+                  </span> */}
 
                   {active === cat && (
                     <motion.span
@@ -126,7 +126,7 @@ export default function PublicationsPage() {
         </div>
 
         {/* List */}
-        <div className="max-w-content mx-auto px-6 md:px-10 py-16 md:py-20">
+        <div className="max-w-content mx-auto px-6 md:px-10 ">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
@@ -175,14 +175,14 @@ export default function PublicationsPage() {
                       }`}
                     >
                       <div className="lg:col-span-2 order-2 lg:order-1">
-                        <p className="text-charcoal/40 text-sm">
+                        <p className="text-charcoal text-sm">
                           {formatDate(item.date)}
                         </p>
                       </div>
 
                       {active === "All" && (
                         <div className="lg:col-span-2 order-1 lg:order-2">
-                          <p className="eyebrow text-red-600">
+                          <p className=" uppercase  text-black">
                             {item.category}
                           </p>
                         </div>
@@ -196,7 +196,7 @@ export default function PublicationsPage() {
                         }`}
                       >
                         <h2
-                          className={`font-display text-lg md:text-xl text-charcoal leading-snug ${
+                          className={`font-display text-lg md:text-2xl text-charcoal tracking-wide leading-snug ${
                             clickable
                               ? "group-hover:text-red-600 transition-colors duration-300"
                               : ""
@@ -205,14 +205,14 @@ export default function PublicationsPage() {
                           {item.title}
                         </h2>
 
-                        <p className="text-charcoal/50 text-sm mt-2 max-w-xl leading-relaxed">
+                        <p className="text-charcoal text-sm mt-2 max-w-xl leading-relaxed">
                           {item.summary}
                         </p>
                       </div>
 
                       <div className="lg:col-span-1 order-4 flex lg:justify-end">
                         {clickable ? (
-                          <span className="inline-flex items-center gap-1.5 text-charcoal/40 text-xs uppercase tracking-wide group-hover:text-red-600 transition-colors duration-300">
+                          <span className="inline-flex items-center gap-1.5 text-charcoal text-xs uppercase tracking-wide group-hover:text-red-600 transition-colors duration-300">
                             Read
 
                             <ArrowUpRight
@@ -222,7 +222,7 @@ export default function PublicationsPage() {
                             />
                           </span>
                         ) : (
-                          <span className="text-charcoal/30 text-xs uppercase tracking-wide">
+                          <span className="text-charcoal text-xs uppercase tracking-wide">
                             Unavailable
                           </span>
                         )}

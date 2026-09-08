@@ -1,29 +1,48 @@
 "use client";
 
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import recognition from "@/data/recognition.json";
 
-/**
- * Currently renders directory names as styled wordmarks since no logo
- * image files were provided. To use real logos instead: drop the files in
- * /public/logos/ and replace the <span> below with:
- *   <Image src={`/logos/${name}.png`} alt={name} width={140} height={40} className="opacity-60 hover:opacity-100 transition-opacity" />
- */
+import s1 from "@/public/logo/s1.png";
+import s2 from "@/public/logo/s2.png";
+import s3 from "@/public/logo/s3.png";
+import s4 from "@/public/logo/s4.png";
+import s5 from "@/public/logo/s5.png";
+import s6 from "@/public/logo/s6.png";
+import s7 from "@/public/logo/s7.png";
+import s8 from "@/public/logo/s8.png";
+
+const logos = [
+  { src: s1, alt: "WWL - Who's Who Legal" },
+  { src: s2, alt: "asialaw" },
+  { src: s3, alt: "IFLR1000" },
+  { src: s4, alt: "Employment Law Alliance" },
+  { src: s5, alt: "ID40 - India Business Law Journal" },
+  { src: s6, alt: "The A List - Bangladesh's Top Lawyers" },
+  { src: s7, alt: "The Legal 500 Asia Pacific" },
+  { src: s8, alt: "Chambers Asia-Pacific 2024 - Sattar & Co." },
+];
+
 export default function RecognitionMarquee() {
   return (
-    <section className="bg-ivory py-16 md:py-20 border-y border-charcoal/10">
+    <section className="bg-white py-10  border-y border-charcoal/10">
       <div className="max-w-content mx-auto px-6 md:px-10 mb-10">
-        <p className="eyebrow text-charcoal/40 text-center">Recognised By</p>
+        <p className="eyebrow text-charcoal/40 !text-xl text-center">Recognised By</p>
       </div>
 
-      <Marquee speed={38} gradient gradientColor="#F5F1E7" gradientWidth={120} pauseOnHover>
-        {[...recognition.directories, ...recognition.directories].map((name, i) => (
-          <span
+      <Marquee speed={38} gradient gradientColor="white" gradientWidth={120} pauseOnHover>
+        {[...logos, ...logos].map((logo, i) => (
+          <div
             key={i}
-            className="font-display text-2xl md:text-3xl text-charcoal/50 mx-12 md:mx-16 whitespace-nowrap"
+            className="mx-4 md:mx-6 flex h-24 w-40 md:h-28 md:w-48 items-center justify-center rounded-xl bg-white p-4   transition-all duration-300 hover:shadow-md hover:ring-charcoal/10"
           >
-            {name}
-          </span>
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              className="h-full w-full object-contain  transition-all duration-300 "
+              placeholder="blur"
+            />
+          </div>
         ))}
       </Marquee>
     </section>

@@ -20,6 +20,15 @@ const NAV_LINKS = [
   // { href: "/contact", label: "Contact" },
 ];
 
+// Strips a trailing slash so "/firm/" and "/firm" compare equal — needed
+// because next.config.js has trailingSlash: true for static export.
+function normalizePath(path: string) {
+  if (path.length > 1 && path.endsWith("/")) {
+    return path.slice(0, -1);
+  }
+  return path;
+}
+
 export default function Navbar() {
   const headerRef = useRef<HTMLElement>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -74,18 +83,19 @@ export default function Navbar() {
         ref={headerRef}
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ease-editorial",
-          solid ? "bg-ivory/95 backdrop-blur-sm border-b border-charcoal/10" : "bg-transparent"
+          solid ? "bg-white backdrop-blur-sm border-b border-charcoal/10" : "bg-transparent"
         )}
       >
-        <nav className="max-w-content mx-auto flex items-center justify-between px-6 md:px-10  h-19 py-4 ">
+        <nav className="max-w-content font-bold mx-auto flex items-center justify-between px-6 md:px-10  h-19 py-4 ">
           <Link
             href="/"
             className={cn(
-              "font-display text-lg md:text-xl tracking-wide transition-colors duration-500",
-              solid ? "text-charcoal" : "text-gray-500 "
+              "font-display text-lg md:text-xl tracking-wide  transition-colors duration-500",
+              solid ? "text-black" : "text-black "
             )}
           >
-            {solid?<img src={blogo.src} alt="" className="w-32" /> : <img src={wlogo.src} alt="" className="w-32" />}
+            {solid?<img src={blogo.src} alt="" className="w-32 " /> : <img src={wlogo.src} alt="" className="w-32 opacity-0" />}
+            {/* <img src={blogo.src} alt="" className="w-32" /> */}
           
            
            
@@ -93,17 +103,23 @@ export default function Navbar() {
 
           <ul
             className={cn(
-              "hidden lg:flex items-center gap-9 text-sm uppercase tracking-wide transition-colors duration-500",
-              solid ? "text-charcoal/80" : "text-ivory/85"
+              "hidden lg:flex items-center gap-9 text-lg uppercase tracking-wide transition-colors duration-500",
+              solid ? "text-charcoal/80" : "text-charcoal/85"
             )}
           >
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} className="link-underline">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive = normalizePath(pathname) === normalizePath(link.href);
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={cn("link-underline", isActive && "text-red-600")}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
 
           <button
@@ -111,7 +127,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen((v) => !v)}
             className={cn(
               "lg:hidden p-2 -mr-2 transition-colors duration-500",
-              solid ? "text-charcoal" : "text-ivory"
+              solid ? "text-charcoal" : "text-charcoal"
             )}
           >
             {menuOpen ? <X size={22} strokeWidth={1.5} /> : <Menu size={22} strokeWidth={1.5} />}
@@ -120,8 +136,8 @@ export default function Navbar() {
           <Link
             href="/contact"
             className={cn(
-              "hidden lg:inline-block link-underline text-sm uppercase tracking-wide transition-colors duration-500",
-              solid ? "text-charcoal" : "text-ivory"
+              "hidden lg:inline-block link-underline text-lg uppercase tracking-wide transition-colors duration-500",
+              solid ? "text-charcoal" : "text-charcoal"
             )}
           >
             Enquire

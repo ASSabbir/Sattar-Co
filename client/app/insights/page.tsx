@@ -45,7 +45,7 @@ export default function InsightsPage() {
 
   return (
     <>
-      <section className="grain relative overflow-hidden bg-navy pt-40 pb-20 md:pt-52 md:pb-24">
+      <section className="grain relative overflow-hidden bg-white pt-40 pb-20 md:pt-52 md:pb-24">
         <Image
           src={img1}
           alt=""
@@ -56,28 +56,29 @@ export default function InsightsPage() {
         <div className="absolute inset-0 bg-black/35" />
 
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
-          <SectionLabel label="Insights" light className="mb-8" />
+          {/* <SectionLabel label="Insights" light className="mb-8" /> */}
           <RevealText as="h1" immediate className="font-display text-display-lg text-ivory max-w-3xl">
             Commentary from the firm
           </RevealText>
         </div>
       </section>
 
-      <section className="bg-ivory">
+      <section className="bg-white">
+        
         {/* Year tabs */}
-        <div className="sticky top-20 md:top-24 z-30 bg-ivory/95 backdrop-blur-sm border-b border-charcoal/10">
+        <div className="sticky top-14  z-30 bg-white backdrop-blur-sm border-b pt-4 border-charcoal/10">
           <div className="max-w-content mx-auto px-6 md:px-10">
             <div className="flex items-center justify-between gap-8 md:gap-10 overflow-x-auto no-scrollbar py-6">
               {years.map((year) => (
                 <button
                   key={year}
                   onClick={() => setActive(year)}
-                  className={`relative shrink-0 text-sm uppercase tracking-wide pb-3 transition-colors duration-300 ${
-                    active === year ? "text-charcoal" : "text-charcoal/40 hover:text-charcoal/70"
+                  className={`relative shrink-0 uppercase tracking-wide pb-3   duration-300 ${
+                    active === year ? "text-charcoal text-3xl" : "text-charcoal/40 text-xl  hover:text-charcoal/70"
                   }`}
                 >
                   {year}
-                  <span className="ml-2 text-xs text-charcoal/35">({counts[year] ?? 0})</span>
+                  
                   {active === year && (
                     <motion.span
                       layoutId="insights-tab-underline"
@@ -92,7 +93,7 @@ export default function InsightsPage() {
         </div>
 
         {/* List */}
-        <div className="max-w-content mx-auto px-6 md:px-10 py-16 md:py-20">
+        <div className="max-w-content mx-auto bg-white px-6 md:px-10 ">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
@@ -111,18 +112,18 @@ export default function InsightsPage() {
                 >
                   <Link
                     href={`/insights/${item.slug}`}
-                    className="group grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-8 items-start lg:items-center py-7 border-t border-charcoal/10"
+                    className="group grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-8 items-start lg:items-center py-5 border-t border-charcoal/10"
                   >
-                    <div className="lg:col-span-2 order-2 lg:order-1">
-                      <p className="text-charcoal/40 text-sm">{formatDate(item)}</p>
+                    {/* <div className="lg:col-span-2 order-2 lg:order-1">
+                      <p className="text-charcoal/40 text-xl">{formatDate(item)}</p>
+                    </div> */}
+
+                    <div className="lg:col-span-4 order-1 lg:order-2">
+                      <p className="eyebrow !text-sm ">{item.category}</p>
                     </div>
 
-                    <div className="lg:col-span-2 order-1 lg:order-2">
-                      <p className="eyebrow text-red-600">{item.category}</p>
-                    </div>
-
-                    <div className="lg:col-span-7 order-3">
-                      <h2 className="font-display text-lg md:text-xl text-charcoal leading-snug group-hover:text-red-600 transition-colors duration-300">
+                    <div className="lg:col-span-7 border-l-2 pl-10 order-3">
+                      <h2 className="font-display text-lg md:text-2xl text-charcoal leading-snug group-hover:text-red-600 tracking-wider transition-colors duration-300">
                         {item.title}
                       </h2>
                     </div>

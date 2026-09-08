@@ -34,15 +34,15 @@ export default function FirmPage() {
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
-          <SectionLabel label="The Firm" light className="mb-8" />
-          <RevealText as="h1" immediate className="font-display text-display-lg text-ivory max-w-3xl">
+          {/* <SectionLabel label="The Firm" light className="mb-8" /> */}
+          <RevealText as="h1" immediate className="font-display text-display-lg text-white max-w-3xl">
             {firm.introStatement}
           </RevealText>
         </div>
       </section>
 
       {/* About body */}
-      <section className="bg-ivory py-24 md:py-32">
+      <section className="bg-white py-24 md:py-32">
         <div className="max-w-content mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
             <div className="lg:col-span-5">
@@ -58,11 +58,11 @@ export default function FirmPage() {
             </div>
             <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-6">
               {firm.aboutBody.map((p, i) => (
-                <p key={i} className="text-charcoal/70 leading-relaxed text-lg">
+                <p key={i} className="text-charcoal/70 leading-relaxed text-2xl text-justify">
                   {p}
                 </p>
               ))}
-              <p className="eyebrow text-red-600 mt-4">{firm.founded}</p>
+              <p className="eyebrow text-red-600 ita  !text-lg mt-4">{firm.founded}</p>
             </div>
           </div>
         </div>
@@ -73,9 +73,9 @@ export default function FirmPage() {
         <div className="max-w-content mx-auto px-6 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
             {firm.stats.map((stat) => (
-              <div key={stat.label} className="border-t border-ivory/15 pt-6">
+              <div key={stat.label} className="border-t flex flex-col items-center border-white pt-6">
                 <StatCounter value={stat.value} />
-                <p className="text-ivory/50 text-sm uppercase tracking-wide">{stat.label}</p>
+                <p className="text-white text-xl uppercase tracking-wide">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -92,9 +92,9 @@ export default function FirmPage() {
      
 
       {/* Image slider */}
-      <section className="bg-ivory py-24 ">
+      <section className="bg-white py-24 ">
         <div className="max-w-content mx-auto px-6 md:px-10">
-          <SectionLabel label="Life At The Firm" className="mb-8" />
+          <SectionLabel label="Life At The Firm" className="mb-8 " />
           <ImageSlider
             images={[
               { src: img3, label: "Sattar&Co. — Office" },
@@ -104,7 +104,7 @@ export default function FirmPage() {
           />
         </div>
       </section>
-       <section className="bg-ivory pb-24 ">
+       <section className="bg-white pb-24 ">
         <div className="max-w-content mx-auto px-6 md:px-10">
           <SectionLabel label="Approach" className="mb-8" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
@@ -123,8 +123,8 @@ export default function FirmPage() {
               },
             ].map((item) => (
               <div key={item.title} className="border-t border-charcoal/15 pt-6">
-                <h3 className="font-display text-xl text-charcoal mb-4">{item.title}</h3>
-                <p className="text-charcoal/60 leading-relaxed">{item.body}</p>
+                <h3 className="font-display text-5xl text-charcoal mb-6">{item.title}</h3>
+                <p className="text-charcoal/90 text-xl leading-relaxed">{item.body}</p>
               </div>
             ))}
           </div>
