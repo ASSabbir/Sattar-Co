@@ -29,8 +29,8 @@ const KEY_MATTERS_DATA: KeyMatterCategory[] = [
       "Advised a mobile phone manufacturing company based in Singapore to set up operations in Bangladesh.",
       "Advised a semi-State entity in relation to the sale of exclusive marketing agency rights to a foreign company for $Ms for the broadcasting of international cricket matches.",
       "Advised a foreign company, in relation to a concession agreement, regarding the construction of a 7km fly-over in Bangladesh.",
-      "Advised a leading foreign company in relation to their turn-key contract/project for setting up telecommunication network facilities in Bangladesh."
-    ]
+      "Advised a leading foreign company in relation to their turn-key contract/project for setting up telecommunication network facilities in Bangladesh.",
+    ],
   },
   {
     id: "arbitration",
@@ -44,8 +44,8 @@ const KEY_MATTERS_DATA: KeyMatterCategory[] = [
       "Represented an Eastern-European State in an investment treaty arbitration under the UNCITRAL Rules. The dispute involved allegations of expropriation of a shipping construction programme by the actions of a State entity attributable to the State.",
       "Represented a South-Asian State in an investment treaty arbitration under the rules of ICSID. The dispute involved allegations of expropriation of a financial contract by State organs.",
       "Represented the Government of Bangladesh in an investment treaty arbitration under ICSID rules in a dispute involving indirect expropriation of an ICC arbitral award by the national courts.",
-      "Represented a Bangladeshi State entity in an international commercial arbitration held under the ICC rules involving a complex dispute regarding the construction of a dam."
-    ]
+      "Represented a Bangladeshi State entity in an international commercial arbitration held under the ICC rules involving a complex dispute regarding the construction of a dam.",
+    ],
   },
   {
     id: "international-law",
@@ -58,8 +58,8 @@ const KEY_MATTERS_DATA: KeyMatterCategory[] = [
       "Advised a foreign pre-shipment inspection company in relation to its rights under international law and a bilateral investment treaty with respect to an unlawful termination of a PSI contract.",
       "Represented companies in domestic commercial arbitration held under the Arbitration Act 2001 of Bangladesh. Most disputes related primarily to breach of commercial contracts and the compensation due.",
       "Represented companies in the Bangladeshi courts for and against banks in relation to debt recovery claims, matters relating to fraud, disputes relating to share buy-back agreements.",
-      "Represented companies in the Bangladeshi courts in relation to contract claims, shareholder disputes, rectification of share register, minority protection matters."
-    ]
+      "Represented companies in the Bangladeshi courts in relation to contract claims, shareholder disputes, rectification of share register, minority protection matters.",
+    ],
   },
   {
     id: "lecture-training",
@@ -68,9 +68,9 @@ const KEY_MATTERS_DATA: KeyMatterCategory[] = [
     countLabel: "02 Key Programs",
     matters: [
       "Trained government officers in a Middle Eastern State on issues of dispute resolution and arbitration.",
-      "Delivered a joint lecture at Kings College London on Evidence and Weighting in International Boundary Adjudication."
-    ]
-  }
+      "Delivered a joint lecture at Kings College London on Evidence and Weighting in International Boundary Adjudication.",
+    ],
+  },
 ];
 
 export default function KeyMattersSection() {
@@ -82,9 +82,8 @@ export default function KeyMattersSection() {
   };
 
   return (
-    <section className="w-full bg-[#F4F1E8] text-[#1A1A1A] py-12 md:py-16 border-t border-[#1A1A1A]/15 font-sans">
+    <section className="w-full bg-white text-charcoal py-12 md:py-16 border-t border-charcoal/15 font-sans">
       <div className="max-w-[1280px] mx-auto px-4 md:px-8">
-
         {/* Section Header */}
         <div className="mb-10 md:mb-14">
           <span className="eyebrow text-red-600 block mb-3">
@@ -96,7 +95,7 @@ export default function KeyMattersSection() {
         </div>
 
         {/* Editorial Table / Index Container */}
-        <div className="border-t border-b border-[#1A1A1A]/20 divide-y divide-[#1A1A1A]/15">
+        <div className="border-t border-b border-charcoal/20 divide-y divide-charcoal/15">
           {KEY_MATTERS_DATA.map((category) => {
             const isOpen = openCategoryId === category.number;
 
@@ -104,7 +103,7 @@ export default function KeyMattersSection() {
               <div
                 key={category.id}
                 className={`transition-colors duration-200 ${
-                  isOpen ? "bg-[#1A1A1A]/[0.03]" : "hover:bg-[#1A1A1A]/[0.015]"
+                  isOpen ? "bg-charcoal/[0.03]" : "hover:bg-charcoal/[0.015]"
                 }`}
               >
                 {/* Row Header / Toggle Button */}
@@ -118,31 +117,20 @@ export default function KeyMattersSection() {
                     {/* Index Number */}
                     <span
                       className={`font-display text-2xl md:text-3xl transition-colors duration-200 ${
-                        isOpen
-                          ? "text-red-600"
-                          : "text-charcoal/35 group-hover:text-charcoal/60"
+                        isOpen ? "text-red-600" : "text-charcoal"
                       }`}
                     >
                       [{category.number}]
                     </span>
 
                     {/* Category Title */}
-                    <h3
-                      className={`font-display text-2xl md:text-3xl tracking-tight transition-colors duration-200 ${
-                        isOpen
-                          ? "text-charcoal"
-                          : "text-charcoal/35 group-hover:text-charcoal/60"
-                      }`}
-                    >
+                    <h3 className="font-display text-2xl md:text-3xl tracking-tight text-charcoal">
                       {category.title}
                     </h3>
                   </div>
 
-                  {/* Metadata & Interaction Indicator */}
-                  <div className="flex items-center gap-4 md:gap-8 shrink-0">
-                    <span className="eyebrow hidden sm:inline-block text-charcoal/50">
-                      {category.countLabel}
-                    </span>
+                  {/* Interaction Indicator */}
+                  <div className="flex items-center shrink-0">
                     <span
                       className={`w-8 h-8 shrink-0 rounded-full border border-charcoal/20 flex items-center justify-center text-xl transition-all duration-300 ${
                         isOpen
@@ -163,12 +151,12 @@ export default function KeyMattersSection() {
                         {category.matters.map((matter, idx) => (
                           <div
                             key={idx}
-                            className="bg-white/40 border border-charcoal/10 p-5 md:p-6 flex items-start gap-4 transition-shadow hover:shadow-sm"
+                            className="bg-charcoal/[0.02] border border-charcoal/10 p-5 md:p-6 flex items-start gap-4 transition-shadow hover:shadow-sm"
                           >
                             <span className="text-red-600 font-display text-xl leading-none select-none shrink-0">
                               —
                             </span>
-                            <p className="text-xl text-charcoal leading-relaxed">
+                            <p className="text-xl text-charcoal leading-relaxed text-justify hyphens-auto">
                               {matter}
                             </p>
                           </div>
@@ -181,7 +169,6 @@ export default function KeyMattersSection() {
             );
           })}
         </div>
-
       </div>
     </section>
   );
