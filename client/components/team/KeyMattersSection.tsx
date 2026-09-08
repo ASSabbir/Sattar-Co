@@ -83,7 +83,7 @@ export default function KeyMattersSection() {
 
   return (
     <section className="w-full bg-white text-charcoal py-12 md:py-16 border-t border-charcoal/15 font-sans">
-      <div className="max-w-[1280px] mx-auto px-4 md:px-8">
+      <div className="max-w-full mx-auto ">
         {/* Section Header */}
         <div className="mb-10 md:mb-14">
           <span className="eyebrow text-red-600 block mb-3">
