@@ -74,11 +74,15 @@ const KEY_MATTERS_DATA: KeyMatterCategory[] = [
 ];
 
 export default function KeyMattersSection() {
-  // Nothing open by default
-  const [openCategoryId, setOpenCategoryId] = useState<string>("");
+  // Nothing open by default; multiple categories can stay open at once.
+  const [openIds, setOpenIds] = useState<Set<string>>(() => new Set());
 
   const toggleCategory = (id: string) => {
-    setOpenCategoryId((prev) => (prev === id ? "" : id));
+    setOpenIds((prev) => {
+      const next = new Set(prev);
+      if (!next.delete(id)) next.add(id);
+      return next;
+    });
   };
 
   return (
@@ -97,7 +101,7 @@ export default function KeyMattersSection() {
         {/* Editorial Table / Index Container */}
         <div className="border-t border-b border-charcoal/20 divide-y divide-charcoal/15">
           {KEY_MATTERS_DATA.map((category) => {
-            const isOpen = openCategoryId === category.number;
+            const isOpen = openIds.has(category.number);
 
             return (
               <div
