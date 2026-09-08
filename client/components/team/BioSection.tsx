@@ -19,7 +19,7 @@ export default function BioSection({ name, paragraphs }: Props) {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-start gap-2 text-[#C92B2B] font-semibold text-xs uppercase tracking-widest border-b border-[#1A1A1A]/15 pb-3 min-h-[52px] md:min-h-[56px]">
+      <div className="eyebrow flex items-start gap-2 text-red-600 border-b border-charcoal/15 pb-3 min-h-[52px] md:min-h-[56px]">
         <span>ˇ</span> <span className="leading-snug">BIOGRAPHY</span>
       </div>
 
@@ -31,12 +31,12 @@ export default function BioSection({ name, paragraphs }: Props) {
             transition: "max-height 0.6s cubic-bezier(0.65,0,0.35,1)",
             overflow: "hidden",
           }}
-          className="space-y-4 text-xs md:text-sm text-[#1A1A1A]/85 leading-relaxed font-light text-justify"
+          className="space-y-4 text-xl text-charcoal leading-relaxed"
         >
           {paragraphs.map((para, idx) => (
             <p key={idx}>
               {idx === 0 && (
-                <strong className="font-semibold text-[#1A1A1A]">
+                <strong className="font-display text-2xl md:text-3xl text-charcoal">
                   {name}{" "}
                 </strong>
               )}
@@ -54,7 +54,7 @@ export default function BioSection({ name, paragraphs }: Props) {
         <button
           type="button"
           onClick={() => setExpanded((v) => !v)}
-          className="text-[11px] uppercase tracking-widest font-semibold text-[#C92B2B] hover:text-[#1A1A1A] transition-colors"
+          className="eyebrow text-red-600 hover:text-charcoal transition-colors"
         >
           {expanded ? "See Less" : "See More"}
         </button>
