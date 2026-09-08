@@ -87,10 +87,10 @@ export default function KeyMattersSection() {
 
         {/* Section Header */}
         <div className="mb-10 md:mb-14">
-          <span className="text-[10px] md:text-xs uppercase tracking-[0.25em] text-[#C92B2B] font-semibold block mb-3">
+          <span className="eyebrow text-red-600 block mb-3">
             REPRESENTATIVE PRACTICE
           </span>
-          <h2 className="font-serif text-2xl md:text-4xl text-[#1A1A1A] font-normal tracking-tight leading-tight">
+          <h2 className="font-display text-3xl md:text-4xl text-charcoal font-normal tracking-tight leading-tight">
             Some of the key matters, on which Barrister Sattar worked, include:
           </h2>
         </div>
@@ -117,10 +117,10 @@ export default function KeyMattersSection() {
                   <div className="flex items-baseline gap-4 md:gap-8 min-w-0">
                     {/* Index Number */}
                     <span
-                      className={`font-serif text-xl md:text-3xl transition-colors duration-200 ${
+                      className={`font-display text-2xl md:text-3xl transition-colors duration-200 ${
                         isOpen
-                          ? "text-[#C92B2B] font-medium"
-                          : "text-[#1A1A1A]/40 group-hover:text-[#1A1A1A]/70"
+                          ? "text-red-600"
+                          : "text-charcoal/35 group-hover:text-charcoal/60"
                       }`}
                     >
                       [{category.number}]
@@ -128,10 +128,10 @@ export default function KeyMattersSection() {
 
                     {/* Category Title */}
                     <h3
-                      className={`font-serif text-lg md:text-2xl tracking-tight transition-colors duration-200 ${
+                      className={`font-display text-2xl md:text-3xl tracking-tight transition-colors duration-200 ${
                         isOpen
-                          ? "text-[#1A1A1A] font-medium"
-                          : "text-[#1A1A1A]/85 group-hover:text-[#C92B2B]"
+                          ? "text-charcoal"
+                          : "text-charcoal/35 group-hover:text-charcoal/60"
                       }`}
                     >
                       {category.title}
@@ -140,14 +140,14 @@ export default function KeyMattersSection() {
 
                   {/* Metadata & Interaction Indicator */}
                   <div className="flex items-center gap-4 md:gap-8 shrink-0">
-                    <span className="hidden sm:inline-block text-xs uppercase tracking-widest text-[#1A1A1A]/50 font-mono">
+                    <span className="eyebrow hidden sm:inline-block text-charcoal/50">
                       {category.countLabel}
                     </span>
                     <span
-                      className={`w-8 h-8 rounded-full border border-[#1A1A1A]/20 flex items-center justify-center text-sm transition-all duration-300 ${
+                      className={`w-8 h-8 shrink-0 rounded-full border border-charcoal/20 flex items-center justify-center text-xl transition-all duration-300 ${
                         isOpen
-                          ? "bg-[#C92B2B] text-white border-[#C92B2B] rotate-90"
-                          : "text-[#1A1A1A]/60 group-hover:border-[#C92B2B] group-hover:text-[#C92B2B]"
+                          ? "bg-red-600 text-white border-red-600 rotate-90"
+                          : "text-charcoal/60 group-hover:border-red-600 group-hover:text-red-600"
                       }`}
                     >
                       →
@@ -158,17 +158,17 @@ export default function KeyMattersSection() {
                 {/* Expanded Detailed Content Area */}
                 {isOpen && (
                   <div className="px-2 md:px-4 pb-8 md:pb-12 pt-2 animate-fadeIn">
-                    <div className="pl-10 md:pl-16 pr-2 md:pr-8 border-l-2 border-[#C92B2B]">
+                    <div className="pl-10 md:pl-16 pr-2 md:pr-8 border-l-2 border-red-600">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                         {category.matters.map((matter, idx) => (
                           <div
                             key={idx}
-                            className="bg-white/40 border border-[#1A1A1A]/10 p-5 md:p-6 flex items-start gap-4 transition-shadow hover:shadow-sm"
+                            className="bg-white/40 border border-charcoal/10 p-5 md:p-6 flex items-start gap-4 transition-shadow hover:shadow-sm"
                           >
-                            <span className="text-[#C92B2B] font-serif text-lg leading-none select-none">
+                            <span className="text-red-600 font-display text-xl leading-none select-none shrink-0">
                               —
                             </span>
-                            <p className="text-sm md:text-base text-[#1A1A1A]/85 font-light leading-relaxed">
+                            <p className="text-xl text-charcoal leading-relaxed">
                               {matter}
                             </p>
                           </div>

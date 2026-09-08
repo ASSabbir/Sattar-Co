@@ -65,21 +65,22 @@ export default async function TeamMemberPage({ params }: Props) {
 
  // REPLACE WITH
   return (
-    <main className="relative bg-[#F4F1E8] text-[#1A1A1A] pt-28 pb-6 md:pt-36 md:pb-8 px-4 sm:px-8 lg:px-12 font-sans select-none overflow-hidden lg:h-screen lg:fixed lg:inset-0">
+    <div data-profile-wrapper className="relative">
+    <main className="relative bg-[#F4F1E8] text-[#1A1A1A] pt-28 pb-6 md:pt-36 md:pb-8 px-4 sm:px-8 lg:px-12 font-sans select-none overflow-hidden lg:sticky lg:top-0 lg:h-screen">
       {/* Editorial Vertical Label on Right */}
-      <div className="hidden xl:block fixed right-6 top-1/2 -translate-y-1/2 rotate-90 origin-right text-[10px] tracking-[0.3em] uppercase text-[#1A1A1A]/40 font-medium pointer-events-none z-20">
+      <div className="eyebrow hidden xl:block fixed right-6 top-1/2 -translate-y-1/2 rotate-90 origin-right text-charcoal/40 pointer-events-none z-20">
         COUNSEL • STRATEGY • REPRESENTATION
       </div>
 
       <div className="max-w-[1380px] mx-auto h-full flex flex-col lg:h-full">
 
         {/* 3-Column Editorial Layout */}
-        <div data-lenis-prevent className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start relative flex-1 min-h-0 overflow-y-auto lg:overflow-visible no-scrollbar">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start lg:items-stretch relative flex-1 min-h-0 overflow-y-auto lg:overflow-hidden no-scrollbar">
 
           {/* COLUMN 1: Portrait Card with Info Overlay (fixed like head-of-firm image) */}
           <div className="lg:col-span-5 relative lg:h-full lg:sticky lg:top-0">
             {/* Background Watermark 01 */}
-            <span className="absolute -left-16 -bottom-16 md:-left-24 md:-bottom-24 font-serif text-[180px] md:text-[240px] text-[#1A1A1A]/[0.06] leading-none pointer-events-none -z-0">
+            <span className="absolute -left-16 -bottom-16 md:-left-24 md:-bottom-24 font-display text-[180px] md:text-[240px] text-[#1A1A1A]/[0.06] leading-none pointer-events-none -z-0">
               {watermarkNumber}
             </span>
 
@@ -94,7 +95,7 @@ export default async function TeamMemberPage({ params }: Props) {
 
               {/* Text Overlay on Left Side of Image */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 md:p-8 flex flex-col justify-end text-white">
-                <h1 className="font-serif text-2xl md:text-3xl font-normal leading-tight mb-4">
+                <h1 className="font-display text-3xl md:text-4xl font-normal leading-tight mb-4">
                   {member.name}
                 </h1>
               </div>
@@ -113,32 +114,32 @@ export default async function TeamMemberPage({ params }: Props) {
               {/* COLUMN 3: Qualification, Education & Action */}
               <div className="md:col-span-5 space-y-8">
                 <div>
-                  <div className="flex items-start gap-2 text-[#C92B2B] font-semibold text-xs uppercase tracking-widest border-b border-[#1A1A1A]/15 pb-3 mb-6 min-h-[52px] md:min-h-[56px]">
+                  <div className="eyebrow flex items-start gap-2 text-red-600 border-b border-charcoal/15 pb-3 mb-6 min-h-[52px] md:min-h-[56px]">
                     <span>ˆ</span> <span className="leading-snug">PROFESSIONAL QUALIFICATION & EDUCATION</span>
                   </div>
 
                   {/* Timeline Items */}
-                  <div className="space-y-5 text-xs text-[#1A1A1A]">
+                  <div className="space-y-5 text-xl text-charcoal">
                     {member.education && member.education.length > 0 ? (
                       member.education.map((edu, idx) => (
                         <div key={`${edu.date}-${idx}`}>
-                          <p className="font-bold text-sm text-[#1A1A1A] font-sans mb-0.5">
+                          <p className="font-display text-2xl md:text-3xl text-charcoal leading-tight mb-1">
                             {edu.date}
                           </p>
                           {edu.institution ? (
                             <>
-                              <p className="text-[#1A1A1A]/90 font-medium">
+                              <p className="text-xl text-charcoal leading-relaxed">
                                 {edu.institution}
                               </p>
                               {edu.course && (
-                                <p className="text-[#1A1A1A]/70 font-light">
+                                <p className="text-xl text-charcoal/70 leading-relaxed">
                                   Course: {edu.course}
                                 </p>
                               )}
                             </>
                           ) : (
                             edu.description && (
-                              <p className="text-[#1A1A1A]/80 font-light leading-snug text-justify">
+                              <p className="text-xl text-charcoal leading-relaxed">
                                 {edu.description}
                               </p>
                             )
@@ -146,7 +147,7 @@ export default async function TeamMemberPage({ params }: Props) {
                         </div>
                       ))
                     ) : (
-                      <p className="text-[#1A1A1A]/50 font-light italic">
+                      <p className="text-xl text-charcoal/50 italic leading-relaxed">
                         No education details available.
                       </p>
                     )}
@@ -155,12 +156,12 @@ export default async function TeamMemberPage({ params }: Props) {
 
                 {member.slug === "sameer-sattar" && member.email && (
                   <div>
-                    <div className="flex items-center gap-2 text-[#C92B2B] font-semibold text-xs uppercase tracking-widest border-b border-[#1A1A1A]/15 pb-3 mb-6">
+                    <div className="eyebrow flex items-center gap-2 text-red-600 border-b border-charcoal/15 pb-3 mb-6">
                       <span>ˆ</span> CONTACT
                     </div>
                     <a
                       href={`mailto:${encodeURIComponent(member.email)}`}
-                      className="text-xs text-[#1A1A1A]/80 font-light break-all hover:text-[#C92B2B] transition-colors"
+                      className="text-xl text-charcoal leading-relaxed break-all hover:text-red-600 transition-colors"
                     >
                       {member.email}
                     </a>
@@ -180,5 +181,6 @@ export default async function TeamMemberPage({ params }: Props) {
         </div>
       </div>
     </main>
+    </div>
   );
 }
