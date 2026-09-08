@@ -22,7 +22,7 @@ export default function TestimonialSpotlight() {
 
   return (
     <section
-      className="grain  py-24 md:py-36"
+      className="grain bg-white py-10 "
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -37,12 +37,12 @@ export default function TestimonialSpotlight() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -28 }}
               transition={{ duration: 0.7, ease: [0.65, 0, 0.35, 1] }}
-              className="max-w-3xl mx-auto"
+              className="max-w-5xl mx-auto"
             >
-              <p className="font-display italic text-2xl md:text-4xl leading-snug text-zinc-800/95 mb-8">
+              <p className="font-display italic text-2xl md:text-6xl leading-snug text-zinc-800/95 mb-12">
                 &ldquo;{quotes[active].quote}&rdquo;
               </p>
-              <p className="eyebrow text-red-600">{quotes[active].source}</p>
+              <p className="eyebrow !text-lg text-red-600">{quotes[active].source}</p>
             </motion.div>
           </AnimatePresence>
         </div>

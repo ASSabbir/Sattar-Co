@@ -40,34 +40,34 @@ export default function PracticeAreasInteractive() {
   const current = practiceAreas[active];
 
   return (
-    <section ref={rootRef} className="bg-ivory py-24 md:py-36">
+    <section ref={rootRef} className="bg-white py-14">
       <div className="max-w-content mx-auto px-6 md:px-10">
-        <SectionLabel label="Practice Areas" index="" className="mb-8" />
+        {/* <SectionLabel label="Practice Areas" index="" className="mb-8" /> */}
         <h2 className="font-display text-display-md text-charcoal mb-16 md:mb-24 max-w-2xl">
           Breadth across the matters that shape Bangladesh&rsquo;s economy
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           {/* Left: scrolling list of categories */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-6">
             {practiceAreas.map((area, i) => (
               <div
                 key={area.id}
                 ref={(el) => {
                   itemRefs.current[i] = el;
                 }}
-                className="min-h-[38vh] lg:min-h-[52vh] flex items-center border-t border-charcoal/10 last:border-b"
+                className="min-h-[38vh] lg:min-h-[50vh] flex items-center border-t border-charcoal/10 last:border-b"
               >
                 <button
                   onClick={() => setActive(i)}
                   className="text-left w-full py-6 group"
                 >
-                  <span className="eyebrow text-red-600 block mb-3">{area.index}</span>
+                  <span className="eyebrow text-red-600 border-b-2   inline text-3xl  px-2 pb-1 border-red-600 ">{area.index}</span>
                   <span
-                    className={`font-display block transition-all duration-500 ease-editorial ${
+                    className={`font-display block mt-3 transition-all duration-500 ease-editorial ${
                       active === i
-                        ? "text-display-sm text-charcoal"
-                        : "text-2xl text-charcoal/35 group-hover:text-charcoal/60"
+                        ? "text-6xl text-charcoal"
+                        : "text-3xl text-charcoal/35 group-hover:text-charcoal/60"
                     }`}
                   >
                     {area.category}
@@ -78,10 +78,10 @@ export default function PracticeAreasInteractive() {
           </div>
 
           {/* Right: sticky detail pane */}
-          <div className="lg:col-span-7 ">
-            <div className="lg:sticky lg:top-32">
+          <div className="lg:col-span-6 ">
+            <div className="lg:sticky lg:top-20">
               <div className="mb-8">
-                <img src='https://sattarandco.com/wp-content/uploads/2021/06/Firm-rotate-4.jpg' className=" h-96" alt="" />
+                <img src='https://sattarandco.com/wp-content/uploads/2021/06/Firm-rotate-4.jpg' className=" w-full object-cover h-60" alt="" />
                 {/* <Plate
                   label={`Practice — ${current.category}`}
                   className="aspect-[16/10] w-full"
@@ -96,13 +96,13 @@ export default function PracticeAreasInteractive() {
                   exit={{ opacity: 0, y: -16 }}
                   transition={{ duration: 0.5, ease: [0.65, 0, 0.35, 1] }}
                 >
-                  <p className="text-charcoal/70 leading-relaxed mb-8 max-w-lg">
+                  <p className="text-charcoal/70 leading-relaxed mb-8 max-w-lg text-xl">
                     {current.description}
                   </p>
 
                   <ul className="flex flex-wrap gap-x-6 gap-y-3 mb-8">
                     {current.areas.map((a: string) => (
-                      <li key={a} className="text-sm text-charcoal/60 flex items-center gap-2">
+                      <li key={a} className="text-xl text-charcoal/60 flex items-center gap-2">
                         <span className="w-1 h-1 rounded-full bg-red-600" />
                         {a}
                       </li>
@@ -110,7 +110,7 @@ export default function PracticeAreasInteractive() {
                   </ul>
 
                   
-                  <ArrowLink href="/contact">Talk With Us</ArrowLink>
+                  {/* <ArrowLink href="/contact">Talk With Us</ArrowLink> */}
                 </motion.div>
               </AnimatePresence>
             </div>

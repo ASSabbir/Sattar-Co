@@ -4,10 +4,10 @@ import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const FIELDS = [
-  { name: "name", label: "Name", type: "text", required: true },
-  { name: "email", label: "Email", type: "email", required: true },
-  { name: "company", label: "Company", type: "text", required: false },
-  { name: "subject", label: "Subject", type: "text", required: true },
+  { name: "name", label: "Name", type: "text", required: true, p:"Mahbub Hossain" },
+  { name: "email", label: "Email", type: "email", required: true,p:"mahbubhossin@gmail.com" },
+  { name: "company", label: "Company", type: "text", required: false,p:"TechOf Solution" },
+  { name: "subject", label: "Subject", type: "text", required: true,p:"Its Urgent" },
 ] as const;
 
 /**
@@ -50,7 +50,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {FIELDS.map((field) => (
           <div key={field.name} className="flex flex-col">
-            <label htmlFor={field.name} className="eyebrow text-zinc-950/50 mb-3">
+            <label htmlFor={field.name} className="eyebrow text-zinc-950 mb-3">
               {field.label}
               {field.required && <span className="text-red-600"> *</span>}
             </label>
@@ -58,6 +58,7 @@ export default function ContactForm() {
               id={field.name}
               name={field.name}
               type={field.type}
+              placeholder={field.p}
               required={field.required}
               className="bg-transparent border-b border-zinc-900/25 focus:border-red-600 outline-none py-2 text-zinc-950 placeholder:text-zinc-950/30 transition-colors duration-300"
             />
@@ -66,12 +67,13 @@ export default function ContactForm() {
       </div>
 
       <div className="flex flex-col">
-        <label htmlFor="message" className="eyebrow text-zinc-950/50 mb-3">
+        <label htmlFor="message" className="eyebrow text-zinc-950 mb-3">
           Message <span className="text-red-600">*</span>
         </label>
         <textarea
           id="message"
           name="message"
+          placeholder="its"
           required
           rows={5}
           className="bg-transparent border-b border-zinc-900/25 focus:border-red-600 outline-none py-2 text-zinc-950 placeholder:text-zinc-950/30 resize-none transition-colors duration-300"
@@ -81,7 +83,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="self-start mt-4 link-underline text-zinc-500 text-sm uppercase tracking-wide disabled:opacity-50"
+        className="self-start mt-4  border-b-[1px] p-4 border-zinc-900/25 text-black text-sm uppercase tracking-wide disabled:opacity-50"
       >
         {submitting ? "Sending…" : "Submit Enquiry"}
       </button>

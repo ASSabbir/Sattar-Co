@@ -60,7 +60,7 @@ export default function StatCounter({ value, duration = 1600 }: StatCounterProps
   }, [target, duration]);
 
   return (
-    <p ref={ref} className="font-display text-display-sm text-red-600 mb-2">
+    <p ref={ref} className="font-display text-7xl text-white mb-2">
       {display}
       {suffix}
     </p>

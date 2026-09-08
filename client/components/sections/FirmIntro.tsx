@@ -7,18 +7,18 @@ import img1 from '../../public/images/about.webp'
 
 export default function FirmIntro() {
   return (
-    <section className="bg-ivory py-24 md:py-36">
+    <section className="bg-white pt-24  ">
       <div className="max-w-content mx-auto px-6 md:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-[78px]  items-center">
           <div className="lg:col-span-6">
             <SectionLabel label="Trusted Legal Counsel" index="01" className="mb-8" />
-            <RevealText as="h2" className="font-display text-display-md text-charcoal mb-8">
+            <RevealText as="h2" className="font-display tra text-4xl md:text-6xl text-charcoal mb-8">
               {firm.introStatement}
             </RevealText>
-            <p className="text-charcoal/70 text-justify leading-relaxed max-w-lg mb-10">
+            <p className="text-charcoal text-justify leading-relaxed text-xl max-w-lg mb-10">
               {firm.introBody}
             </p>
-            <ArrowLink href="/firm">Explore the Firm</ArrowLink>
+            {/* <ArrowLink href="/firm">Explore the Firm</ArrowLink> */}
           </div>
 
           <div className="lg:col-span-6 lg:col-start-7">

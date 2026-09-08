@@ -316,12 +316,12 @@ export default function Hero() {
 
         <div className="relative z-20  h-full max-w-content mx-auto px-6 md:px-10 flex flex-col justify-end pb-20 md:pb-28">
           <div className="" ref={introInnerRef}>
-            
+
             <img src={wlogo.src} className="h-24" alt="" />
-            <p className="mt-4 md:mt-6 max-w-3xl  text-zinc-800 text-base md:text-lg leading-relaxed">
+            {/* <p className="mt-4 md:mt-6 max-w-3xl  text-white text-base md:text-2xl leading-relaxed">
               {firm.heroStatement}
-            </p>
-            <div className="flex flex-wrap items-center gap-x-10 gap-y-4 mt-10 md:mt-14">
+            </p> */}
+            {/* <div className="flex flex-wrap items-center gap-x-10 gap-y-4 mt-10 md:mt-14">
               <Link href="/firm" className="link-underline text-ivory text-sm uppercase tracking-wide">
                 Explore the Firm
               </Link>
@@ -331,24 +331,24 @@ export default function Hero() {
               >
                 Our Practice Areas
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
 
         <div className="absolute inset-0 z-10 flex items-center justify-center px-6 pointer-events-none">
           <div ref={text1InnerRef} className="text-center will-change-transform" style={{ opacity: 0 }}>
-            
-            <h2 className="font-display text-[5vw]  text-zinc-800 ">
-              Your <span className="text-red-600">Trusted</span> Advisor
+            <h2 className="font-display text-[5vw] bg-white/20 backdrop-blur-md backdrop-saturate-150 border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.15)]  rounded-3xl px-10 text-zinc-900 font-b">
+              Your <span className="textwh">Trusted</span> Advisor
             </h2>
           </div>
         </div>
-
+        
         <div className="absolute inset-0 z-10  flex items-center justify-center px-6 pointer-events-none">
-          <div ref={text2InnerRef} className=" rounded-full  text-center will-change-transform" style={{ opacity: 0 }}>
+          <div ref={text2InnerRef} className="text-center will-change-transform" style={{ opacity: 0 }}>
             {/* <p className="eyebrow text-gold mb-6">Recognised Internationally</p> */}
-            <h2 className="font-display text-[5vw]   text-zinc-800 ">
-              Counsel for <span className="text-white">Complex</span> Matters
+            
+            <h2 className="font-display text-[5vw] bg-white/20 backdrop-blur-md backdrop-saturate-150 border border-white/30 shadow-[0_8px_32px_0_rgba(31,38,135,0.15)]  rounded-3xl px-10 text-zinc-900 font-b">
+               Counsel for <span className="textwh">Complex</span> Matters
             </h2>
           </div>
         </div>

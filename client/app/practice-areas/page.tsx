@@ -33,8 +33,11 @@ export default function PracticeAreasPage() {
         </div>
       </section>
       <PracticeAreasInteractive />
+      <div className=" w-full bg-black h-20">
 
-      {/* <section className="bg-ivory py-24 md:py-32">
+      </div>
+
+      <section className="bg-white py-24 md:py-32">
         <div className="max-w-content mx-auto px-6 md:px-10 flex flex-col gap-20 md:gap-28">
           {practiceAreas.map((area) => (
             <div
@@ -49,13 +52,13 @@ export default function PracticeAreasPage() {
               </div>
 
               <div className="lg:col-span-4">
-                <p className="text-charcoal/65 leading-relaxed">{area.description}</p>
+                <p className="text-charcoal text-xl leading-relaxed">{area.description}</p>
               </div>
 
               <div className="lg:col-span-4">
                 <ul className="flex flex-col gap-3">
                   {area.areas.map((a) => (
-                    <li key={a} className="text-charcoal/70 text-sm flex items-center gap-3">
+                    <li key={a} className="text-charcoal text-xl flex items-center gap-3">
                       <span className="w-1 h-1 rounded-full bg-red-600 shrink-0" />
                       {a}
                     </li>
@@ -65,7 +68,7 @@ export default function PracticeAreasPage() {
             </div>
           ))}
         </div>
-      </section> */}
+      </section>
     </>
   );
 }
