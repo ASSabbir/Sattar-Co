@@ -1,4 +1,10 @@
+
+
+
 "use client";
+import { RiChatQuoteLine } from "react-icons/ri"; 
+import { FaQuoteLeft } from "react-icons/fa"; 
+
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -6,7 +12,7 @@ import Link from "next/link";
 import { ArrowUpRight, Quote } from "lucide-react";
 import insights from "@/data/insights.json";
 import recognition from "@/data/recognition.json";
-
+import { RiChatQuoteFill } from "react-icons/ri";
 const AUTOPLAY_INTERVAL = 5000; // ms between testimonial slides
 
 function formatDate(item: { date: string | null; year: number }) {
@@ -16,7 +22,7 @@ function formatDate(item: { date: string | null; year: number }) {
     month: "short",
     year: "numeric",
   });
-} 
+}
 
 export default function InsightsPreview() {
   const testimonials = recognition.quotes;
@@ -43,8 +49,8 @@ export default function InsightsPreview() {
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
           >
-            <Quote size={44} strokeWidth={1} className="text-red-600/40 mt-10 mb-8 shrink-0" />
-
+            <FaQuoteLeft size={44} strokeWidth={1} className="text-red-600/70 mt-10 mb-8 shrink-0" />
+            
             <div className="relative mt- flex-1 flex  overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -56,9 +62,9 @@ export default function InsightsPreview() {
                   className="w-full"
                 >
                   <p className="font-display italic text-xl md:text-4xl leading-relaxed text-gray-800 mb-6">
-                    &ldquo;{testimonials[active].quote}&rdquo;
+                   {testimonials[active].quote}
                   </p>
-                  <p className="eyebrow text-red-600">{testimonials[active].source}</p>
+                  <p className="eyebrow !text-lg text-red-600">{testimonials[active].source}</p>
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -97,17 +103,16 @@ export default function InsightsPreview() {
               <Link
                 key={item.slug}
                 href={`/insights/${item.slug}`}
-                className={`group flex-1 flex items-center gap-6  md:py-0 ${
-                  i !== 0 ? "border-t border-charcoal/10" : ""
-                }`}
+                className={`group flex-1 flex items-center gap-6  md:py-0 ${i !== 0 ? "border-t border-charcoal/10" : ""
+                  }`}
               >
-                <span className="font-display text-4xl text-charcoal/20 shrink-0 w-10">
+                {/* <span className="font-display text-4xl text-charcoal/20 shrink-0 w-10">
                   {String(i + 1).padStart(2, "0")}
-                </span>
+                </span> */}
 
                 <div className="min-w-0">
                   <p className="eyebrow text-red-600 mb-2">
-                    {item.category} · {formatDate(item)}
+                    {item.category} · 
                   </p>
                   <h3 className="font-display text-lg md:text-2xl text-charcoal leading-snug group-hover:text-red-600 transition-colors duration-300 tracking-wide">
                     {item.title}

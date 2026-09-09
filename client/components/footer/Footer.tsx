@@ -59,8 +59,17 @@ export default function Footer() {
           ))}
         </div> */}
 
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4  text-xs text-ivory/40">
-          <p>© {new Date().getFullYear()} Sattar&amp;Co. All rights reserved.</p>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-ivory/50">
+          <p>
+            © Copyright {new Date().getFullYear()}. Sattar&amp;Co. All rights reserved{" "}
+            <span className="mx-2 text-ivory/25">|</span>
+            <Link
+              href="/disclaimer"
+              className="hover:text-red-600 transition-colors duration-300"
+            >
+              Legal Disclaimer
+            </Link>
+          </p>
           <p>{firm.location} · {firm.phone} · {firm.email}</p>
         </div>
       </div>

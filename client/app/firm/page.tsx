@@ -36,7 +36,7 @@ export default function FirmPage() {
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
           {/* <SectionLabel label="The Firm" light className="mb-8" /> */}
           <RevealText as="h1" immediate className="font-display text-display-lg text-white max-w-3xl">
-            {firm.introStatement}
+            Built on Trust & Expertise
           </RevealText>
         </div>
       </section>
@@ -118,8 +118,8 @@ export default function FirmPage() {
                 body: "Advice is built for how business actually operates in Bangladesh — grounded in the regulatory reality, not abstract legal principle alone.",
               },
               {
-                title: "Discretion as standard",
-                body: "Client matters, however high-profile, are handled with the confidentiality expected of a firm of this standing.",
+                title: "Commercially focused",
+                body: "Clear advice focused on your objectives, risks and commercial priorities.",
               },
             ].map((item) => (
               <div key={item.title} className="border-t border-charcoal/15 pt-6">

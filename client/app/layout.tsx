@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
       <body suppressHydrationWarning>
-        <PageLoader />
+        {/* <PageLoader /> */}
         <SmoothScrollProvider>
           <Navbar />
           <main>{children}</main>

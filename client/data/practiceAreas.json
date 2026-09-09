@@ -3,8 +3,8 @@
     "id": "corporate-commercial",
     "index": "01",
     "category": "Corporate & Commercial",
-    "imgs":"https://www.sattarandco.com/wp-content/uploads/2021/06/About-Sameer-Sattar-Small.jpg",
-    "description": "Advisory and transactional work for companies, investors and financial institutions operating in and into Bangladesh — from formation through to complex cross-border transactions.",
+    "imgs": "https://blackandwhitelawhouse.com/public/uploads/practiceArea/largeImages/1737719270.png",
+    "description": "We advise companies, investors and financial institutions on the full spectrum of corporate and commercial matters in Bangladesh. Our work covers business formation, corporate structuring, investments, mergers and acquisitions, commercial agreements and complex cross-border transactions, with a focus on protecting our clients’ interests while supporting their long-term commercial objectives.",
     "areas": [
       "Mergers & Acquisitions",
       "Company Law",
@@ -18,9 +18,9 @@
   {
     "id": "dispute-resolution",
     "index": "02",
-    "imgs":"https://sattarandco.com/wp-content/uploads/2021/06/Firm-rotate-2.jpg",
+    "imgs": "https://www.vilendrerlaw.com/wp-content/uploads/2020/04/Mediation-a-Superior-Dispute-Resolution-Mechanism-1000x480.jpg",
     "category": "Dispute Resolution",
-    "description": "Litigation and arbitration before the Supreme Court of Bangladesh and arbitral tribunals in Bangladesh and abroad, for banks, corporates and public-sector clients.",
+    "description": "Our dispute resolution practice represents clients in complex commercial disputes, litigation and arbitration in Bangladesh and internationally. We act for banks, corporations, investors and public-sector organisations before the Bangladesh Supreme Court and arbitral tribunals, combining rigorous legal analysis with strategic advocacy to achieve effective and commercially meaningful outcomes.",
     "areas": [
       "Litigation",
       "Domestic Arbitration",
@@ -33,9 +33,9 @@
   {
     "id": "industry-regulatory",
     "index": "03",
-    "imgs":"https://www.sattarandco.com/wp-content/uploads/2021/06/About-Sameer-Sattar-Small.jpg",
+    "imgs": "https://legaladvicebd.com/wp-content/uploads/2024/01/top-10-law-firms-in-bangladesh-1024x595.jpg",
     "category": "Industry & Regulatory",
-    "description": "Sector-specific counsel for regulated industries, drawing on close working knowledge of the relevant Bangladeshi regulatory bodies and licensing regimes.",
+    "description": "We provide sector-focused legal and regulatory advice to businesses operating in highly regulated and rapidly evolving industries. Our lawyers work closely with clients to navigate licensing requirements, regulatory frameworks and government authorities, helping businesses manage legal risk and make informed decisions across complex and changing regulatory environments.",
     "areas": [
       "Energy & Oil and Gas",
       "Banking Law and Regulation",
@@ -48,9 +48,9 @@
   {
     "id": "employment-people",
     "index": "04",
-    "imgs":"https://sattarandco.com/wp-content/uploads/2021/06/Firm-rotate-2.jpg",
+    "imgs": "https://thumbs.dreamstime.com/b/employment-law-labor-legislation-gavel-people-cowd-concept-legal-education-employment-law-labor-legislation-gavel-121901332.jpg",
     "category": "Employment & People",
-    "description": "Advice to domestic and multinational employers on the full employment lifecycle, workforce structuring and labour compliance in Bangladesh.",
+    "description": "We advise domestic and multinational employers on the legal and regulatory issues that arise throughout the employment lifecycle. Our practice covers workforce structuring, employment agreements, labour compliance, workplace policies, restructuring and disputes, providing practical advice that helps organisations manage their people while meeting their legal and regulatory obligations.",
     "areas": [
       "Employment Law",
       "Labour Compliance",
@@ -61,9 +61,9 @@
   {
     "id": "international-trade",
     "index": "05",
-    "imgs":"https://www.sattarandco.com/wp-content/uploads/2021/06/About-Sameer-Sattar-Small.jpg",
+    "imgs": "https://upeswebsitecdn-prod-hphqfhc0b8h2ffhf.a02.azurefd.net/drupal-data/2024-08/ITIL%20(1).webp",
     "category": "International Trade & Investment",
-    "description": "Guidance for foreign counsel, investors and trading partners navigating market entry, cross-border trade and international regulatory exposure.",
+    "description": "Our international trade and investment practice assists foreign investors, international businesses, trading partners and overseas counsel navigating the Bangladeshi market. We advise on market entry, foreign investment structures, cross-border transactions, trade regulations, project finance and concessions, helping clients understand and manage the legal complexities of doing business across borders.",
     "areas": [
       "Laws of Foreign Investment",
       "International Trade",
@@ -75,9 +75,9 @@
   {
     "id": "ip-technology",
     "index": "06",
-    "imgs":"https://www.sattarandco.com/wp-content/uploads/2021/06/About-Sameer-Sattar-Small.jpg",
+    "imgs": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMLfZ0qXv2S41nzcy-r4ERkZRCxPmtorRcv-UTMEoUG7TlsRIfkSVGpHk&s=10",
     "category": "IP & Technology",
-    "description": "Protection and commercialisation of intangible assets, and counsel on emerging digital and financial-technology regulation.",
+    "description": "We advise businesses on protecting, managing and commercialising intellectual property and other intangible assets in an increasingly digital economy. Our lawyers also advise on technology transactions, data and cyber-related matters, digital financial services and emerging regulatory issues affecting technology-driven businesses, helping clients navigate both established and evolving legal frameworks.",
     "areas": [
       "Intellectual Property",
       "Information Technology & Cyber Law",

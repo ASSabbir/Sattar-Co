@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 
 export default function DisclaimerPage() {
   return (
-    <section className="bg-ivory pt-40 pb-24 md:pt-52 md:pb-36">
+    <section className="bg-white pt-40 pb-24 md:pt-52 md:pb-36">
       <div className="max-w-content mx-auto px-6 md:px-10">
         <SectionLabel label="Legal Disclaimer" className="mb-8" />
-        <RevealText as="h1" immediate className="font-display text-display-md text-charcoal max-w-2xl mb-16">
+        <RevealText as="h1" immediate className="font-display py-6 text-display-md text-charcoal max-w-2xl mb-10">
           Legal Disclaimer &amp; Privacy
         </RevealText>
 

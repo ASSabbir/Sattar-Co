@@ -7,9 +7,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { gsap } from "@/lib/gsap";
-import { onLoaderComplete } from "@/lib/loaderEvents";
+import { onHeroIntroComplete } from "@/lib/heroEvents";
 import wlogo from '../../public/wlogo.png'
 import blogo from '../../public/blogo.png'
+import TopBar from "../layout/TopBar";
 
 const NAV_LINKS = [
   { href: "/practice-areas", label: "Practice Areas" },
@@ -17,11 +18,10 @@ const NAV_LINKS = [
   { href: "/team", label: "Team" },
   { href: "/insights", label: "Insights" },
   { href: "/publications", label: "Publications" },
+  { href: "/careers", label: "Careers" },
   // { href: "/contact", label: "Contact" },
 ];
 
-// Strips a trailing slash so "/firm/" and "/firm" compare equal — needed
-// because next.config.js has trailingSlash: true for static export.
 function normalizePath(path: string) {
   if (path.length > 1 && path.endsWith("/")) {
     return path.slice(0, -1);
@@ -37,15 +37,12 @@ export default function Navbar() {
 
   const isHome = pathname === "/";
 
-  // Hide the navbar the instant it mounts — before the loader even starts
-  // its slide — so there's nothing to "suddenly" reveal underneath it.
   useLayoutEffect(() => {
     if (headerRef.current) {
       gsap.set(headerRef.current, { opacity: 0, y: -16 });
     }
   }, []);
 
-  // Fade it in only once the loader has finished.
   useEffect(() => {
     const header = headerRef.current;
     if (!header) return;
@@ -54,7 +51,17 @@ export default function Navbar() {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    return onLoaderComplete(() => {
+    if (!isHome) {
+      gsap.to(header, {
+        opacity: 1,
+        y: 0,
+        duration: prefersReducedMotion ? 0.01 : 0.5,
+        ease: "power3.out",
+      });
+      return;
+    }
+
+    return onHeroIntroComplete(() => {
       gsap.to(header, {
         opacity: 1,
         y: 0,
@@ -62,7 +69,7 @@ export default function Navbar() {
         ease: "power3.out",
       });
     });
-  }, []);
+  }, [isHome]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -86,6 +93,15 @@ export default function Navbar() {
           solid ? "bg-white backdrop-blur-sm border-b border-charcoal/10" : "bg-transparent"
         )}
       >
+        <div
+          className={cn(
+            "overflow-hidden transition-[max-height,opacity] duration-500 ease-editorial",
+            scrolled || menuOpen ? "max-h-0 opacity-0" : "max-h-12 opacity-100"
+          )}
+        >
+          <TopBar />
+        </div>
+
         <nav className="max-w-content font-bold mx-auto flex items-center justify-between px-6 md:px-10  h-19 py-4 ">
           <Link
             href="/"
@@ -95,10 +111,6 @@ export default function Navbar() {
             )}
           >
             {solid?<img src={blogo.src} alt="" className="w-32 " /> : <img src={wlogo.src} alt="" className="w-32 opacity-0" />}
-            {/* <img src={blogo.src} alt="" className="w-32" /> */}
-          
-           
-           
           </Link>
 
           <ul
@@ -140,7 +152,7 @@ export default function Navbar() {
               solid ? "text-charcoal" : "text-charcoal"
             )}
           >
-            Enquire
+            Contact
           </Link>
         </nav>
       </header>

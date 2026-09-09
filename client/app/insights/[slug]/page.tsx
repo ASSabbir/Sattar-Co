@@ -34,7 +34,7 @@ export default async function InsightArticlePage({ params }: Props) {
   if (!item) notFound();
 
   return (
-    <article className="bg-ivory pt-40 pb-24 md:pt-52 md:pb-32">
+    <article className="bg-white pt-40 pb-24 md:pt-52 md:pb-32">
       <div className="max-w-content mx-auto px-6 md:px-10">
         <SectionLabel label="Insights" className="mb-8" />
         <p className="eyebrow text-red-600 mb-6">
@@ -46,8 +46,8 @@ export default async function InsightArticlePage({ params }: Props) {
         {item.author && <p className="text-charcoal/40 text-sm mb-14">By {item.author}</p>}
 
         <div className={item.author ? "max-w-2xl" : "max-w-2xl mt-14"}>
-          <p className="text-charcoal/75 text-lg leading-relaxed mb-8">{item.excerpt}</p>
-          <p className="text-charcoal/60 leading-relaxed mb-6">
+          <p className="text-charcoal/85 text-lg leading-relaxed mb-8">{item.excerpt}</p>
+          <p className="text-charcoal/80 leading-relaxed mb-6">
             This is placeholder body copy for the demo build. Replace this section with the
             approved article content from the firm&rsquo;s editorial team.
           </p>
