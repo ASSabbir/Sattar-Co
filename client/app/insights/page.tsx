@@ -74,7 +74,7 @@ export default function InsightsPage() {
                   key={year}
                   onClick={() => setActive(year)}
                   className={`relative shrink-0 uppercase tracking-wide pb-3   duration-300 ${
-                    active === year ? "text-charcoal text-3xl" : "text-charcoal/40 text-xl  hover:text-charcoal/70"
+                    active === year ? "text-charcoal text-2xl" : "text-charcoal/40 text-xl  hover:text-charcoal/70"
                   }`}
                 >
                   {year}

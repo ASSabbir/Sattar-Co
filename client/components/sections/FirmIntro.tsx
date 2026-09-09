@@ -11,9 +11,9 @@ export default function FirmIntro() {
       <div className="max-w-content mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-[78px]  items-center">
           <div className="lg:col-span-6">
-            <SectionLabel label="Trusted Legal Counsel" index="01" className="mb-8" />
-            <RevealText as="h2" className="font-display tra text-4xl md:text-6xl text-charcoal mb-8">
-              {firm.introStatement}
+            {/* <SectionLabel label="Trusted Legal Counsel" index="01" className="mb-8" /> */}
+            <RevealText as="h2" className="font-display tra text-4xl spay py-2  md:text-6xl text-charcoal mb-8">
+              Knowledgeable,<br/> <span className="">Diligent & Reliable</span>
             </RevealText>
             <p className="text-charcoal text-justify leading-relaxed text-xl max-w-lg mb-10">
               {firm.introBody}

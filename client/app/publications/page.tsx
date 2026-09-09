@@ -56,20 +56,19 @@ export default function PublicationsPage() {
       {/* =========================================================
           PUBLICATIONS HERO
       ========================================================== */}
-      <section className="grain relative overflow-hidden pt-40 pb-20 md:pt-52 md:pb-24">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url(${img1.src})`,
-          }}
+      <section className="grain relative overflow-hidden bg-navy pt-40 pb-20 md:pt-52 md:pb-24">
+        {/* Background Video */}
+        <video
+          src="/videos/video1.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
-        {/* Black Overlay */}
-        <div className="absolute inset-0 bg-black/65" />
-
         {/* Cinematic Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-black/55" />
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
@@ -104,10 +103,6 @@ export default function PublicationsPage() {
                   }`}
                 >
                   {cat}
-
-                  {/* <span className="ml-2 text-xs text-charcoal/35">
-                    {counts[cat] ?? 0}
-                  </span> */}
 
                   {active === cat && (
                     <motion.span

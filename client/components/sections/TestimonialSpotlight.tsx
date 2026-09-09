@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Quote } from "lucide-react";
 import recognition from "@/data/recognition.json";
+import { FaQuoteLeft } from "react-icons/fa";
 
 const AUTOPLAY_INTERVAL = 5500;
 
@@ -27,8 +28,8 @@ export default function TestimonialSpotlight() {
       onMouseLeave={() => setPaused(false)}
     >
       <div className="max-w-content mx-auto px-6 md:px-10 text-center">
-        <Quote size={52} strokeWidth={1} className="text-red-600/50 mx-auto mb-10" />
-
+        {/* <Quote size={52} strokeWidth={1} className="text-red-600/50 mx-auto mb-10" /> */}
+        <FaQuoteLeft size={44} strokeWidth={1} className="text-red-600/80 mx-auto mb-10" />
         <div className="relative min-h-[180px] md:min-h-[150px] flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
@@ -40,7 +41,7 @@ export default function TestimonialSpotlight() {
               className="max-w-5xl mx-auto"
             >
               <p className="font-display italic text-2xl md:text-6xl leading-snug text-zinc-800/95 mb-12">
-                &ldquo;{quotes[active].quote}&rdquo;
+                {quotes[active].quote}
               </p>
               <p className="eyebrow !text-lg text-red-600">{quotes[active].source}</p>
             </motion.div>
@@ -53,9 +54,8 @@ export default function TestimonialSpotlight() {
               key={i}
               onClick={() => setActive(i)}
               aria-label={`Show testimonial ${i + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-400 ${
-                i === active ? "w-8 bg-red-600" : "w-1.5 bg-zinc-400/85 hover:bg-zinc-400/40"
-              }`}
+              className={`h-1.5 rounded-full transition-all duration-400 ${i === active ? "w-8 bg-red-600" : "w-1.5 bg-zinc-400/85 hover:bg-zinc-400/40"
+                }`}
             />
           ))}
         </div>
