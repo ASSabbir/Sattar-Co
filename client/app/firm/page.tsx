@@ -13,7 +13,7 @@ import img2 from "../../public/images/sattar.webp";
 import img3 from "../../public/images/Firm-rotate-2.jpg";
 import img4 from "../../public/images/Firm-rotate-3 (1).jpg";
 import img5 from "../../public/images/about.webp";
-
+import { FaQuoteLeft } from "react-icons/fa";
 export const metadata: Metadata = {
   title: "The Firm",
   description: firm.introBody,
@@ -31,11 +31,11 @@ export default function FirmPage() {
           priority
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
           {/* <SectionLabel label="The Firm" light className="mb-8" /> */}
-          <RevealText as="h1" immediate className="font-display text-display-lg text-white max-w-3xl">
+          <RevealText as="h1" immediate className="font-display text-display-lg text-white ">
             Built on Trust & Expertise
           </RevealText>
         </div>
@@ -57,47 +57,38 @@ export default function FirmPage() {
               </div>
             </div>
             <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-6 relative">
-  {/* Opening Quote */}
-  <span
-    className="absolute -top-2 -left-8 font-display text-[50px] leading-none text-red-600/40 pointer-events-none"
-    aria-hidden="true"
-  >
-    “
-  </span>
+              {/* Opening Quote */}
+             <div className="">
+               <FaQuoteLeft size={44} strokeWidth={1} className="text-red-600/80 bg- relative -top-5 -left-10" />
+             </div>
 
-  <p className="text-charcoal/70 leading-relaxed text-2xl text-justify relative z-10">
-    I have always believed that exceptional legal counsel begins with
-    understanding more than the law. It requires understanding the client,
-    the realities they face, and the environment in which their decisions
-    are made.
-  </p>
+              <p className="text-charcoal/70 leading-relaxed text-2xl text-justify relative z-10">
+                I have always believed that exceptional legal counsel begins with
+                understanding more than the law. It requires understanding the client,
+                the realities they face, and the environment in which their decisions
+                are made.
+              </p>
 
-  <p className="text-charcoal/70 leading-relaxed text-2xl text-justify relative z-10">
-    At Sattar&Co., we bring together legal expertise, commercial perspective
-    and sound judgment to address matters that demand precision and
-    discretion. Our role is to understand what is at stake, anticipate what
-    lies ahead, and help our clients move forward with confidence.
-  </p>
+              <p className="text-charcoal/70 leading-relaxed text-2xl text-justify relative z-10">
+                At Sattar&Co., we bring together legal expertise, commercial perspective
+                and sound judgment to address matters that demand precision and
+                discretion. Our role is to understand what is at stake, anticipate what
+                lies ahead, and help our clients move forward with confidence.
+              </p>
 
-  <div className="relative">
-    <p className="text-charcoal/70 leading-relaxed text-2xl text-justify relative z-10">
-      We have built the firm on a simple principle: excellence is measured
-      not only by the quality of our work, but by the trust we earn through it.
-    </p>
+              <div className="relative">
+                <p className="text-charcoal/70 leading-relaxed text-2xl text-justify relative z-10">
+                  We have built the firm on a simple principle: excellence is measured
+                  not only by the quality of our work, but by the trust we earn through it.
+                </p>
 
-    {/* Closing Quote */}
-    <span
-      className="absolute -bottom-10 -right-4 font-display text-[50px] leading-none text-red-600/40 pointer-events-none"
-      aria-hidden="true"
-    >
-      ”
-    </span>
-  </div>
+                
+              </div>
 
-  <p className="eyebrow text-red-600 ita !text-lg mt-4">
-    Barrister Sameer Sattar — Head of Firm 
-  </p>
-</div>
+              <p className="eyebrow text-red-600 ita !text-lg mt-4">
+                Barrister Sameer Sattar — Head of Firm
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -105,7 +96,7 @@ export default function FirmPage() {
       {/* Stats — count up on scroll into view */}
       <section className="grain bg-charcoal py-20 md:py-28">
         <div className="max-w-content mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-8">
             {firm.stats.map((stat) => (
               <div key={stat.label} className="border-t flex flex-col items-center border-white pt-6">
                 <StatCounter value={stat.value} />
