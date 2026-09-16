@@ -49,7 +49,7 @@ export default function InsightsPreview() {
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
           >
-            <FaQuoteLeft size={44} strokeWidth={1} className="text-red-600/70 mt-10 mb-8 shrink-0" />
+            <FaQuoteLeft size={44} strokeWidth={1} className="text-red-600/70 mt-4 mb-8 shrink-0" />
             
             <div className="relative mt- flex-1 flex  overflow-hidden">
               <AnimatePresence mode="wait">
@@ -110,11 +110,11 @@ export default function InsightsPreview() {
                   {String(i + 1).padStart(2, "0")}
                 </span> */}
 
-                <div className="min-w-0">
-                  <p className="eyebrow text-red-600 mb-2">
+                <div className="min-w-0 group">
+                  <p className="eyebrow !text-[15px] text-red-600 group-hover:text-black duration-300 mb-2">
                     {item.category} · 
                   </p>
-                  <h3 className="font-display text-lg md:text-2xl text-charcoal leading-snug group-hover:text-red-600 transition-colors duration-300 tracking-wide">
+                  <h3 className="font-display text-lg t md:text-2xl text-charcoal leading-snug group-hover:text-red-600 transition-colors duration-300 tracking-wide">
                     {item.title}
                   </h3>
                 </div>

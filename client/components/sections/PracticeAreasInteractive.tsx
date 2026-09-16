@@ -41,39 +41,24 @@ export default function PracticeAreasInteractive() {
   const current = practiceAreas[active];
 
   return (
-    <section ref={rootRef} className="bg-white py-14">
+    <section ref={rootRef} className="bg-white py-16">
       <div className="max-w-content mx-auto px-6 md:px-10">
         {/* <SectionLabel label="Practice Areas" index="" className="mb-8" /> */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <div className=" gap-10 lg:gap-16 items-start">
           {/* Image */}
-          <div className="w-full">
+          {/* <div className="w-full">
             <img
               src="https://sattarandco.com/wp-content/uploads/2021/06/Firm-rotate-4.jpg"
               alt="Sattar&Co."
               className="w-full h-[320px] md:h-[420px]  object-cover"
             />
-          </div>
+          </div> */}
 
           {/* Content */}
-          <div className="w-full font-sans text-lg md:text-xl font-thin leading-relaxed text-charcoal space-y-6 lg:space-y-8">
-            <p>
-              Sattar&Co. provides a comprehensive range of legal services to its
-              clients.
-            </p>
-
-            <p>
-              Sattar&Co.’s work is varied but is essentially concerned with corporate
-              and commercial matters, international disputes, litigation between, and
-              providing legal advice for, companies and businesses. Clients come from
-              a wide range of industries and public sectors.
-            </p>
-
-            <p>
-              Lawyers at Sattar&Co. are very experienced in advisory work and
-              litigation and regularly appear as advocates in the Bangladesh Supreme
-              Court as well as before arbitral tribunals, both in Bangladesh and
-              abroad.
-            </p>
+          <div className="w-full font-sans flex flex-col  text-lg md:text-2xl font-thin space-y-4  text-charcoal ">
+            <span>Sattar&Co. provides strategic, full-service legal counsel to the Bangladeshi business community, as well as the international investors and counsel who operate alongside it. Built upon specialized legal expertise and a sophisticated understanding of Bangladesh’s regulatory landscape, the firm delivers decisive, high-stakes judgment under pressure.</span>
+             <span className="">Our practice spans a diverse array of industries and sectors, focusing primarily on complex corporate transactions, international disputes,<br/> and commercial litigation.</span>
+              <span>Comprising highly experienced advocates, our legal team regularly appears before the Supreme Court of Bangladesh and prominent domestic and international arbitral tribunals.</span>
           </div>
         </div>
 
@@ -135,7 +120,7 @@ export default function PracticeAreasInteractive() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-charcoal/70  leading-relaxed mb-8 \ text-justify text-xl">
+                  <p className="text-charcoal/90  leading-relaxed mb-8 \ text-justify text-xl">
                     {current.description}
                   </p>
 
@@ -144,10 +129,10 @@ export default function PracticeAreasInteractive() {
                     {current.areas.map((area: string) => (
                       <li
                         key={area}
-                        className="text-xl text-charcoal/60 flex items-center gap-2"
+                        className="text-xl text-charcoal/80 flex items-center gap-2"
                       >
                         <span className="w-1 h-1 rounded-full bg-red-600" />
-                        {area}
+                        <span className="text-charcoal/90">{area}</span>
                       </li>
                     ))}
                   </ul>
