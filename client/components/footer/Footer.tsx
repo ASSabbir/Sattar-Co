@@ -59,9 +59,9 @@ export default function Footer() {
           ))}
         </div> */}
 
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-ivory/50">
+        <div className="flex flex-col md:flex-row justify-center items-start md:items-center  gap-4 text-sm text-ivory/70">
           <p>
-            © Copyright {new Date().getFullYear()}. Sattar&amp;Co. All rights reserved{" "}
+            © Copyright {new Date().getFullYear()}. Sattar&amp;Co. All Rights Reserved{" "}
             <span className="mx-2 text-ivory/25">|</span>
             <Link
               href="/disclaimer"
@@ -70,7 +70,7 @@ export default function Footer() {
               Legal Disclaimer
             </Link>
           </p>
-          <p>{firm.location} · {firm.phone} · {firm.email}</p>
+          {/* <p>{firm.location} · {firm.phone} · {firm.email}</p> */}
         </div>
       </div>
     </footer>

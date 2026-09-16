@@ -12,14 +12,16 @@ import wlogo from '../../public/wlogo.png'
 import blogo from '../../public/blogo.png'
 import TopBar from "../layout/TopBar";
 
+
 const NAV_LINKS = [
-  { href: "/practice-areas", label: "Practice Areas" },
+  { href: "/practice-areas", label: "Expertise" },
   { href: "/firm", label: "The Firm" },
   { href: "/team", label: "Team" },
   { href: "/insights", label: "Insights" },
   { href: "/publications", label: "Publications" },
   { href: "/careers", label: "Careers" },
-  // { href: "/contact", label: "Contact" },
+  
+  { href: "/contact", label: " Contact Us" },
 ];
 
 function normalizePath(path: string) {
@@ -102,7 +104,7 @@ export default function Navbar() {
           <TopBar />
         </div>
 
-        <nav className="max-w-content font-bold mx-auto flex items-center justify-between px-6 md:px-10  h-19 py-4 ">
+        <nav className="max-w-content  font-bold mx-auto flex items-center justify-between px-6 md:px-10   h-19 py-4 ">
           <Link
             href="/"
             className={cn(
@@ -115,7 +117,7 @@ export default function Navbar() {
 
           <ul
             className={cn(
-              "hidden lg:flex items-center gap-9 text-lg uppercase tracking-wide transition-colors duration-500",
+              "hidden lg:flex items-center pr-5 gap-10 text-lg uppercase tracking-wide transition-colors duration-500",
               solid ? "text-charcoal/80" : "text-charcoal/85"
             )}
           >
@@ -133,27 +135,9 @@ export default function Navbar() {
               );
             })}
           </ul>
+          <div></div>
 
-          <button
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            onClick={() => setMenuOpen((v) => !v)}
-            className={cn(
-              "lg:hidden p-2 -mr-2 transition-colors duration-500",
-              solid ? "text-charcoal" : "text-charcoal"
-            )}
-          >
-            {menuOpen ? <X size={22} strokeWidth={1.5} /> : <Menu size={22} strokeWidth={1.5} />}
-          </button>
-
-          <Link
-            href="/contact"
-            className={cn(
-              "hidden lg:inline-block link-underline text-lg uppercase tracking-wide transition-colors duration-500",
-              solid ? "text-charcoal" : "text-charcoal"
-            )}
-          >
-            Contact
-          </Link>
+          
         </nav>
       </header>
 

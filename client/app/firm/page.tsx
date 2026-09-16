@@ -56,14 +56,48 @@ export default function FirmPage() {
                 />
               </div>
             </div>
-            <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-6">
-              {firm.aboutBody.map((p, i) => (
-                <p key={i} className="text-charcoal/70 leading-relaxed text-2xl text-justify">
-                  {p}
-                </p>
-              ))}
-              <p className="eyebrow text-red-600 ita  !text-lg mt-4">{firm.founded}</p>
-            </div>
+            <div className="lg:col-span-6 lg:col-start-7 flex flex-col gap-6 relative">
+  {/* Opening Quote */}
+  <span
+    className="absolute -top-2 -left-8 font-display text-[50px] leading-none text-red-600/40 pointer-events-none"
+    aria-hidden="true"
+  >
+    “
+  </span>
+
+  <p className="text-charcoal/70 leading-relaxed text-2xl text-justify relative z-10">
+    I have always believed that exceptional legal counsel begins with
+    understanding more than the law. It requires understanding the client,
+    the realities they face, and the environment in which their decisions
+    are made.
+  </p>
+
+  <p className="text-charcoal/70 leading-relaxed text-2xl text-justify relative z-10">
+    At Sattar&Co., we bring together legal expertise, commercial perspective
+    and sound judgment to address matters that demand precision and
+    discretion. Our role is to understand what is at stake, anticipate what
+    lies ahead, and help our clients move forward with confidence.
+  </p>
+
+  <div className="relative">
+    <p className="text-charcoal/70 leading-relaxed text-2xl text-justify relative z-10">
+      We have built the firm on a simple principle: excellence is measured
+      not only by the quality of our work, but by the trust we earn through it.
+    </p>
+
+    {/* Closing Quote */}
+    <span
+      className="absolute -bottom-10 -right-4 font-display text-[50px] leading-none text-red-600/40 pointer-events-none"
+      aria-hidden="true"
+    >
+      ”
+    </span>
+  </div>
+
+  <p className="eyebrow text-red-600 ita !text-lg mt-4">
+    Barrister Sameer Sattar — Head of Firm 
+  </p>
+</div>
           </div>
         </div>
       </section>
@@ -89,7 +123,7 @@ export default function FirmPage() {
       <RecognitionMarquee />
 
       {/* Values */}
-     
+
 
       {/* Image slider */}
       <section className="bg-white py-24 ">
@@ -104,7 +138,7 @@ export default function FirmPage() {
           />
         </div>
       </section>
-       <section className="bg-white pb-24 ">
+      <section className="bg-white pb-24 ">
         <div className="max-w-content mx-auto px-6 md:px-10">
           <SectionLabel label="Approach" className="mb-8" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
@@ -131,7 +165,7 @@ export default function FirmPage() {
         </div>
       </section>
 
-     
+
     </>
   );
 }

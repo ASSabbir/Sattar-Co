@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 export default function PracticeAreasPage() {
   return (
-    <>
-      <section className="grain relative overflow-hidden bg-navy pt-40 pb-24 md:pt-52 md:pb-32">
+    <section className="mt-55">
+      <section className="grain relative overflow-hidden bg-navy  h-[420px]   md:mt-55 ">
         <video
           src="/videos/video2.mp4"
           autoPlay
@@ -23,20 +23,17 @@ export default function PracticeAreasPage() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-black/15" />
 
-        <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
+        <div className="relative z-10 max-w-content h-full flex items-center !mt-45 mx-auto px-6 md:px-10">
           
-          <RevealText as="h1" immediate className="font-display text-display-lg text-ivory max-w-5xl">
-            Expertise Across Industries
+          <RevealText as="h1" immediate  className="font-display    text-display-lg text-zinc-800 max-w-5xl">
+            Expertise & Experience
           </RevealText>
           
         </div>
       </section>
       <PracticeAreasInteractive />
-      
-
-      
-    </>
+    </section>
   );
 }
