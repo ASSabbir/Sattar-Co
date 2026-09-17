@@ -36,7 +36,7 @@ export default function FirmPage() {
         <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
           {/* <SectionLabel label="The Firm" light className="mb-8" /> */}
           <RevealText as="h1" immediate className="font-display text-display-lg text-white ">
-            Built on Trust & Expertise
+           Trusted Excellence
           </RevealText>
         </div>
       </section>
