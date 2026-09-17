@@ -57,7 +57,7 @@ export default function PracticeAreasInteractive() {
           {/* Content */}
           <div className="w-full font-sans flex flex-col  text-lg md:text-2xl font-thin space-y-4  text-charcoal ">
             <span>Sattar&Co. provides strategic, full-service legal counsel to the Bangladeshi business community, as well as the international investors and counsel who operate alongside it. Built upon specialized legal expertise and a sophisticated understanding of Bangladesh’s regulatory landscape, the firm delivers decisive, high-stakes judgment under pressure.</span>
-             <span className="">Our practice spans a diverse array of industries and sectors, focusing primarily on complex corporate transactions, international disputes,<br/> and commercial litigation.</span>
+             <span className="">Our practice spans a diverse array of industries and sectors, focusing primarily on complex corporate transactions, international disputes, and commercial litigation.</span>
               <span>Comprising highly experienced advocates, our legal team regularly appears before the Supreme Court of Bangladesh and prominent domestic and international arbitral tribunals.</span>
           </div>
         </div>
