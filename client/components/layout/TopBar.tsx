@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { BiLogoGmail } from "react-icons/bi";
 import { MdLocalPhone } from "react-icons/md";
 import { RiFacebookFill } from "react-icons/ri";
@@ -18,19 +19,28 @@ const SOCIAL_LINKS = [
 ];
 
 export default function TopBar() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   return (
-    <div className="w-full bg-white border-b border-charcoal/10">
+    <div
+      className={
+        isHome
+          ? "w-full bg-transparent"
+          : "w-full bg-white border-b border-charcoal/10"
+      }
+    >
       <div className=" mx-auto px-6 md:px-14 h-11 flex items-center justify-end text-sm
        text-charcoal/80">
         {/* <div className="flex items-center gap-5">
-          <a
+          
             href="tel:+880288366629"
             className="hover:text-red-600 transition-colors duration-300"
           >
            <MdLocalPhone />
           </a>
           <span className="w-px h-3.5 bg-charcoal/" />
-          <a
+          
             href="mailto:info@sattarandco.com"
             className="hover:text-red-600 transition-colors duration-300"
           >
@@ -43,11 +53,15 @@ export default function TopBar() {
         <div className="flex items-center gap-2 mt-[2px]">
           {SOCIAL_LINKS.map(({ href, label }) => (
             <a
-              key={label}
+              
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="  text-charcoal text-xl  hover:text-red-600 transition-colors duration-300"
+              className={
+                isHome
+                  ? "text-black text-xl hover:text-red-600 transition-colors duration-300"
+                  : "text-charcoal text-xl hover:text-red-600 transition-colors duration-300"
+              }
             >
               {label}
             </a>
