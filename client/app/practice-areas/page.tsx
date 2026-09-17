@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function PracticeAreasPage() {
   return (
-<section className="mt-[clamp(4.5rem,12vw,13.75rem)]">
+<section className="">
       <section className="grain relative isolate w-full overflow-hidden bg-navy h-[clamp(240px,52svh,620px)] min-h-[240px]">
 
         <Image
@@ -40,7 +40,7 @@ export default function PracticeAreasPage() {
         />
         <div className="pointer-events-none absolute inset-0 -z-10 bg-black/15" />
 
-        <div className="relative z-10 mx-auto flex h-full max-w-content items-center px-[clamp(1rem,4vw,2.5rem)]">
+        <div className="relative z-10 mx-auto flex h-full  my-auto max-w-content items-center px-[clamp(1rem,4vw,2.5rem)]">
           <RevealText
             as="h1"
             immediate

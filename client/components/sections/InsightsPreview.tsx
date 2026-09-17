@@ -1,10 +1,6 @@
-
-
-
 "use client";
-import { RiChatQuoteLine } from "react-icons/ri"; 
-import { FaQuoteLeft } from "react-icons/fa"; 
-
+import { RiChatQuoteLine } from "react-icons/ri";
+import { FaQuoteLeft } from "react-icons/fa";
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -13,6 +9,7 @@ import { ArrowUpRight, Quote } from "lucide-react";
 import insights from "@/data/insights.json";
 import recognition from "@/data/recognition.json";
 import { RiChatQuoteFill } from "react-icons/ri";
+
 const AUTOPLAY_INTERVAL = 5000; // ms between testimonial slides
 
 function formatDate(item: { date: string | null; year: number }) {
@@ -24,9 +21,34 @@ function formatDate(item: { date: string | null; year: number }) {
   });
 }
 
+// Fisher-Yates shuffle — unbiased, better than sort(() => Math.random() - 0.5)
+function shuffleArray<T>(array: T[]): T[] {
+  const arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// Truncate to a max word count, adding "…" if it was cut off
+function truncateWords(text: string, maxWords: number) {
+  const words = text.trim().split(/\s+/);
+  if (words.length <= maxWords) return text;
+  return words.slice(0, maxWords).join(" ") + "…";
+}
+
 export default function InsightsPreview() {
   const testimonials = recognition.quotes;
-  const newsItems = insights.slice(0, 3);
+
+  // Start with a deterministic slice for SSR, then randomize on mount.
+  // This avoids a hydration mismatch (server renders one thing, client
+  // would render another if we randomized directly in render).
+  const [newsItems, setNewsItems] = useState(() => insights.slice(0, 3));
+
+  useEffect(() => {
+    setNewsItems(shuffleArray(insights).slice(0, 3));
+  }, []); // empty deps → runs once per mount, i.e. once per reload
 
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -50,7 +72,7 @@ export default function InsightsPreview() {
             onMouseLeave={() => setPaused(false)}
           >
             <FaQuoteLeft size={44} strokeWidth={1} className="text-red-600/70 mt-4 mb-8 shrink-0" />
-            
+
             <div className="relative mt- flex-1 flex  overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -62,7 +84,7 @@ export default function InsightsPreview() {
                   className="w-full"
                 >
                   <p className="font-display italic text-xl md:text-4xl leading-relaxed text-gray-800 mb-6">
-                   {testimonials[active].quote}
+                    {testimonials[active].quote}
                   </p>
                   <p className="eyebrow !text-lg text-red-600">{testimonials[active].source}</p>
                 </motion.div>
@@ -97,25 +119,22 @@ export default function InsightsPreview() {
             </div>
           </div>
 
-          {/* ── Right: three news items, no images, flex column ── */}
+          {/* ── Right: three random news items, no images, flex column ── */}
           <div className="lg:col-span-6 flex  flex-col h-full">
             {newsItems.map((item, i) => (
               <Link
                 key={item.slug}
                 href={`/insights/${item.slug}`}
-                className={`group flex-1 flex items-center gap-6  md:py-0 ${i !== 0 ? "border-t border-charcoal/10" : ""
-                  }`}
+                className={`group flex-1 flex items-center gap-6  md:py-0 ${
+                  i !== 0 ? "border-t border-charcoal/10" : ""
+                }`}
               >
-                {/* <span className="font-display text-4xl text-charcoal/20 shrink-0 w-10">
-                  {String(i + 1).padStart(2, "0")}
-                </span> */}
-
                 <div className="min-w-0 group">
                   <p className="eyebrow !text-[15px] text-red-600 group-hover:text-black duration-300 mb-2">
-                    {item.category} · 
+                    {item.category} ·
                   </p>
                   <h3 className="font-display text-lg t md:text-2xl text-charcoal leading-snug group-hover:text-red-600 transition-colors duration-300 tracking-wide">
-                    {item.title}
+                    {truncateWords(item.title, 10)}
                   </h3>
                 </div>
 

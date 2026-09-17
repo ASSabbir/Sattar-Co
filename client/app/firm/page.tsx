@@ -8,7 +8,7 @@ import TestimonialSpotlight from "@/components/sections/TestimonialSpotlight";
 import RecognitionMarquee from "@/components/sections/RecognitionMarquee";
 import ImageSlider from "@/components/sections/ImageSlider";
 import firm from "@/data/firm.json";
-import img1 from "../../public/images/5.webp";
+import img1 from "../../public/images/10.webp";
 import img2 from "../../public/images/sattar.webp";
 import img3 from "../../public/images/Firm-rotate-2.jpg";
 import img4 from "../../public/images/Firm-rotate-3 (1).jpg";
@@ -23,7 +23,7 @@ export default function FirmPage() {
   return (
     <>
       {/* Page hero */}
-      <section className="grain relative overflow-hidden bg-navy pt-40 pb-24 md:pt-52 md:pb-32">
+      <section className="grain relative overflow-hidden bg-navy flex justify-center item-center pt-40 pb-24 md:pt-52 md:pb-32">
         <Image
           src={img1}
           alt=""
@@ -33,7 +33,7 @@ export default function FirmPage() {
         />
         <div className="absolute inset-0 bg-black/20" />
 
-        <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
+        <div className="relative z-10 max-w-content mx-auto  px-6 md:px-10">
           {/* <SectionLabel label="The Firm" light className="mb-8" /> */}
           <RevealText as="h1" immediate className="font-display text-display-lg text-white ">
            Trusted Excellence
