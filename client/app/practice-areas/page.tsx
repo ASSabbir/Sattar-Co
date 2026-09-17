@@ -40,11 +40,12 @@ export default function PracticeAreasPage() {
         />
         <div className="pointer-events-none absolute inset-0 -z-10 bg-black/15" />
 
-        <div className="relative z-10 mx-auto flex h-full max-w-content items-center px-[clamp(1rem,4vw,2.5rem)]">
+
+        <div className="absolute inset-0 z-10 mx-auto flex h-full w-full max-w-content items-center justify-start px-[clamp(1rem,4vw,2.5rem)]">
           <RevealText
             as="h1"
             immediate
-            className="font-display text-display-lg text-zinc-800 max-w-[min(100%,64rem)] [text-wrap:balance]"
+            className="font-display text-display-lg text-zinc-800 max-w-[min(100%,64rem)] leading-[1] [text-wrap:balance] [&>*]:leading-[1] [&_*]:align-middle"
           >
             Expertise &amp; Experience
           </RevealText>
