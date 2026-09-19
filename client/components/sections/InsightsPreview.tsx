@@ -125,7 +125,7 @@ export default function InsightsPreview() {
               <Link
                 key={item.slug}
                 href={`/insights/${item.slug}`}
-                className={`group flex-1 flex items-center gap-6  md:py-0 ${
+                className={`group flex-1 flex items-center gap-6  py-2 md:py-0 ${
                   i !== 0 ? "border-t border-charcoal/10" : ""
                 }`}
               >
