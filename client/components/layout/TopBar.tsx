@@ -30,8 +30,10 @@ export default function TopBar() {
           : "w-full bg-white border-b border-charcoal/10"
       }
     >
-      <div className=" mx-auto px-6 md:px-14 md:pr-[4vw] h-11 flex items-center justify-end text-sm
-       text-charcoal/80">
+      <div
+      
+      className={` mx-auto px-6 md:px-14 md:pr-[4vw] ${isHome? 'items-end' :'items-center'} h-11 flex  justify-end text-sm
+       text-charcoal/80`}>
         {/* <div className="flex items-center gap-5">
           
             href="tel:+880288366629"

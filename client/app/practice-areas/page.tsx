@@ -3,6 +3,7 @@ import Image from "next/image";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
 import practiceAreas from "@/data/practiceAreas.json";
+import img1 from "../../public/images/10.webp";
 
 import PracticeAreasInteractive from "@/components/sections/PracticeAreasInteractive";
 
@@ -14,39 +15,22 @@ export const metadata: Metadata = {
 
 export default function PracticeAreasPage() {
   return (
-<section className="">
-      <section className="grain relative isolate w-full overflow-hidden bg-navy h-[clamp(240px,52svh,620px)] min-h-[240px]">
-
+    <section className="">
+      {/* Page hero */}
+      <section className="grain relative overflow-hidden bg-navy flex justify-center item-center pt-36 pb-24  md:pb-32">
         <Image
-          src="/images/9.jpg"
+          src={img1}
           alt=""
           fill
           priority
-          sizes="100vw"
-          aria-hidden="true"
-          className="pointer-events-none -z-10 block object-cover object-[center_20%] md:hidden"
+          className="object-cover object-center"
         />
-        <video
-          src="/videos/video2.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          disablePictureInPicture
-          aria-hidden="true"
-          tabIndex={-1}
-          className="pointer-events-none absolute inset-0 -z-10 hidden h-full w-full max-w-none object-cover object-[center_19%] md:block"
-        />
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-black/15" />
+        <div className="absolute inset-0 bg-black/20" />
 
-        <div className="relative z-10 mx-auto flex h-full  my-auto max-w-content items-center px-[clamp(1rem,4vw,2.5rem)]">
-          <RevealText
-            as="h1"
-            immediate
-            className="font-display text-display-lg text-zinc-800 max-w-[min(100%,64rem)] leading-[1] [text-wrap:balance] [&>*]:leading-[1] [&_*]:align-middle"
-          >
-            Expertise &amp; Experience
+        <div className="relative z-10 max-w-content mx-auto  px-6 md:px-10">
+          {/* <SectionLabel label="The Firm" light className="mb-8" /> */}
+          <RevealText as="h1" immediate className="font-display text-display-lg text-white ">
+           Trusted Excellence
           </RevealText>
         </div>
       </section>

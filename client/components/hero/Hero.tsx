@@ -175,7 +175,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-10 flex items-center justify-center px-6 pointer-events-none">
         <div ref={text1Ref} className="inline-block text-center will-change-transform" style={{ opacity: 0 }}>
           <h2
-            className="font-display text-[5vw] leading-tight inline-block px-10 py-6 md:px-14 md:py-8
+            className="font-display text-4xl md:text-[5vw] leading-tight inline-block px-10 py-6 md:px-14 md:py-8
                        bg-white/10 backdrop-blur-xl backdrop-saturate-150
                        border border-white/25 shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
                        rounded-3xl text-zinc-800 drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]"
@@ -188,7 +188,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-10 flex items-center justify-center px-6 pointer-events-none">
         <div ref={text2Ref} className="inline-block text-center will-change-transform" style={{ opacity: 0 }}>
           <h2
-            className="font-display text-[5vw] leading-tight inline-block px-10 py-6 md:px-14 md:py-8
+            className="font-display text-4xl md:text-[5vw] leading-tight inline-block px-10 py-6 md:px-14 md:py-8
                        bg-white/10 backdrop-blur-xl backdrop-saturate-150
                        border border-white/25 shadow-[0_8px_32px_0_rgba(0,0,0,0.25)]
                        rounded-3xl text-zinc-800 drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]"

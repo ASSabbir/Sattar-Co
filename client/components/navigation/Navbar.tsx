@@ -14,7 +14,7 @@ import TopBar from "../layout/TopBar";
 
 
 const NAV_LINKS = [
-  { href: "/team", label: "Team" },
+  { href: "/team", label: "People" },
   { href: "/practice-areas", label: "Expertise" },
   { href: "/firm", label: "The Firm" },
   { href: "/insights", label: "Insights" },
@@ -104,20 +104,20 @@ export default function Navbar() {
           <TopBar />
         </div>
 
-        <nav className="max-w-content  font-bold mx-auto flex items-center justify-between px-6 md:px-10   h-19 py-4 ">
+        <nav className="max-w-content font-bold mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 h-16 sm:h-[4.75rem] lg:h-19 py-3 sm:py-4">
           <Link
             href="/"
             className={cn(
-              "font-display text-lg md:text-xl tracking-wide  transition-colors duration-500",
+              "font-display text-lg md:text-xl tracking-wide shrink-0 transition-colors duration-500",
               solid ? "text-black" : "text-black "
             )}
           >
-            {solid?<img src={blogo.src} alt="" className="w-32 " /> : <img src={wlogo.src} alt="" className="w-32 opacity-0" />}
+            {solid?<img src={blogo.src} alt="" className="w-24 sm:w-28 lg:w-32" /> : <img src={wlogo.src} alt="" className="w-24 sm:w-28 lg:w-32 opacity-0" />}
           </Link>
 
           <ul
             className={cn(
-              "hidden lg:flex items-center pr-5 gap-10 text-lg uppercase tracking-wide transition-colors duration-500",
+              "hidden lg:flex items-center pr-5 gap-6 xl:gap-10 text-base xl:text-lg uppercase tracking-wide transition-colors duration-500",
               solid ? "text-charcoal/80" : "text-charcoal/85"
             )}
           >
@@ -135,9 +135,19 @@ export default function Navbar() {
               );
             })}
           </ul>
-          <div></div>
 
-          
+          <button
+            type="button"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((v) => !v)}
+            className={cn(
+              "lg:hidden p-2 -mr-2 shrink-0 transition-colors duration-500",
+              solid ? "text-charcoal" : "text-charcoal"
+            )}
+          >
+            {menuOpen ? <X size={22} strokeWidth={1.5} /> : <Menu size={22} strokeWidth={1.5} />}
+          </button>
         </nav>
       </header>
 
@@ -148,10 +158,10 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
-            className="fixed inset-0 z-40 bg-ivory lg:hidden"
+            className="fixed inset-0 z-40 bg-ivory lg:hidden overflow-y-auto"
           >
-            <div className="flex flex-col justify-center h-full px-8">
-              <ul className="flex flex-col gap-6">
+            <div className="flex flex-col justify-center min-h-full px-6 sm:px-8 py-24">
+              <ul className="flex flex-col gap-5 sm:gap-6">
                 {NAV_LINKS.map((link, i) => (
                   <motion.li
                     key={link.href}
@@ -161,7 +171,7 @@ export default function Navbar() {
                   >
                     <Link
                       href={link.href}
-                      className="font-display text-4xl text-charcoal hover:text-red-600 transition-colors duration-300"
+                      className="font-display text-3xl sm:text-4xl text-charcoal hover:text-red-600 transition-colors duration-300"
                     >
                       {link.label}
                     </Link>
