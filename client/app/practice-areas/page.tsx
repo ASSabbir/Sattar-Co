@@ -44,7 +44,7 @@ export default function PracticeAreasPage() {
           <RevealText
             as="h1"
             immediate
-            className="font-display text-display-lg text-zinc-800 max-w-[min(100%,64rem)] [text-wrap:balance]"
+            className="font-display text-display-lg text-zinc-800 max-w-[min(100%,64rem)] leading-[1] [text-wrap:balance] [&>*]:leading-[1] [&_*]:align-middle"
           >
             Expertise &amp; Experience
           </RevealText>

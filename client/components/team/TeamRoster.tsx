@@ -151,21 +151,21 @@ export default function TeamRoster() {
       <section
         ref={sectionRef as React.RefObject<HTMLElement>}
         aria-label="Our team"
-        className="mt-20 relative bg-white text-charcoal pt-36 pb-24 md:pt-20 md:pb-10 px-6 md:px-12 lg:px-20 overflow-hidden font-sans lg:sticky lg:top-0 lg:h-screen lg:max-h-screen"
+        className="mt-20 relative bg-white text-charcoal pt-36 pb-24 px-6 md:px-12 lg:px-20 overflow-hidden font-sans md:pt-[clamp(1.5rem,5svh,5rem)] md:pb-[clamp(1rem,3svh,2.5rem)] lg:sticky lg:top-0 lg:h-[100svh] lg:max-h-[100svh]"
       >
         <div className="eyebrow hidden xl:block absolute right-6 top-1/2 -translate-y-1/2 rotate-90 origin-right text-charcoal/40 pointer-events-none select-none">
           COUNSEL • STRATEGY • REPRESENTATION
         </div>
 
         <div className="max-w-[1280px] mx-auto lg:h-full lg:flex lg:flex-col">
-          <div className="mb-12 md:mb-16 lg:flex-shrink-0">
-            <SectionLabel label="THE PEOPLE" className="mb-4 text-red-600" />
-            <h1 className="font-display text-3xl md:text-4xl text-charcoal font-normal tracking-tight">
+          <div className="mb-12 md:mb-[clamp(1.25rem,4svh,4rem)] lg:flex-shrink-0">
+            <SectionLabel label="THE PEOPLE" className="mb-[clamp(0.5rem,1.2svh,1rem)] text-red-600" />
+            <h1 className="font-display text-3xl text-[clamp(1.5rem,3.2svh,2.25rem)] text-charcoal font-normal tracking-tight leading-[1.15]">
               Leadership with Perspective.
             </h1>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 relative lg:flex-1 lg:min-h-0">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-[clamp(1.5rem,3vw,3.5rem)] relative lg:flex-1 lg:min-h-0">
             <span
               aria-hidden
               className="absolute -left-8 top-10 font-display text-[180px] md:text-[260px] text-charcoal/[0.04] leading-none select-none pointer-events-none -z-0"
@@ -188,17 +188,17 @@ export default function TeamRoster() {
 
             <div className="lg:col-span-7 z-10 lg:h-full lg:flex lg:flex-col lg:min-h-0">
               <div className="lg:flex-shrink-0">
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start pb-8 border-b border-charcoal/15">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start pb-8 md:pb-[clamp(1rem,3svh,2rem)] border-b border-charcoal/15">
                   <div className="md:col-span-7 border-l-2 border-red-600 pl-4">
-                    <span className="eyebrow text-red-600 block mb-3">
+                    <span className="eyebrow text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
                       HEAD OF FIRM
                     </span>
-                    <h2 className="font-display text-3xl md:text-4xl text-charcoal font-normal uppercase tracking-wide">
+                    <h2 className="font-display text-3xl md:text-[clamp(1.5rem,3.2svh,2.25rem)] text-charcoal font-normal uppercase tracking-wide leading-[1.15]">
                       {leader?.name || "SAMEER SATTAR"}
                     </h2>
                   </div>
 
-                  <div className="md:col-span-5 text-charcoal text-xl leading-relaxed space-y-2 pt-1">
+                  <div className="md:col-span-5 text-charcoal text-xl md:text-[clamp(0.95rem,2svh,1.25rem)] leading-relaxed space-y-2 md:space-y-[clamp(0.15rem,0.7svh,0.5rem)] pt-1">
                     {leader?.practiceAreas?.slice(0, 4).map((area) => (
                       <p key={area}>{area}</p>
                     )) || (
@@ -209,7 +209,7 @@ export default function TeamRoster() {
                       </>
                     )}
 
-                    <div className="pt-6">
+                    <div className="pt-6 md:pt-[clamp(0.75rem,2.5svh,1.5rem)]">
                       <Link
                         href={`/team/${leader?.slug ?? ""}`}
                         className="eyebrow inline-flex items-center text-charcoal hover:text-red-600 transition-colors gap-2"
@@ -221,13 +221,13 @@ export default function TeamRoster() {
                 </div>
               </div>
 
-              <div className="lg:flex-shrink-0 pt-6">
+              <div className="lg:flex-shrink-0 pt-6 lg:pt-[clamp(0.75rem,2.5svh,1.5rem)]">
                 <span className="eyebrow text-red-600 block">{activeGroupName}</span>
               </div>
 
               <div
                 ref={scrollerRef}
-                className="pt-4 lg:flex-1 lg:min-h-0 lg:overflow-hidden no-scrollbar"
+                className="pt-4 lg:pt-[clamp(0.5rem,1.5svh,1rem)] lg:flex-1 lg:min-h-0 lg:overflow-hidden no-scrollbar"
               >
                 <div ref={trackRef} className="lg:will-change-transform">
                   {rosterRows.map((row, rowIndex) => {
@@ -243,11 +243,11 @@ export default function TeamRoster() {
                           itemRefs.current[rowIndex] = el;
                         }}
                         className={[
-                          "min-h-[38vh] lg:min-h-[45vh] flex flex-col justify-center border-b border-charcoal/15 last:border-b-0",
+                          "min-h-[38vh] lg:min-h-[clamp(220px,40svh,440px)] flex flex-col justify-center border-b border-charcoal/15 last:border-b-0 py-[clamp(0.75rem,2svh,1.5rem)]",
                           isFirstOfGroup ? "pt-2" : "",
                         ].join(" ")}
                       >
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-8 w-full">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-[clamp(1rem,2vw,2rem)] w-full">
                           {row.members.map((member) => {
                             const isViewable =
                               member.group !== "Administration & Accounts";
@@ -270,11 +270,11 @@ export default function TeamRoster() {
                                 key={member.slug}
                                 {...(wrapperProps as Record<string, unknown>)}
                                 className={[
-                                  "group flex flex-col items-start gap-3",
+                                  "group flex flex-col items-start gap-3 lg:gap-[clamp(0.35rem,1.2svh,0.75rem)]",
                                   isViewable ? "cursor-pointer" : "cursor-default",
                                 ].join(" ")}
                               >
-                                <div className="relative w-full aspect-[4/5] bg-charcoal/10 overflow-hidden">
+                                <div className="relative w-full aspect-[4/5] lg:max-h-[clamp(120px,24svh,260px)] bg-charcoal/10 overflow-hidden">
                                   <Image
                                     src={member.image || "/team/placeholder.jpg"}
                                     alt={`Portrait of ${member.name}${
