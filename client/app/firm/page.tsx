@@ -23,7 +23,7 @@ export default function FirmPage() {
   return (
     <>
       {/* Page hero */}
-      <section className="grain relative overflow-hidden bg-navy flex justify-center item-center pt-40 pb-24 md:pt-52 md:pb-32">
+      <section className="grain relative overflow-hidden bg-navy flex justify-center item-center pt-36 pb-24  md:pb-32">
         <Image
           src={img1}
           alt=""
@@ -62,14 +62,14 @@ export default function FirmPage() {
                <FaQuoteLeft size={44} strokeWidth={1} className="text-red-600/80 bg- relative -top-5 -left-10" />
              </div>
 
-              <p className="text-charcoal/70 leading-relaxed text-2xl text-justify relative z-10">
+              <p className="text-charcoal/70 leading-relaxed text-2xl  relative z-10">
                 I have always believed that exceptional legal counsel begins with
                 understanding more than the law. It requires understanding the client,
                 the realities they face, and the environment in which their decisions
                 are made.
               </p>
 
-              <p className="text-charcoal/70 leading-relaxed text-2xl text-justify relative z-10">
+              <p className="text-charcoal/70 leading-relaxed text-2xl  relative z-10">
                 At Sattar&Co., we bring together legal expertise, commercial perspective
                 and sound judgment to address matters that demand precision and
                 discretion. Our role is to understand what is at stake, anticipate what
@@ -77,7 +77,7 @@ export default function FirmPage() {
               </p>
 
               <div className="relative">
-                <p className="text-charcoal/70 leading-relaxed text-2xl text-justify relative z-10">
+                <p className="text-charcoal/70 leading-relaxed text-2xl  relative z-10">
                   We have built the firm on a simple principle: excellence is measured
                   not only by the quality of our work, but by the trust we earn through it.
                 </p>

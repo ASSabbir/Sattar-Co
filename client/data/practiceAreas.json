@@ -51,14 +51,15 @@
     "id": "regulatory-bodies",
     "index": "04",
     "category": "Regulatory Bodies",
-    "imgs": "https://www.thedailystar.net/sites/default/files/styles/big_1/public/2026-09/_Rashed%20Shumon_RS_4653.jpg?h=ac02026f",
+    "imgs": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Bangladesh_Secretariat_gate.jpg/330px-Bangladesh_Secretariat_gate.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
     "description": "We help businesses and organisations navigate Bangladesh's regulatory environment and engage with key governmental authorities, covering compliance, investment, labour, competition, environmental, tax and corporate registration matters.",
     "areas": [
       "Bangladesh Bank",
       "Bangladesh Competition Commission",
-      "Bangladesh Investment Development Authority (BIDA)",
+      
       "City Corporations",
       "Environmental Regulatory Authorities",
+      "Invest Bangladesh",
       "Labour Authorities",
       "Registrar of Joint Stock Companies & Firms (RJSC)",
       "Tax & VAT Authorities"
@@ -73,7 +74,9 @@
     "areas": [
       "Cessation of Employment",
       "Compliance with Labour Laws",
+      "Disciplinary Proceedings",
       "Employment Laws",
+      "Investigations",
       "Service Rules (Employment Handbook)",
       "Sexual Harassment",
       "Workforce Restructuring"
