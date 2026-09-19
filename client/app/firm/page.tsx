@@ -116,7 +116,7 @@ const SECTION_Y = "py-14 sm:py-20 lg:py-24";
 
 function Hero() {
   return (
-    <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-32 md:pt-36 2xl:pb-40 2xl:pt-44">
+    <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 md:pt-36  2xl:pt-44">
       <Image
         src={heroImg}
         alt=""
@@ -127,11 +127,11 @@ function Hero() {
       />
       <div className="absolute inset-0 bg-black/20" />
 
-      <div className={`${CONTAINER} relative z-10 text-center`}>
+      {/* <div className={`${CONTAINER} relative z-10 text-center`}>
         <RevealText as="h1" immediate className="font-display text-display-lg text-white">
           Trusted Excellence
         </RevealText>
-      </div>
+      </div> */}
     </section>
   );
 }

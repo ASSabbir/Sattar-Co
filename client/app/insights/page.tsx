@@ -45,23 +45,23 @@ export default function InsightsPage() {
 
   return (
     <>
-      <section className="grain relative overflow-hidden bg-white pt-40 pb-20 md:pt-52 md:pb-24">
-        <Image
-          src={img1}
-          alt=""
-          fill
-          priority
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black/35" />
+      <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 md:pt-36  2xl:pt-44">
+      <Image
+        src={img1}
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-black/20" />
 
-        <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
-          {/* <SectionLabel label="Insights" light className="mb-8" /> */}
-          <RevealText as="h1" immediate className="font-display text-display-lg text-ivory max-w-3xl">
-            Commentary from the firm
-          </RevealText>
-        </div>
-      </section>
+      {/* <div className={`${CONTAINER} relative z-10 text-center`}>
+        <RevealText as="h1" immediate className="font-display text-display-lg text-white">
+          Trusted Excellence
+        </RevealText>
+      </div> */}
+    </section>
 
       <section className="bg-white">
         

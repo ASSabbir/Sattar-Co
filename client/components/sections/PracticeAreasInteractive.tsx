@@ -168,7 +168,7 @@ function PracticeAreaPanel({ area, isActive }: PanelProps) {
     <div
       className={`mt-8 grid gap-6 sm:gap-8 md:mt-10 md:grid-cols-2 md:items-center lg:sticky lg:top-24 lg:col-span-6 lg:col-start-7 lg:mt-0 lg:block lg:self-start lg:row-start-1 lg:[grid-row-end:span_var(--pa-rows)] lg:transition-[opacity,transform] lg:ease-editorial lg:motion-reduce:transition-none ${visibility}`}
     >
-      <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[16/9] md:aspect-[4/3] lg:mb-8 lg:aspect-[16/10] lg:max-h-[55vh]">
+      <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[16/9] md:aspect-[4/3] lg:mb-8 lg:aspect-[22/10] lg:max-h-[55vh]">
         <Image
           src={area.imgs}
           alt={`${area.category} — Sattar&Co. practice area`}
