@@ -50,8 +50,8 @@ export default function PracticeAreasInteractive() {
       <div className="max-w-content mx-auto px-6 md:px-10">
         <div className="gap-10 lg:gap-16 items-start">
           <div className="w-full font-sans flex flex-col text-lg md:text-2xl font-thin space-y-4 text-charcoal">
-            <span>Sattar&amp;Co. provides strategic, full-service legal counsel to the Bangladeshi business community, as well as the international investors and counsel who operate alongside it. Built upon specialized legal expertise and a sophisticated understanding of Bangladesh’s regulatory landscape, the firm delivers decisive, high-stakes judgment under pressure.</span>
-            <span>Our practice spans a diverse array of industries and sectors, focusing primarily on complex corporate transactions, international disputes,<br />and commercial litigation.</span>
+            <span>Sattar&amp;Co. provides strategic, full-service legal counsel to the Bangladeshi business community, as well as international investors and foreign law firms. Built upon specialized legal expertise and a sophisticated understanding of local regulatory landscape, the firm delivers decisive, high-stakes judgment under pressure.</span>
+            <span>Our practice spans a diverse array of industries and sectors, focusing primarily on complex corporate transactions, international disputes and commercial litigation.</span>
             <span>Comprising highly experienced advocates, our legal team regularly appears before the Supreme Court of Bangladesh and prominent domestic and international arbitral tribunals.</span>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function PracticeAreasInteractive() {
                   onClick={() => setActive(i)}
                   className="text-left w-full py-6 group"
                 >
-                  <span className="eyebrow text-red-600 border-b-2 inline text-3xl px-2 pb-1 border-red-600">
+                  <span className="eyebrow text-red-600 border-b-2 inline !text-lg px-2 pb-1 border-red-600">
                     {area.index}
                   </span>
                   <span
@@ -121,9 +121,9 @@ export default function PracticeAreasInteractive() {
                     />
                   </motion.div>
 
-                  <p className="text-charcoal/90 leading-relaxed mb-8 text-justify text-xl">
+                  {/* <p className="text-charcoal/90 leading-relaxed mb-8  text-xl">
                     {current.description}
-                  </p>
+                  </p> */}
 
                   {/* Areas — staggered in instead of popping in all at once */}
                   <motion.ul

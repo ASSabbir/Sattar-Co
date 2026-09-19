@@ -1,10 +1,11 @@
+
 [
-   {
+  {
     "id": "corporate-commercial",
     "index": "01",
     "category": "Corporate & Commercial",
     "imgs": "https://www.ahabtoor.com/wp-content/uploads/2024/03/Corporate-Commercial.jpeg",
-    "description": "We advise companies, investors and financial institutions on a wide range of corporate and commercial matters in Bangladesh. Our work includes corporate governance, commercial transactions, mergers and acquisitions, private equity, financing, insurance and regulatory issues, with a focus on providing clear and commercially grounded legal counsel.",
+    "description": "We advise companies, investors and financial institutions on corporate and commercial matters in Bangladesh, including transactions, governance, mergers and acquisitions, private equity, financing, insurance and regulatory issues, with a focus on clear and commercially grounded advice.",
     "areas": [
       "Commercial Transactions",
       "Corporate Governance",
@@ -15,12 +16,13 @@
       "Regulatory Issues",
       "Shareholder Disputes"
     ]
-  }, {
+  },
+  {
     "id": "banking-finance",
     "index": "02",
     "category": "Banking & Finance",
     "imgs": "https://vtn-partners.com/data/uploads/2023/03/nganh-tai-chinh-ngan-hang-la-gi-hinh-anh3.jpg",
-    "description": "We advise banks, financial institutions, investors and businesses on a broad range of banking and finance matters, combining detailed knowledge of financial regulation with practical commercial judgment. Our work spans structured finance, syndicated lending, project and asset finance, loan transactions and emerging FinTech matters.",
+    "description": "We advise banks, financial institutions, investors and businesses on banking and finance matters, including structured finance, lending, project and asset finance, loan transactions and emerging FinTech matters.",
     "areas": [
       "Asset Finance",
       "Financial Regulation",
@@ -31,13 +33,12 @@
       "Structured Debt Financing"
     ]
   },
-
   {
     "id": "dispute-resolution",
     "index": "03",
     "category": "Dispute Resolution",
     "imgs": "https://www.mmaadvocates.co.ke/wp-content/uploads/2024/07/Dispute-Resolution-in-Business.png.webp",
-    "description": "Our dispute resolution practice represents clients in complex commercial disputes and contentious matters in Bangladesh and internationally. We advise and represent clients across litigation, arbitration, negotiation and mediation, combining rigorous legal analysis with strategic judgment to protect their interests.",
+    "description": "We represent clients in complex commercial disputes in Bangladesh and internationally, covering litigation, arbitration, negotiation and mediation, supported by rigorous legal analysis and strategic judgment.",
     "areas": [
       "Domestic Arbitration",
       "International Arbitration",
@@ -50,31 +51,32 @@
     "id": "regulatory-bodies",
     "index": "04",
     "category": "Regulatory Bodies",
-    "imgs": "https://www.thedailystar.net/sites/default/files/styles/big_1/public/2026-09/_Rashed%20Shumon_RS_4653.jpg?h=ac02026f",
-    "description": "We advise businesses and organisations in navigating Bangladesh's regulatory landscape and their interactions with key regulatory and governmental authorities. Our work includes regulatory compliance, investment, labour, competition, environmental, tax and corporate registration matters.",
+    "imgs": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Bangladesh_Secretariat_gate.jpg/330px-Bangladesh_Secretariat_gate.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "description": "We help businesses and organisations navigate Bangladesh's regulatory environment and engage with key governmental authorities, covering compliance, investment, labour, competition, environmental, tax and corporate registration matters.",
     "areas": [
       "Bangladesh Bank",
       "Bangladesh Competition Commission",
-      "Bangladesh Investment Development Authority (BIDA)",
+      
       "City Corporations",
       "Environmental Regulatory Authorities",
+      "Invest Bangladesh",
       "Labour Authorities",
       "Registrar of Joint Stock Companies & Firms (RJSC)",
       "Tax & VAT Authorities"
     ]
   },
-  
-  
   {
     "id": "cessation-of-employment",
     "index": "05",
     "category": "Employment",
     "imgs": "/Images/8.jpeg",
-    "description": "We advise employers on the legal and practical considerations arising from the cessation and restructuring of employment. Our counsel covers compliance with labour laws, employment regulations, service rules, workplace conduct and workforce restructuring, helping organisations manage employment transitions with clarity and care.",
+    "description": "We advise employers on employment matters, including cessation, labour laws, employment regulations, service rules, workplace conduct and workforce restructuring, helping organisations manage employment decisions with clarity and compliance.",
     "areas": [
       "Cessation of Employment",
       "Compliance with Labour Laws",
+      "Disciplinary Proceedings",
       "Employment Laws",
+      "Investigations",
       "Service Rules (Employment Handbook)",
       "Sexual Harassment",
       "Workforce Restructuring"
@@ -85,7 +87,7 @@
     "index": "06",
     "category": "IP & Technology",
     "imgs": "/Images/7.jpeg",
-    "description": "We advise businesses on intellectual property, technology and digital matters across an increasingly regulated and technology-driven economy. Our work covers intellectual property rights, data protection, cyber law, digital infrastructure, telecommunications and emerging technologies, including artificial intelligence.",
+    "description": "We advise businesses on intellectual property, technology and digital matters, including IP rights, data protection, cyber law, digital infrastructure, telecommunications and emerging technologies such as artificial intelligence.",
     "areas": [
       "Artificial Intelligence (AI) & Technology Law",
       "Copyright & Patent Law",

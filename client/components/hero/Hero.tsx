@@ -168,7 +168,7 @@ export default function Hero() {
 
       <div className="relative z-20 h-full max-w-content mx-auto px-6 md:px-10 flex flex-col justify-end pb-20 md:pb-28">
         <div ref={logoRef}>
-          <img src={wlogo.src} className="h-32" alt="Sattar&Co." />
+          <img src={wlogo.src} className="h-12 md:h-32" alt="Sattar&Co." />
         </div>
       </div>
 
