@@ -51,7 +51,7 @@
     "id": "regulatory-bodies",
     "index": "04",
     "category": "Regulatory Bodies",
-    "imgs": "https://i.ibb.co.com/SDBpBHfc/5.png",
+    "imgs": "/images/services/5.png",
     "description": "We help businesses and organisations navigate Bangladesh's regulatory environment and engage with key governmental authorities, covering compliance, investment, labour, competition, environmental, tax and corporate registration matters.",
     "areas": [
       "Bangladesh Bank",
@@ -69,7 +69,7 @@
     "id": "cessation-of-employment",
     "index": "05",
     "category": "Employment",
-    "imgs": "https://i.ibb.co.com/XHRBQSN/2.jpg",
+    "imgs": "https://api.industryinsiderbd.com/images/articles/1779617455853.webp",
     "description": "We advise employers on employment matters, including cessation, labour laws, employment regulations, service rules, workplace conduct and workforce restructuring, helping organisations manage employment decisions with clarity and compliance.",
     "areas": [
       "Cessation of Employment",
@@ -86,7 +86,7 @@
     "id": "ip-technology",
     "index": "06",
     "category": "IP & Technology",
-    "imgs": "https://i.ibb.co.com/tTS4rxvv/Chat-GPT-Image-Sep-20-2026-05-11-10-AM.png",
+    "imgs": "https://hetheringtongroup.com/wp-content/uploads/2026/03/shutterstock_2567251255.jpg",
     "description": "We advise businesses on intellectual property, technology and digital matters, including IP rights, data protection, cyber law, digital infrastructure, telecommunications and emerging technologies such as artificial intelligence.",
     "areas": [
       "Artificial Intelligence (AI) & Technology Law",

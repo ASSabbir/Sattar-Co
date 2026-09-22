@@ -17,7 +17,7 @@ const NAV_LINKS = [
   { href: "/team", label: "People" },
   { href: "/practice-areas", label: "Expertise" },
   { href: "/firm", label: "The Firm" },
-  { href: "/insights", label: "Insights" },
+  { href: "/insights", label: "Work Done" },
   { href: "/publications", label: "Publications" },
   { href: "/careers", label: "Careers" },
   

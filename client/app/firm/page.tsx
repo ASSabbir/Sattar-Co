@@ -8,7 +8,7 @@ import TestimonialSpotlight from "@/components/sections/TestimonialSpotlight";
 import RecognitionMarquee from "@/components/sections/RecognitionMarquee";
 import ImageSlider from "@/components/sections/ImageSlider";
 import firm from "@/data/firm.json";
-import heroImg from "../../public/images/10.webp";
+import heroImg from "../../public/images/IMG_5002.jpg";
 import founderImg from "../../public/images/sattar.webp";
 import officeImg from "../../public/images/Firm-rotate-2.jpg";
 // TIP: rename this file to firm-rotate-3.jpg (no spaces / brackets) — cleaner URLs.
@@ -116,7 +116,7 @@ const SECTION_Y = "py-14 sm:py-20 lg:py-24";
 
 function Hero() {
   return (
-    <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 md:pt-36  2xl:pt-44">
+    <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 mt-24  ">
       <Image
         src={heroImg}
         alt=""

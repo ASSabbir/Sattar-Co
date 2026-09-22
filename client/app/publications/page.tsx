@@ -6,7 +6,8 @@ import { ArrowUpRight } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
 import publications from "@/data/publications.json";
-import img1 from "../../public/images/4.webp";
+import img1 from "../../public/images/asa.png";
+import Image from "next/image";
 
 // Fixed order rather than deriving from the data, so the tab order never
 // shuffles if entries get added/removed later.
@@ -56,16 +57,15 @@ export default function PublicationsPage() {
       {/* =========================================================
           PUBLICATIONS HERO
       ========================================================== */}
-      <section className="grain relative overflow-hidden bg-navy pt-40 pb-20 md:pt-52 md:pb-52">
-        {/* Background Video */}
-        <video
-          src="/videos/video1.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
+      <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 mt-24  ">
+      <Image
+        src={img1}
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
 
         {/* Cinematic Gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-black/55" />

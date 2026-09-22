@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import RevealText from "@/components/ui/RevealText";
 import CareersInteractive from "@/components/sections/CareersInteractive";
-
+import Image from "next/image";
+import img1 from "../../public/images/DSC_9836.webp";
 export const metadata: Metadata = {
   title: "Careers",
   description:
@@ -11,22 +12,18 @@ export const metadata: Metadata = {
 export default function CareersPage() {
   return (
     <>
-      <section className="grain relative overflow-hidden bg-navy pt-40 pb-20 md:pt-52 md:pb-24">
-        <video
-          src="/videos/video3.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover object-top"
-        />
+      <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 mt-24  ">
+      <Image
+        src={img1}
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
         <div className="absolute inset-0 bg-black/45" />
 
-        <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
-          <RevealText as="h1" immediate className="font-display text-display-lg text-ivory max-w-3xl">
-           Start Your Practice With Us
-          </RevealText>
-        </div>
+        
       </section>
 
       <section className="bg-white pt-10 pb-4">

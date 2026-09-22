@@ -17,14 +17,15 @@ export default function PracticeAreasPage() {
   return (
     <section className="">
       {/* Page hero */}
-      <section className="grain relative overflow-hidden bg-navy flex justify-center item-center pt-36 pb-24  md:pb-52">
-        <Image
-          src={img1}
-          alt=""
-          fill
-          priority
-          className="object-cover object-center"
-        />
+      <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 mt-24  ">
+      <Image
+        src={img1}
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
         <div className="absolute inset-0 bg-black/20" />
 
         {/* <div className="relative z-10 max-w-content mx-auto  px-6 md:px-10">

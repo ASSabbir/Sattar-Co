@@ -8,7 +8,7 @@ import { ArrowUpRight } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
 import insights from "@/data/insights.json";
-import img1 from '../../public/images/3.webp'
+import img1 from '../../public/images/s.png'
 
 function formatDate(item: { date: string | null; year: number }) {
   if (!item.date) return String(item.year);
@@ -45,7 +45,7 @@ export default function InsightsPage() {
 
   return (
     <>
-      <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 md:pt-36  2xl:pt-44">
+      <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 mt-24  ">
       <Image
         src={img1}
         alt=""
