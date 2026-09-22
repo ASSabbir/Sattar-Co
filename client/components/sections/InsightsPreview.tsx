@@ -35,7 +35,7 @@ function shuffleArray<T>(array: T[]): T[] {
 function truncateWords(text: string, maxWords: number) {
   const words = text.trim().split(/\s+/);
   if (words.length <= maxWords) return text;
-  return words.slice(0, maxWords).join(" ") + "…";
+  return words.slice(0, maxWords).join(" ") ;
 }
 
 export default function InsightsPreview() {
@@ -134,7 +134,7 @@ export default function InsightsPreview() {
                     {item.category} ·
                   </p>
                   <h3 className="font-display text-lg t md:text-2xl text-charcoal leading-snug group-hover:text-red-600 transition-colors duration-300 tracking-wide">
-                    {truncateWords(item.title, 10)}
+                    {truncateWords(item.title, 10)}<span className="text-red-500 group-hover:text-gray-800 eyebrow ml-5 text-sm">(see more)</span>
                   </h3>
                 </div>
 
