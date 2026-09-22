@@ -3,7 +3,7 @@ import ArrowLink from "@/components/ui/ArrowLink";
 import Plate from "@/components/ui/Plate";
 import RevealText from "@/components/ui/RevealText";
 import firm from "@/data/firm.json";
-import img1 from '../../public/images/10.webp'
+import img1 from '../../public/images/as.png'
 
 export default function FirmIntro() {
   return (
