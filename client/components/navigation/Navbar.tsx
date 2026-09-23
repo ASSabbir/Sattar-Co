@@ -20,7 +20,6 @@ const NAV_LINKS = [
   { href: "/insights", label: "Work Done" },
   { href: "/publications", label: "Publications" },
   { href: "/careers", label: "Careers" },
-  
   { href: "/contact", label: " Contact Us" },
 ];
 
@@ -104,7 +103,7 @@ export default function Navbar() {
           <TopBar />
         </div>
 
-        <nav className="max-w-content font-bold mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 h-16 sm:h-[4.75rem] lg:h-19 py-3 sm:py-4">
+        <nav className="max-w-content font-bold mx-auto flex items-center justify-between px-4 sm:px-6 md:px-20 h-16 sm:h-[4.75rem] lg:h-19 py-3 sm:py-4">
           <Link
             href="/"
             className={cn(
@@ -112,7 +111,8 @@ export default function Navbar() {
               solid ? "text-black" : "text-black "
             )}
           >
-            {solid?<img src={blogo.src} alt="" className="w-24 sm:w-28 lg:w-32" /> : <img src={wlogo.src} alt="" className="w-24 sm:w-28 lg:w-32 opacity-0" />}
+            {/* {solid?<img src={blogo.src} alt="" className="w-24 sm:w-28 lg:w-30" /> : <img src={wlogo.src} alt="" className="w-24 sm:w-28 lg:w-32 opacity-0" />} */}
+            <img src={blogo.src} alt="" className="w-24 sm:w-28 lg:w-36 mb-1" /> 
           </Link>
 
           <ul
@@ -129,7 +129,7 @@ export default function Navbar() {
                     href={link.href}
                     className={cn("link-underline", isActive && "text-red-600")}
                   >
-                    {link.label}
+                    {link.label && link.label=="Careers" ? <span className="text-[19px] ">Careers</span> : link.label}
                   </Link>
                 </li>
               );
@@ -173,7 +173,7 @@ export default function Navbar() {
                       href={link.href}
                       className="font-display text-3xl sm:text-4xl text-charcoal hover:text-red-600 transition-colors duration-300"
                     >
-                      {link.label}
+                      {link.label=="Contact Us"&&<span className="text-[30px]">Contact Us</span>}
                     </Link>
                   </motion.li>
                 ))}

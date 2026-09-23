@@ -35,7 +35,7 @@ function shuffleArray<T>(array: T[]): T[] {
 function truncateWords(text: string, maxWords: number) {
   const words = text.trim().split(/\s+/);
   if (words.length <= maxWords) return text;
-  return words.slice(0, maxWords).join(" ") ;
+  return words.slice(0, maxWords).join(" ") + "…";
 }
 
 export default function InsightsPreview() {
@@ -125,24 +125,29 @@ export default function InsightsPreview() {
               <Link
                 key={item.slug}
                 href={`/insights/${item.slug}`}
-                className={`group flex-1 flex items-center gap-6  py-2 md:py-0 ${
-                  i !== 0 ? "border-t border-charcoal/10" : ""
-                }`}
+                className={`group flex-1 flex items-center gap-6  py-2 md:py-5 ${i !== 0 ? "border-t border-charcoal/30" : ""
+                  }`}
               >
                 <div className="min-w-0 group">
-                  <p className="eyebrow !text-[15px] text-red-600 group-hover:text-black duration-300 mb-2">
-                    {item.category} ·
+                  <p className=" !text-[16px] eyebrow  uppercase text-red-600 group-hover:text-black duration-300 mb-2">
+                    {item.category} <span className="">·</span>
                   </p>
-                  <h3 className="font-display text-lg t md:text-2xl text-charcoal leading-snug group-hover:text-red-600 transition-colors duration-300 tracking-wide">
-                    {truncateWords(item.title, 10)}<span className="text-red-500 group-hover:text-gray-800 eyebrow ml-5 text-sm">(see more)</span>
+                  <h3 className="font-display text-lg t md:text-2xl text-charcoal leading-snug group-hover:text-red-600 transition-colors duration-300 trackin">
+                    {truncateWords(item.title, 10)}
                   </h3>
+                  <div className="flex  item-center flex-row   gap-2 h-full ">
+                    <button className="mt-2  text-lg text-red-600 group-hover:text-gray-600 transition-colors duration-300">
+                      Read more
+                    </button>
+                    <ArrowUpRight
+                      size={18}
+                      strokeWidth={1.5}
+                      className=" mt-4 text-charcoal/30 transition-all duration-300 group-hover:text-red-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    />
+                  </div>
                 </div>
 
-                <ArrowUpRight
-                  size={18}
-                  strokeWidth={1.5}
-                  className="ml-auto shrink-0 text-charcoal/30 transition-all duration-300 group-hover:text-red-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
+
               </Link>
             ))}
           </div>
