@@ -147,9 +147,9 @@ function FounderMessage() {
           About {SITE_NAME}
         </h2>
 
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 lg:gap-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 lg:gap-24">
           {/* Portrait */}
-          <div className="md:col-span-5">
+          <div className="md:col-span-6">
             <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden md:sticky md:top-28 md:max-h-[calc(100svh-9rem)] md:max-w-none lg:top-32 lg:max-h-[calc(100svh-10rem)]">
               <Image
                 src={founderImg}
@@ -165,10 +165,10 @@ function FounderMessage() {
           <figure className="flex flex-col gap-5 md:col-span-7 md:gap-6 lg:col-span-6 lg:col-start-7">
             <FaQuoteLeft
               aria-hidden="true"
-              className="h-8 w-8 text-red-600/80 md:h-11 md:w-11 xl:-ml-12"
+              className="h-8 w-8 text-red-600/80 md:h-11 md:w-11 "
             />
 
-            <blockquote className="flex flex-col gap-5 text-base leading-relaxed text-charcoal/70 sm:text-lg md:gap-6 lg:text-xl xl:text-2xl">
+            <blockquote className="flex flex-col   gap-5 text-base text-charcoal tracking-tightest leading-relaxed text-lg md:text-[22px] md:gap-6 ">
               {FOUNDER_MESSAGE.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}

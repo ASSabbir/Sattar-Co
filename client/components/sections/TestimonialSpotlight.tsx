@@ -50,7 +50,7 @@ export default function TestimonialSpotlight() {
 
         <FaQuoteLeft
           aria-hidden="true"
-          className="mx-auto mb-6 h-8 w-8 text-red-600/80 md:mb-10 md:h-11 md:w-11"
+          className="mx-aut  mb-6 h-8 w-8 text-red-600/80 md:mb-10 md:h-11 md:w-11 relative left-[48%]"
         />
 
         {/*
