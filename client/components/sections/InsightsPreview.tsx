@@ -67,13 +67,13 @@ export default function InsightsPreview() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-stretch">
           {/* ── Left: autoplay testimonial card ── */}
           <div
-            className="lg:col-span-6 mt- relative grain overflow-hidden rounded-sm min-h-[400px]  flex flex-col justify-between"
+            className="lg:col-span-6 mt- relative grain overflow-hidden rounded-sm min-h-[400px]  flex flex-col  "
             onMouseEnter={() => setPaused(true)}
             onMouseLeave={() => setPaused(false)}
           >
             <FaQuoteLeft size={44} strokeWidth={1} className="text-red-600/70 mt-4 mb-8 shrink-0" />
 
-            <div className="relative mt- flex-1 flex  overflow-hidden">
+            <div className="relative mt- flex-1  flex  overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={active}
@@ -92,7 +92,7 @@ export default function InsightsPreview() {
             </div>
 
             {/* Progress indicator */}
-            <div className="flex items-center gap-2 mt-8 shrink-0">
+            <div className="flex items-center  gap-2 mt-8 shrink-0">
               {testimonials.map((_, i) => (
                 <button
                   key={i}

@@ -147,13 +147,13 @@ export default function TeamRoster() {
   const handleRosterFocus = (index: number) => setActiveIndex(index);
 
   return (
-    <div ref={wrapperRef} className="relative">
+    <div ref={wrapperRef} className="relative mt-24">
       <section
         ref={sectionRef as React.RefObject<HTMLElement>}
         aria-label="Our team"
         className="mt-20 relative bg-white text-charcoal pt-36 pb-24 px-6 md:px-12 lg:px-20 overflow-hidden font-sans md:pt-[clamp(1.5rem,5svh,5rem)] md:pb-[clamp(1rem,3svh,2.5rem)] lg:sticky lg:top-0 lg:h-[100svh] lg:max-h-[100svh]"
       >
-        <div className="eyebrow hidden xl:block absolute right-6 top-1/2 -translate-y-1/2 rotate-90 origin-right text-charcoal/40 pointer-events-none select-none">
+        <div className="eyebrow hidden xl:block absolute right-6 top-2/3 -translate-y-1/2 rotate-90 origin-right text-charcoal/40 pointer-events-none select-none">
           COUNSEL • STRATEGY • REPRESENTATION
         </div>
 
@@ -221,15 +221,15 @@ export default function TeamRoster() {
                 </div>
               </div>
 
-              <div className="lg:flex-shrink-0 pt-6 lg:pt-[clamp(0.75rem,2.5svh,1.5rem)]">
+              <div className="lg:flex-shrink-0 pt-6  lg:pt-[clamp(0.75rem,2.5svh,1.5rem)]">
                 <span className="eyebrow text-red-600 block">{activeGroupName}</span>
               </div>
 
               <div
                 ref={scrollerRef}
-                className="pt-4 lg:pt-[clamp(0.5rem,1.5svh,1rem)] lg:flex-1 lg:min-h-0 lg:overflow-hidden no-scrollbar"
+                className="pt-4 lg:pt-[clamp(0.5rem,1.5svh,1rem)]  lg:flex-1 lg:min-h-0 lg:overflow-hidden no-scrollbar"
               >
-                <div ref={trackRef} className="lg:will-change-transform">
+                <div ref={trackRef} className="lg:will-change-transform ">
                   {rosterRows.map((row, rowIndex) => {
                     const isRowActive = activeIndex === rowIndex;
                     const isFirstOfGroup =
@@ -284,9 +284,7 @@ export default function TeamRoster() {
                                     sizes="(max-width: 639px) 45vw, (max-width: 1023px) 30vw, 18vw"
                                     className={[
                                       "object-cover object-top transition-all duration-500",
-                                      isRowActive
-                                        ? "grayscale-0"
-                                        : "grayscale group-hover:grayscale-0",
+                                      
                                     ].join(" ")}
                                   />
                                 </div>

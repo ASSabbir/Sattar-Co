@@ -180,7 +180,7 @@ function PracticeAreaPanel({ area, isActive }: PanelProps) {
         />
       </div>
 
-      <ul className="flex flex-wrap gap-x-6 gap-y-3">
+      <ul className="grid grid-cols-2 gap-x-6 gap-y-3">
         {area.areas.map((item: string, j: number) => (
           <li
             key={item}
@@ -212,20 +212,20 @@ export default function PracticeAreasInteractive() {
     <section
       id="practice-areas"
       aria-labelledby="practice-areas-heading"
-      className="bg-white py-12 sm:py-16 lg:py-20 2xl:py-28"
+      className="bg-white pt-12  sm:pb-16 lg:pb-20 "
     >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: structuredDataJson }}
       />
 
-      <div className="mx-auto max-w-content px-5 sm:px-6 md:px-10">
+      <div className="mx-auto  max-w-content px-5 sm:px-6 md:px-10">
         <h2 id="practice-areas-heading" className="sr-only">
           Practice Areas
         </h2>
 
         {/* Intro */}
-        <div className=" space-y-4 font-sans text-lg font-light leading-relaxed text-charcoal sm:text-xl md:space-y-6 md:text-2xl md:font-thin 2xl:text-3xl">
+        <div className=" space-y-4 font-sans  font-light  sm:text-xl md:space-y-6 md:text-2xl md:font-thin text-charcoal  leading-relaxed text-lg md:text-[22px]">
           {INTRO_PARAGRAPHS.map((text) => (
             <p key={text}>{text}</p>
           ))}
