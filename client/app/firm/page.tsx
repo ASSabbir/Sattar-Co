@@ -244,7 +244,7 @@ function Approach() {
         <ul className="grid grid-cols-1 gap-10 lg:grid-cols-3 lg:gap-12">
           {APPROACH_ITEMS.map((item) => (
             <li key={item.title} className="border-t border-charcoal/15 pt-6">
-              <h3 className="mb-4 font-display text-3xl text-charcoal [text-wrap:balance] sm:text-4xl md:mb-6 xl:text-5xl">
+              <h3 className="mb-4  [text-wrap:balance] sm:text-4xl md:mb-6 font-display pb-2 bg text-4xl spay   md:text-6xl text-charcoal">
                 {item.title}
               </h3>
               <p className="max-w-2xl text-base leading-relaxed text-charcoal/90 sm:text-lg xl:text-xl">

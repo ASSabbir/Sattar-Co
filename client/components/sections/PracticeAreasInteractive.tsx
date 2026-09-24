@@ -212,7 +212,7 @@ export default function PracticeAreasInteractive() {
     <section
       id="practice-areas"
       aria-labelledby="practice-areas-heading"
-      className="bg-white pt-12  sm:pb-16 lg:pb-20 "
+      className="bg-white   sm:pb-16 lg:pb-20 "
     >
       <script
         type="application/ld+json"
@@ -225,7 +225,7 @@ export default function PracticeAreasInteractive() {
         </h2>
 
         {/* Intro */}
-        <div className=" space-y-4 font-sans  font-light  sm:text-xl md:space-y-6 md:text-2xl md:font-thin text-charcoal  leading-relaxed text-lg md:text-[22px]">
+        <div className=" space-y-4 py-10 font-sans  font-light  sm:text-xl md:space-y-6 md:text-2xl md:font-thin text-charcoal  leading-relaxed text-lg md:text-[22px]">
           {INTRO_PARAGRAPHS.map((text) => (
             <p key={text}>{text}</p>
           ))}
@@ -234,7 +234,7 @@ export default function PracticeAreasInteractive() {
         {/* Mobile/tablet: stacked cards. Desktop: 2-col grid, sticky pane. */}
         <div
           style={gridVars}
-          className="mt-10 border-t-2 sm:mt-14 lg:grid lg:grid-cols-12 lg:gap-x-16 lg:pt-14 2xl:gap-x-24"
+          className=" border-t-2  lg:grid lg:grid-cols-12 lg:gap-x-16 lg:pt-14 2xl:gap-x-24"
         >
           {practiceAreas.map((area, i) => (
             <article

@@ -35,7 +35,7 @@ const KEY_MATTERS_DATA: KeyMatterCategory[] = [
   {
     id: "arbitration",
     number: "02",
-    title: "International and Domestic Arbitration",
+    title: "International & Domestic Arbitration",
     countLabel: "07 Representative Matters",
     matters: [
       "Represented a major Turkish construction company in an ICSID arbitration against the Government of Turkmenistan. The client undertook numerous high-value construction projects which have been cancelled by the State.",
