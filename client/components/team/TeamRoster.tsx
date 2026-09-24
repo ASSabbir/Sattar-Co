@@ -221,13 +221,13 @@ export default function TeamRoster() {
                 </div>
               </div>
 
-              <div className="lg:flex-shrink-0 pt-6 pb-2  lg:pt-[clamp(0.75rem,2.5svh,1.5rem)]">
+              <div className="lg:flex-shrink-0 pt-6 pb-3  lg:pt-[clamp(0.75rem,2.5svh,1.5rem)]">
                 <span className="eyebrow !text-sm text-red-600 block">{activeGroupName}</span>
               </div>
 
               <div
                 ref={scrollerRef}
-                className="  lg:flex-1 lg:min-h-0 lg:overflow-hidden no-scrollbar"
+                className="-mt-1 lg:flex-1 lg:min-h-0 lg:overflow-hidden no-scrollbar"
               >
                 <div ref={trackRef} className="lg:will-change-transform ">
                   {rosterRows.map((row, rowIndex) => {
