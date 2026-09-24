@@ -97,7 +97,7 @@ export default function CareersInteractive() {
 
   return (
     <>
-      <section className="bg-white pt-10">
+      <section className="bg-white pt-5">
         <div className="max-w-content mx-auto px-6 md:px-10">
           {positions.map((pos) => {
             const isOpen = openId === pos.id;
@@ -163,7 +163,7 @@ export default function CareersInteractive() {
 
       <section className="bg-white pt-20 pb-24 md:pb-32">
         <div className="max-w-content mx-auto px-6 md:px-10">
-          <div className="bg-navy px-8 py-14 md:px-16 md:py-20 grid grid-cols-1 lg:grid-cols-9 gap-10 items-center">
+          <div className="bg-navy px-8 py-14 md:px-16  grid grid-cols-1 lg:grid-cols-9 gap-10 items-center">
             <div className="lg:col-span-8  space-y-5">
               <h3 className="font-display text-3xl md:text-4xl text-ivory">How to Apply</h3>
               <p className="text-ivory/70   leading-relaxed text-lg md:text-[22px]  w-full">
