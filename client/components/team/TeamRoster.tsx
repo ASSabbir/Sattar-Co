@@ -147,7 +147,7 @@ export default function TeamRoster() {
   const handleRosterFocus = (index: number) => setActiveIndex(index);
 
   return (
-    <div ref={wrapperRef} className="relative mt-24">
+    <div ref={wrapperRef} className="relative mt-28">
       <section
         ref={sectionRef as React.RefObject<HTMLElement>}
         aria-label="Our team"
@@ -160,7 +160,7 @@ export default function TeamRoster() {
         <div className="max-w-[1280px] mx-auto lg:h-full lg:flex lg:flex-col">
           <div className="mb-12 md:mb-[clamp(1.25rem,4svh,4rem)] lg:flex-shrink-0">
             <SectionLabel label="THE PEOPLE" className="mb-[clamp(0.5rem,1.2svh,1rem)] text-red-600" />
-            <h1 className="font-display text-3xl text-[clamp(1.5rem,3.2svh,2.25rem)] text-charcoal font-normal tracking-tight leading-[1.15]">
+            <h1 className="font-display relative mt-[2px] text-3xl text-[clamp(1.5rem,3.2svh,2.25rem)] text-charcoal font-normal tracking-tight leading-[1.15]">
               Leadership with Perspective.
             </h1>
           </div>
@@ -190,7 +190,7 @@ export default function TeamRoster() {
               <div className="lg:flex-shrink-0">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start pb-8 md:pb-[clamp(1rem,3svh,2rem)] border-b border-charcoal/15">
                   <div className="md:col-span-7 border-l-2 border-red-600 pl-4">
-                    <span className="eyebrow text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
+                    <span className="eyebrow !text-[16px] text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
                       HEAD OF FIRM
                     </span>
                     <h2 className="font-display text-3xl md:text-[clamp(1.5rem,3.2svh,2.25rem)] text-charcoal font-normal uppercase tracking-wide leading-[1.15]">
