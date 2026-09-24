@@ -179,7 +179,7 @@
     "name": "Francis Gomes",
     "role": "Senior Office Manager",
     "image": "/team/francis-gomes.jpg",
-    "group": "Administration & Accounts",
+    "group": "Administration",
     "practiceAreas": [],
     "bio": "Francis Gomes oversees the firm's administrative and office management functions."
   },
@@ -188,7 +188,7 @@
     "name": "Martin Pritom Gomes",
     "role": "Office Manager",
     "image": "/team/martin-pritom-gomes.jpg",
-    "group": "Administration & Accounts",
+    "group": "Administration",
     "practiceAreas": [],
     "bio": "Martin Pritom Gomes manages daily office operations and administrative coordination."
   },
@@ -197,7 +197,7 @@
     "name": "Palash Sarker",
     "role": "Clerk",
     "image": "/team/palash-sarker.jpg",
-    "group": "Administration & Accounts",
+    "group": "Administration",
     "practiceAreas": [],
     "bio": "Palash Sarker supports the firm's administrative and clerical operations."
   }
