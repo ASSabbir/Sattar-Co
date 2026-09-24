@@ -17,7 +17,7 @@ interface TeamMember {
   practiceAreas?: string[];
 }
 
-const GROUP_ORDER = ["Consultants", "Associates", "Administration & Accounts"];
+const GROUP_ORDER = ["Consultants", "Associates", "Administration"];
 const ROW_SIZE = 3;
 
 interface RosterRow {
@@ -227,7 +227,7 @@ export default function TeamRoster() {
 
               <div
                 ref={scrollerRef}
-                className="pt-4 lg:pt-[clamp(0.5rem,1.5svh,1rem)]  lg:flex-1 lg:min-h-0 lg:overflow-hidden no-scrollbar"
+                className="  lg:flex-1 lg:min-h-0 lg:overflow-hidden no-scrollbar"
               >
                 <div ref={trackRef} className="lg:will-change-transform ">
                   {rosterRows.map((row, rowIndex) => {
