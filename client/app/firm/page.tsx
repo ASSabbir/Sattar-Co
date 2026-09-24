@@ -108,7 +108,7 @@ const structuredDataJson = JSON.stringify(structuredData).replace(/</g, "\\u003c
 /* -------------------------------------------------------------------------- */
 
 const CONTAINER = "mx-auto max-w-content px-6 md:px-10";
-const SECTION_Y = "py-14 sm:py-20 lg:py-24";
+const SECTION_Y = "py-11";
 
 /* -------------------------------------------------------------------------- */
 /*  Sections                                                                  */
