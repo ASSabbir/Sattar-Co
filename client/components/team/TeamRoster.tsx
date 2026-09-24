@@ -153,14 +153,14 @@ export default function TeamRoster() {
         aria-label="Our team"
         className="mt-20 relative bg-white text-charcoal pt-36 pb-24 px-6 md:px-12 lg:px-20 overflow-hidden font-sans md:pt-[clamp(1.5rem,5svh,5rem)] md:pb-[clamp(1rem,3svh,2.5rem)] lg:sticky lg:top-0 lg:h-[100svh] lg:max-h-[100svh]"
       >
-        <div className="eyebrow hidden xl:block absolute right-6 top-2/3 -translate-y-1/2 rotate-90 origin-right text-charcoal/40 pointer-events-none select-none">
+        {/* <div className="eyebrow hidden xl:block absolute right-6 top-2/3 -translate-y-1/2 rotate-90 origin-right text-charcoal/40 pointer-events-none select-none">
           COUNSEL • STRATEGY • REPRESENTATION
-        </div>
+        </div> */}
 
         <div className="max-w-[1280px] mx-auto lg:h-full lg:flex lg:flex-col">
-          <div className="mb-12 md:mb-[clamp(1.25rem,4svh,4rem)] lg:flex-shrink-0">
+          <div className="mb-10 md:mb-[clamp(1.25rem,4svh,1rem)] lg:flex-shrink-0">
             <SectionLabel label="THE PEOPLE" className="mb-[clamp(0.5rem,1.2svh,1rem)] text-red-600" />
-            <h1 className="font-display relative mt-[2px] text-3xl text-[clamp(1.5rem,3.2svh,2.25rem)] text-charcoal font-normal tracking-tight leading-[1.15]">
+            <h1 className="font-display  text-3xl text-[clamp(1.5rem,3.2svh,2.25rem)] text-charcoal font-normal tracking-tight leading-[1.15]">
               Leadership with Perspective.
             </h1>
           </div>
@@ -190,7 +190,7 @@ export default function TeamRoster() {
               <div className="lg:flex-shrink-0">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start pb-8 md:pb-[clamp(1rem,3svh,2rem)] border-b border-charcoal/15">
                   <div className="md:col-span-7 border-l-2 border-red-600 pl-4">
-                    <span className="eyebrow !text-[16px] text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
+                    <span className="eyebrow !tracking-[3px] !text-[16px] text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
                       HEAD OF FIRM
                     </span>
                     <h2 className="font-display text-3xl md:text-[clamp(1.5rem,3.2svh,2.25rem)] text-charcoal font-normal uppercase tracking-wide leading-[1.15]">

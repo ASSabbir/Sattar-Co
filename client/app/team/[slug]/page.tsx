@@ -132,9 +132,9 @@ export default async function TeamMemberPage({ params }: Props) {
           has content left to reveal — then it releases. */}
       <div data-profile-wrapper className="relative">
         <main className="relative bg-white text-charcoal pt-28 pb-6 md:pt-32 md:pb-8 px-4 sm:px-8 lg:px-12 font-sans overflow-hidden lg:sticky lg:top-0 lg:h-screen">
-          <div className="eyebrow hidden xl:block fixed right-6 top-1/2 -translate-y-1/2 rotate-90 origin-right text-charcoal/40 pointer-events-none select-none z-20">
+          {/* <div className="eyebrow hidden xl:block fixed right-6 top-1/2 -translate-y-1/2 rotate-90 origin-right text-charcoal/40 pointer-events-none select-none z-20">
             COUNSEL • STRATEGY • REPRESENTATION
-          </div>
+          </div> */}
 
           <div className="max-w-[1380px] mx-auto h-full flex flex-col lg:h-full">
             <nav aria-label="Breadcrumb" className="flex-shrink-0 mb-5 md:mb-6">
