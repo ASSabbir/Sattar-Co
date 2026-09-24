@@ -190,7 +190,7 @@ export default function TeamRoster() {
               <div className="lg:flex-shrink-0">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start pb-8 md:pb-[clamp(1rem,3svh,2rem)] border-b border-charcoal/15">
                   <div className="md:col-span-7 border-l-2 border-red-600 pl-4">
-                    <span className="eyebrow !tracking-[4px] !text-[16px] text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
+                    <span className="eyebrow !tracking-[3px] !text-[16px] text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
                       HEAD OF FIRM
                     </span>
                     <h2 className="font-display text-3xl md:text-[clamp(1.5rem,3.2svh,2.25rem)] text-charcoal font-normal uppercase tracking-wide leading-[1.15]">
