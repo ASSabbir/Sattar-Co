@@ -180,7 +180,7 @@ function PracticeAreaPanel({ area, isActive }: PanelProps) {
         />
       </div>
 
-      <ul className="grid grid-cols-2 gap-x-6 gap-y-3">
+      <ul className="flex flex-row flex-wrap gap-x-6 gap-y-3">
         {area.areas.map((item: string, j: number) => (
           <li
             key={item}
