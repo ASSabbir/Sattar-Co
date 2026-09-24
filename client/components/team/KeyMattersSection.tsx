@@ -86,11 +86,11 @@ export default function KeyMattersSection() {
   };
 
   return (
-    <section className="w-full bg-white text-charcoal py-12 md:py-16 border-t border-charcoal/15 font-sans">
+    <section className="w-full bg-white text-charcoal py-7 border-t border-charcoal/15 font-sans">
       <div className="max-w-full mx-auto ">
         {/* Section Header */}
-        <div className="mb-10 md:mb-14">
-          <span className="eyebrow text-red-600 block mb-3">
+        <div className="mb-7 md:mb-7">
+          <span className="eyebrowleading-snug  !tracking-[3px] !text-[18px] text-red-600 block mb-3">
             REPRESENTATIVE PRACTICE
           </span>
           <h2 className="font-display text-3xl md:text-4xl text-charcoal font-normal tracking-tight leading-tight">
@@ -114,7 +114,7 @@ export default function KeyMattersSection() {
                 <button
                   type="button"
                   onClick={() => toggleCategory(category.number)}
-                  className="w-full text-left py-6 md:py-8 px-2 md:px-4 flex items-center justify-between gap-4 group focus:outline-none"
+                  className="w-full text-left py-6 md:py-8  flex items-center justify-between gap-4 group focus:outline-none"
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-baseline gap-4 md:gap-8 min-w-0">

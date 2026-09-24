@@ -199,7 +199,7 @@ export default async function TeamMemberPage({ params }: Props) {
                         {member.education && member.education.length > 0 ? (
                           member.education.map((edu, idx) => (
                             <div key={`${edu.date}-${idx}`}>
-                              <p className="font-display text-2xl md:text-3xl font-medium text-charcoal leading-tight mb-1">
+                              <p className="font-display text-2xl  md:text-3xl font-medium text-charcoal leading-tight mb-1">
                                 {edu.date}
                               </p>
                               {edu.institution ? (
