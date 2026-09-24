@@ -8,7 +8,7 @@ interface Props {
 export default function BioSection({ name, paragraphs }: Props) {
   return (
     <div className="space-y-6">
-      <h2 className="eyebrow !tracking-[3px] !text-[14px] text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
+      <h2 className="eyebrow !tracking-[3px] !text-[18px] text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
         <span aria-hidden>ˇ</span> <span className="leading-snug">BIOGRAPHY</span>
       </h2>
 

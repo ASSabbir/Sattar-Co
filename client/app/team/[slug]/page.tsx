@@ -131,7 +131,7 @@ export default async function TeamMemberPage({ params }: Props) {
           the sticky <main> stays pinned exactly as long as the right column
           has content left to reveal — then it releases. */}
       <div data-profile-wrapper className="relative">
-        <main className="relative bg-white text-charcoal pt-28 pb-6 md:pt-32 md:pb-8 px-4 sm:px-8 lg:px-12 font-sans overflow-hidden lg:sticky lg:top-0 lg:h-screen">
+        <main className="relative bg-white text-charcoal pt-28 pb-6 md:pt-[148px] md:pb-8 px-4 sm:px-8 lg:px-12 font-sans overflow-hidden lg:sticky lg:top-0 lg:h-screen">
           {/* <div className="eyebrow hidden xl:block fixed right-6 top-1/2 -translate-y-1/2 rotate-90 origin-right text-charcoal/40 pointer-events-none select-none z-20">
             COUNSEL • STRATEGY • REPRESENTATION
           </div> */}
@@ -190,7 +190,7 @@ export default async function TeamMemberPage({ params }: Props) {
                     <section>
                       <h2 className="eyebrow flex items-start gap-2 text-red-600 border-b border-charcoal/15 pb-3 mb-6 min-h-[52px] md:min-h-[56px]">
                         <span aria-hidden>ˆ</span>
-                        <span className="leading-snug eyebrow !tracking-[3px] !text-[14px] text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
+                        <span className="leading-snug eyebrow !tracking-[3px] !text-[18px] text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
                           PROFESSIONAL QUALIFICATION &amp; EDUCATION
                         </span>
                       </h2>
