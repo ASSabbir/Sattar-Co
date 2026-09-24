@@ -14,7 +14,7 @@ const KEY_MATTERS_DATA: KeyMatterCategory[] = [
   {
     id: "commercial-drafting",
     number: "01",
-    title: "Commercial Drafting / Advisory Work",
+    title: "Commercial Drafting & Advisory Work",
     countLabel: "14 Representative Matters",
     matters: [
       "Advised a leading power generation company on power projects.",
@@ -64,7 +64,7 @@ const KEY_MATTERS_DATA: KeyMatterCategory[] = [
   {
     id: "lecture-training",
     number: "04",
-    title: "Lecture / Legal Training",
+    title: "Lecture & Legal Training",
     countLabel: "02 Key Programs",
     matters: [
       "Trained government officers in a Middle Eastern State on issues of dispute resolution and arbitration.",
