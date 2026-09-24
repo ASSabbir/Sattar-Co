@@ -6,7 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
 import publications from "@/data/publications.json";
-import img1 from "../../public/images/asa.png";
+import img1 from "../../public/images/100.png";
 import Image from "next/image";
 
 // Fixed order rather than deriving from the data, so the tab order never
