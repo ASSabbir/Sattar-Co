@@ -140,7 +140,7 @@ export default async function TeamMemberPage({ params }: Props) {
             <nav aria-label="Breadcrumb" className="flex-shrink-0 mb-5 md:mb-6">
               <Link
                 href="/team"
-                className="eyebrow inline-flex items-center gap-2 text-charcoal hover:text-red-600 transition-colors"
+                className="eyebrow inline-flex  !text-[14px] items-center gap-2 text-charcoal hover:text-red-600 transition-colors"
               >
                 <ArrowLeft size={14} strokeWidth={2} aria-hidden />
                 Back to Team
@@ -190,7 +190,7 @@ export default async function TeamMemberPage({ params }: Props) {
                     <section>
                       <h2 className="eyebrow flex items-start gap-2 text-red-600 border-b border-charcoal/15 pb-3 mb-6 min-h-[52px] md:min-h-[56px]">
                         <span aria-hidden>ˆ</span>
-                        <span className="leading-snug">
+                        <span className="leading-snug eyebrow !tracking-[3px] !text-[14px] text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
                           PROFESSIONAL QUALIFICATION &amp; EDUCATION
                         </span>
                       </h2>
@@ -208,14 +208,14 @@ export default async function TeamMemberPage({ params }: Props) {
                                     {edu.institution}
                                   </p>
                                   {edu.course && (
-                                    <p className="text-xl text-charcoal/70 leading-relaxed text-justify">
+                                    <p className="text-xl text-charcoal/70 leading-relaxed ">
                                       Course: {edu.course}
                                     </p>
                                   )}
                                 </>
                               ) : (
                                 edu.description && (
-                                  <p className="text-xl text-charcoal leading-relaxed text-justify">
+                                  <p className="text-xl text-charcoal leading-relaxed ">
                                     {edu.description}
                                   </p>
                                 )
