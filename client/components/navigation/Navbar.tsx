@@ -112,12 +112,12 @@ export default function Navbar() {
             )}
           >
             {/* {solid?<img src={blogo.src} alt="" className="w-24 sm:w-28 lg:w-30" /> : <img src={wlogo.src} alt="" className="w-24 sm:w-28 lg:w-32 opacity-0" />} */}
-            <img src={blogo.src} alt="" className="w-24 sm:w-28 lg:w-36 mb-1" /> 
+            <img src={blogo.src} alt="" className="w-24 sm:w-28 lg:w-40 mb-1" /> 
           </Link>
 
           <ul
             className={cn(
-              "hidden lg:flex items-center pr-5 gap-6 xl:gap-10 text-base xl:text-lg uppercase tracking-wide transition-colors duration-500",
+              "hidden lg:flex items-center  gap-6 xl:gap-10 text-base xl:text-lg uppercase tracking-wide transition-colors duration-500",
               solid ? "text-charcoal/80" : "text-charcoal/85"
             )}
           >
