@@ -133,7 +133,11 @@ export default function InsightsPreview() {
                     {item.category} <span className="">·</span>
                   </p>
                   <h3 className="font-display text-lg t md:text-2xl text-charcoal leading-snug group-hover:text-red-600 transition-colors duration-300 trackin">
-                    {truncateWords(item.title, 10)}<span className="ml-[3px]">...</span>
+                    {truncateWords(item.title, 10)}<span className="ml-[3px]">
+                      <span className="mr-[2px]">.</span>
+                      <span className="mr-[2px]">.</span>
+                      <span>.</span>
+                    </span>
                   </h3>
                   <div className="flex  item-center flex-row   gap-2 h-full ">
                     <button className="mt-2  text-lg text-red-600 group-hover:text-gray-600 transition-colors duration-300">
