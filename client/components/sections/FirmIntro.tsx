@@ -10,7 +10,7 @@ export default function FirmIntro() {
     <section className="bg-white pt-0 md:pt-24 ">
       <div className="max-w-content mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 md:gap-[78px]  items-start">
-          <div className="lg:col-span-6 ">
+          <div className="lg:col-span-6 relative -mt-[5px] ">
             {/* <SectionLabel label="Trusted Legal Counsel" index="01" className="mb-8" /> */}
             <RevealText as="h2" className="font-display pb-2 bg text-4xl spay   md:text-6xl text-charcoal mb-8">
               Knowledgeable,<br/> <span className="">Diligent & Reliable</span>
