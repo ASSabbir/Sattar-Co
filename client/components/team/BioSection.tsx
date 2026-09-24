@@ -16,9 +16,9 @@ export default function BioSection({ name, paragraphs }: Props) {
         {paragraphs.map((para, idx) => (
           <p key={idx}>
             {idx === 0 && (
-              <strong className="font-display text-2xl md:text-3xl text-charcoal">
+              <span className="font-display text-2xl  md:text-3xl text-charcoal">
                 {name}{" "}
-              </strong>
+              </span>
             )}
             {idx === 0 ? para.replace(name, "").trim() : para}
           </p>
