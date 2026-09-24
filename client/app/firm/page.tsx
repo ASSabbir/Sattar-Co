@@ -247,7 +247,7 @@ function Approach() {
               <h3 className="mb-4  [text-wrap:balance] sm:text-4xl md:mb-6 font-display pb-2 bg text-4xl spay   md:text-6xl text-charcoal">
                 {item.title}
               </h3>
-              <p className="max-w-2xl text-base leading-relaxed text-charcoal/90 sm:text-lg xl:text-xl">
+              <p className="max-w-2xl text-charcoal  leading-relaxed text-lg md:text-[22px]">
                 {item.body}
               </p>
             </li>

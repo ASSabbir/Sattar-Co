@@ -102,7 +102,7 @@ export default function CareersInteractive() {
           {positions.map((pos) => {
             const isOpen = openId === pos.id;
             return (
-              <div key={pos.id} className="border-t border-charcoal/10 last:border-b">
+              <div key={pos.id} className="">
                 <button
                   onClick={() => setOpenId(isOpen ? "" : pos.id)}
                   className="w-full flex items-center justify-between gap-6 py-8 text-left group"

@@ -45,7 +45,7 @@ export default function InsightsPage() {
 
   return (
     <>
-      <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 mt-24  ">
+      <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16  pt-32 sm:pb-24 md:pb-52 mt-24  ">
       <Image
         src={img1}
         alt=""
@@ -66,7 +66,7 @@ export default function InsightsPage() {
       <section className="bg-white">
         
         {/* Year tabs */}
-        <div className="sticky top-14  z-30 bg-white backdrop-blur-sm border-b pt-4 border-charcoal/10">
+        <div className="sticky top-14  z-30 bg-white backdrop-blur-sm border-b pt-4  border-charcoal/10">
           <div className="max-w-content mx-auto px-6 md:px-10">
             <div className="flex items-center justify-between gap-8 md:gap-10 overflow-x-auto no-scrollbar py-6">
               {years.map((year) => (
@@ -93,7 +93,7 @@ export default function InsightsPage() {
         </div>
 
         {/* List */}
-        <div className="max-w-content mx-auto bg-white px-6 md:px-10 ">
+        <div className="max-w-content mx-auto bg-white  px-6 md:px-10 ">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
@@ -101,7 +101,7 @@ export default function InsightsPage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
-              className="flex flex-col"
+              className="flex flex-col pb-14 sm:pb-20 "
             >
               {filtered.map((item, i) => (
                 <motion.div

@@ -121,7 +121,7 @@ export default function PublicationsPage() {
         </div>
 
         {/* List */}
-        <div className="max-w-content mx-auto px-6 md:px-10 ">
+        <div className="max-w-content mx-auto px-6 md:px-10 pb-14 sm:pb-20">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
@@ -205,7 +205,7 @@ export default function PublicationsPage() {
                         </p>
                       </div>
 
-                      <div className="lg:col-span-1 order-4 flex lg:justify-end">
+                      <div className="lg:col-span-1 order-4 flex lg:justify-end ">
                         {clickable ? (
                           <span className="inline-flex items-center gap-1.5 text-charcoal text-xs uppercase tracking-wide group-hover:text-red-600 transition-colors duration-300">
                             Read
