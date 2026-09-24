@@ -234,7 +234,7 @@ export default function PracticeAreasInteractive() {
         {/* Mobile/tablet: stacked cards. Desktop: 2-col grid, sticky pane. */}
         <div
           style={gridVars}
-          className=" border-t-2  lg:grid lg:grid-cols-12 lg:gap-x-16 lg:pt-14 2xl:gap-x-24"
+          className=" border-t-2  lg:grid lg:grid-cols-12 lg:gap-x-16 lg:pt-5 2xl:gap-x-24"
         >
           {practiceAreas.map((area, i) => (
             <article
