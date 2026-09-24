@@ -221,8 +221,8 @@ export default function TeamRoster() {
                 </div>
               </div>
 
-              <div className="lg:flex-shrink-0 pt-6  lg:pt-[clamp(0.75rem,2.5svh,1.5rem)]">
-                <span className="eyebrow text-red-600 block">{activeGroupName}</span>
+              <div className="lg:flex-shrink-0 pt-6 pb-2  lg:pt-[clamp(0.75rem,2.5svh,1.5rem)]">
+                <span className="eyebrow !text-sm text-red-600 block">{activeGroupName}</span>
               </div>
 
               <div
