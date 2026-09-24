@@ -67,9 +67,9 @@ export default function RevealText({
   const Tag = as;
 
   return (
-    <div ref={wrapperRef} className={`reveal-line ${className}`}>
+    <div ref={wrapperRef} className={`reveal-line  ${className}`}>
       <div ref={innerRef}>
-        <Tag className="block">{children}</Tag>
+        <Tag className="block ">{children}</Tag>
       </div>
     </div>
   );

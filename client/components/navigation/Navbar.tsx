@@ -112,7 +112,7 @@ export default function Navbar() {
             )}
           >
             {/* {solid?<img src={blogo.src} alt="" className="w-24 sm:w-28 lg:w-30" /> : <img src={wlogo.src} alt="" className="w-24 sm:w-28 lg:w-32 opacity-0" />} */}
-            <img src={blogo.src} alt="" className="w-24 sm:w-28 lg:w-36 mb-1" /> 
+            <img src={blogo.src} alt="" className="w-24 sm:w-28 lg:w-40 mb-1" /> 
           </Link>
 
           <ul

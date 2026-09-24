@@ -139,13 +139,13 @@ export default function CareersInteractive() {
                           <p className="text-charcoal/40 text-xs uppercase tracking-wide">
                             Eligibility
                           </p>
-                          <p className="text-charcoal/70 leading-relaxed">{pos.eligibility}</p>
+                          <p className="text-charcoal  leading-relaxed text-lg md:text-[22px]">{pos.eligibility}</p>
                         </div>
                         <div className="lg:col-span-6 space-y-4">
                           <p className="text-charcoal/40 text-xs uppercase tracking-wide">Role</p>
-                          <p className="text-charcoal/70 leading-relaxed">{pos.role}</p>
+                          <p className="text-charcoal  leading-relaxed text-lg md:text-[22px]">{pos.role}</p>
                           {pos.extra && (
-                            <p className="text-charcoal/70 leading-relaxed">{pos.extra}</p>
+                            <p className="text-charcoal  leading-relaxed text-lg md:text-[22px]">{pos.extra}</p>
                           )}
                         </div>
                         <div className="lg:col-span-12 pt-2">
@@ -163,10 +163,10 @@ export default function CareersInteractive() {
 
       <section className="bg-white pt-20 pb-24 md:pb-32">
         <div className="max-w-content mx-auto px-6 md:px-10">
-          <div className="bg-navy px-8 py-14 md:px-16 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-8 space-y-5">
+          <div className="bg-navy px-8 py-14 md:px-16 md:py-20 grid grid-cols-1 lg:grid-cols-9 gap-10 items-center">
+            <div className="lg:col-span-8  space-y-5">
               <h3 className="font-display text-3xl md:text-4xl text-ivory">How to Apply</h3>
-              <p className="text-ivory/70 leading-relaxed max-w-xl">
+              <p className="text-ivory/70   leading-relaxed text-lg md:text-[22px]  w-full">
                 Applications should be addressed to the Practice Manager in the HR team, with a
                 copy to Barrister Sattar. Interested applicants must submit their CV, a covering
                 letter, and a letter of recommendation from their University professor or previous
