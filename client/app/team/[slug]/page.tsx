@@ -131,7 +131,7 @@ export default async function TeamMemberPage({ params }: Props) {
           the sticky <main> stays pinned exactly as long as the right column
           has content left to reveal — then it releases. */}
       <div data-profile-wrapper className="relative">
-        <main className="relative bg-white text-charcoal pt-28 pb-6 md:pt-[148px] md:pb-8 px-4 sm:px-8 lg:px-12 font-sans overflow-hidden lg:sticky lg:top-0 lg:h-screen">
+        <main className="relative bg-white text-charcoal pt-36 pb-6 md:pt-[148px] md:pb-8 px-4 sm:px-8 lg:px-12 font-sans overflow-hidden lg:sticky lg:top-0 lg:h-screen">
           {/* <div className="eyebrow hidden xl:block fixed right-6 top-1/2 -translate-y-1/2 rotate-90 origin-right text-charcoal/40 pointer-events-none select-none z-20">
             COUNSEL • STRATEGY • REPRESENTATION
           </div> */}
@@ -152,12 +152,12 @@ export default async function TeamMemberPage({ params }: Props) {
               className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start lg:items-stretch relative flex-1 min-h-0 overflow-y-auto lg:overflow-hidden no-scrollbar"
             >
               <div className="lg:col-span-5 relative lg:h-full lg:sticky lg:top-0">
-                <span
+                {/* <span
                   aria-hidden
                   className="absolute -left-16 -bottom-16 md:-left-24 md:-bottom-24 font-display text-[180px] md:text-[240px] text-charcoal/[0.06] leading-none pointer-events-none select-none -z-0"
                 >
                   {watermarkNumber}
-                </span>
+                </span> */}
 
                 <div className="relative aspect-[4/5] lg:aspect-auto lg:h-full w-full bg-charcoal/10 overflow-hidden border border-charcoal/10 z-10">
                   <Image

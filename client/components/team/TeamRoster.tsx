@@ -151,7 +151,7 @@ export default function TeamRoster() {
       <section
         ref={sectionRef as React.RefObject<HTMLElement>}
         aria-label="Our team"
-        className="mt-20 relative bg-white text-charcoal pt-36 pb-24 px-6 md:px-12 lg:px-20 overflow-hidden font-sans md:pt-[clamp(1.5rem,5svh,5rem)] md:pb-[clamp(1rem,3svh,2.5rem)] lg:sticky lg:top-0 lg:h-[100svh] lg:max-h-[100svh]"
+        className="mt-20 relative bg-white text-charcoal pt-10 pb-24 px-6 md:px-12 lg:px-20 overflow-hidden font-sans md:pt-[clamp(1.5rem,5svh,5rem)] md:pb-[clamp(1rem,3svh,2.5rem)] lg:sticky lg:top-0 lg:h-[100svh] lg:max-h-[100svh]"
       >
         {/* <div className="eyebrow hidden xl:block absolute right-6 top-2/3 -translate-y-1/2 rotate-90 origin-right text-charcoal/40 pointer-events-none select-none">
           COUNSEL • STRATEGY • REPRESENTATION

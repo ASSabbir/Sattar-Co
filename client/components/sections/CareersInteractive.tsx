@@ -134,7 +134,7 @@ export default function CareersInteractive() {
                       transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="pb-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+                      <div className="  grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
                         <div className="lg:col-span-6 space-y-4">
                           <p className="text-charcoal/40 text-xs uppercase tracking-wide">
                             Eligibility
@@ -148,9 +148,7 @@ export default function CareersInteractive() {
                             <p className="text-charcoal  leading-relaxed text-lg md:text-[22px]">{pos.extra}</p>
                           )}
                         </div>
-                        <div className="lg:col-span-12 pt-2">
-                          <ApplyButton position={pos.title} variant="light" />
-                        </div>
+                        
                       </div>
                     </motion.div>
                   )}

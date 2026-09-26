@@ -32,7 +32,7 @@ export default function TopBar() {
     >
       <div
       
-      className={` mx-auto px-6 md:px-14 md:pr-[4vw] ${isHome? 'items-end' :'items-center'} h-11 flex  justify-end text-sm
+      className={` mx-auto px-4 sm:px-6 md:px-10   ${isHome? 'items-end' :'items-center'} h-11 flex  justify-end text-sm
        text-charcoal/80`}>
         {/* <div className="flex items-center gap-5">
           
