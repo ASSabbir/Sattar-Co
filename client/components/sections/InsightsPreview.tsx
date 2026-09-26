@@ -64,7 +64,7 @@ export default function InsightsPreview() {
   return (
     <section className="bg-white pt-2 pb-24 md:pb-36">
       <div className="max-w-content mx-auto px-6 md:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20  items-stretch">
           {/* ── Left: autoplay testimonial card ── */}
           <div
             className="lg:col-span-6 mt- relative grain overflow-hidden rounded-sm min-h-[400px]  flex flex-col  "

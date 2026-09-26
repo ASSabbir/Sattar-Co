@@ -9,7 +9,7 @@ export default function BioSection({ name, paragraphs }: Props) {
   return (
     <div className="space-y-6">
       <h2 className="eyebrow !tracking-[3px] !text-[18px] text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
-        <span aria-hidden>ˇ</span> <span className="leading-snug">BIOGRAPHY</span>
+        <span aria-hidden></span> <span className="leading-snug">BIOGRAPHY</span>
       </h2>
 
       <div className="space-y-4 text-xl text-charcoal leading-relaxed hyphens-auto">

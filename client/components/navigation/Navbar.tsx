@@ -173,7 +173,7 @@ export default function Navbar() {
                       href={link.href}
                       className="font-display text-3xl sm:text-4xl text-charcoal hover:text-red-600 transition-colors duration-300"
                     >
-                      {link.label=="Contact Us"&&<span className="text-[30px]">Contact Us</span>}
+                     {link.label}
                     </Link>
                   </motion.li>
                 ))}

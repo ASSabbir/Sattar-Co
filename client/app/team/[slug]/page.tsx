@@ -189,7 +189,7 @@ export default async function TeamMemberPage({ params }: Props) {
                   <aside data-profile-aside className="md:col-span-5 space-y-8">
                     <section>
                       <h2 className="eyebrow flex items-start gap-2 text-red-600 border-b border-charcoal/15 pb-3 mb-6 min-h-[52px] md:min-h-[56px]">
-                        <span aria-hidden>ˆ</span>
+                        
                         <span className="leading-snug eyebrow !tracking-[3px] !text-[18px] text-red-600 block mb-[clamp(0.35rem,1svh,0.75rem)]">
                           PROFESSIONAL QUALIFICATION &amp; EDUCATION
                         </span>
