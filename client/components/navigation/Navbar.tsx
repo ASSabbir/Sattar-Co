@@ -20,7 +20,7 @@ const NAV_LINKS = [
   { href: "/insights", label: "Work Done" },
   { href: "/publications", label: "Publications" },
   { href: "/careers", label: "Careers" },
-  { href: "/contact", label: " Contact Us" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
 function normalizePath(path: string) {
@@ -112,7 +112,7 @@ export default function Navbar() {
             )}
           >
             {/* {solid?<img src={blogo.src} alt="" className="w-24 sm:w-28 lg:w-30" /> : <img src={wlogo.src} alt="" className="w-24 sm:w-28 lg:w-32 opacity-0" />} */}
-            <img src={blogo.src} alt="" className="w-24 sm:w-28 lg:w-40 mb-1" /> 
+            <img src={blogo.src} alt="" className="w-24 sm:w-28 lg:w-40 mb-1" />
           </Link>
 
           <ul
@@ -129,7 +129,11 @@ export default function Navbar() {
                     href={link.href}
                     className={cn("link-underline", isActive && "text-red-600")}
                   >
-                    {link.label && link.label=="Careers" ? <span className="text-[19px] ">Careers</span> : link.label}
+                    {link.label && link.label === "Careers" ? (
+                      <span className="text-[19px] ">Careers</span>
+                    ) : (
+                      link.label
+                    )}
                   </Link>
                 </li>
               );
@@ -162,21 +166,28 @@ export default function Navbar() {
           >
             <div className="flex flex-col justify-center min-h-full px-6 sm:px-8 py-24">
               <ul className="flex flex-col gap-5 sm:gap-6">
-                {NAV_LINKS.map((link, i) => (
-                  <motion.li
-                    key={link.href}
-                    initial={{ opacity: 0, y: 24 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.08 * i, duration: 0.5, ease: [0.65, 0, 0.35, 1] }}
-                  >
-                    <Link
-                      href={link.href}
-                      className="font-display text-3xl sm:text-4xl text-charcoal hover:text-red-600 transition-colors duration-300"
+                {NAV_LINKS.map((link, i) => {
+                  const isActive = normalizePath(pathname) === normalizePath(link.href);
+                  return (
+                    <motion.li
+                      key={link.href}
+                      initial={{ opacity: 0, y: 24 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.08 * i, duration: 0.5, ease: [0.65, 0, 0.35, 1] }}
                     >
-                     {link.label}
-                    </Link>
-                  </motion.li>
-                ))}
+                      <Link
+                        href={link.href}
+                        onClick={() => setMenuOpen(false)}
+                        className={cn(
+                          "font-display text-3xl sm:text-4xl transition-colors duration-300",
+                          isActive ? "text-red-600" : "text-charcoal hover:text-red-600"
+                        )}
+                      >
+                        {link.label}
+                      </Link>
+                    </motion.li>
+                  );
+                })}
               </ul>
             </div>
           </motion.div>

@@ -160,7 +160,7 @@ export default function KeyMattersSection() {
                             <span className="text-red-600 font-display text-xl leading-none select-none shrink-0">
                               —
                             </span>
-                            <p className="text-xl text-charcoal leading-relaxed text-justify hyphens-auto">
+                            <p className="text-xl text-charcoal leading-relaxed hyphens-auto">
                               {matter}
                             </p>
                           </div>
