@@ -173,7 +173,7 @@ export default function CareersInteractive() {
                 employer. Short-listed applicants will be called for an interview with the
                 Practice Manager.
               </p>
-              <p className="text-ivory/50 text-sm">
+              <p className="text-ivory/50 text-pretty text-sm">
                 {TO_EMAIL} &nbsp;·&nbsp; cc: {CC_EMAIL}
               </p>
             </div>

@@ -34,7 +34,7 @@ export default function RecognitionMarquee() {
         {[...logos, ...logos].map((logo, i) => (
           <div
             key={i}
-            className="mx-4 md:mx-6 flex h-24 w-40 md:h-28 md:w-48 items-center justify-center rounded-xl bg-white p-4   transition-all duration-300 "
+            className="mx-4 md:mx-6 flex h-24  md:h-28   items-center justify-center rounded-xl  p-4   transition-all duration-300 "
           >
             <Image
               src={logo.src}

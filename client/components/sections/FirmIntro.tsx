@@ -7,7 +7,7 @@ import img1 from '../../public/images/10.png'
 
 export default function FirmIntro() {
   return (
-    <section className="bg-white pt-0 md:pt-24 ">
+    <section className="bg-white pt-10 md:pt-24 ">
       <div className="max-w-content mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 md:gap-[78px]  items-start">
           <div className="lg:col-span-6 relative -mt-[5px] ">
