@@ -14,31 +14,35 @@ type Position = {
 
 const positions: Position[] = [
   {
-    id: "junior-associate",
-    title: "Junior Associate",
+    id: "associate",
+    title: "Associate",
     eligibility:
-      "Enrolled with the Bar Council in Bangladesh, with a first or upper second class (or equivalent) undergraduate degree from a reputed University.",
+      "An LLB and LLM degree from a reputed University, along with membership with the Bangladesh Bar Council. All three qualifications are required.",
     role:
-      "Primarily involved in providing legal opinions, and drafting pleadings and commercial documents. Should be confident handling their own cases, with initial support and assistance from a senior lawyer always available when required.",
+      "Primarily involved in providing legal opinions, drafting pleadings and commercial documents, and independently handling cases. Associates are expected to take responsibility for their matters while having access to guidance and assistance from senior lawyers when required.",
   },
   {
-    id: "trainee",
-    title: "Trainee",
+    id: "research-associate",
+    title: "Research Associate",
     eligibility:
-      "A first or upper second class (or equivalent) undergraduate degree from a reputed University.",
+      "An LLB and LLM degree from a reputed University. Membership with the Bangladesh Bar Council is preferable but not mandatory.",
     role:
-      "Primarily assisting senior lawyers with case loads through legal research and drafting exercises. A good command of both English and Bengali is required, with continuous support and assistance from senior lawyers made available throughout.",
+      "Primarily involved in legal research, preparing legal opinions, and assisting senior lawyers with research and drafting assignments. Strong analytical, research, and legal writing skills are expected, with guidance and support from senior lawyers available throughout.",
   },
+  
   {
     id: "internship",
     title: "Internship",
-    eligibility: "Applicants in their final year of an LLB degree are encouraged to apply.",
+    eligibility:
+      "Applicants having completed an LLB degree from a reputed University are encouraged to apply. An LLM degree is preferable but not mandatory.",
     role:
-      "Primarily involved in assisting members of the firm with legal research. A good command of both English and Bengali is required.",
+      "Primarily involved in assisting members of the firm with legal research, drafting, and other legal assignments. A good command of both English and Bengali is required, with continuous guidance and support from senior lawyers.",
     extra:
-      "The internship generally lasts 3 months. Applicants wishing to move to a Trainee position will need to go through an interview with the Practice Manager.",
+      "The internship generally lasts 3 months. Applicants wishing to move to a Trainee or Research Associate position may be required to attend an interview with the Practice Manager.",
   },
 ];
+
+
 
 const TO_EMAIL = "practicemanager@sattarandcobd.com";
 const CC_EMAIL = "ssattar@sattarandco.com";

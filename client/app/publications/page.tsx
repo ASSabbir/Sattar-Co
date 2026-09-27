@@ -57,7 +57,7 @@ export default function PublicationsPage() {
       {/* =========================================================
           PUBLICATIONS HERO
       ========================================================== */}
-      <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 mt-24  ">
+      <section className="grain relative flex items-center justify-center overflow-hidden  pb-16 pt-32 sm:pb-24 md:pb-52 mt-24  ">
       <Image
         src={img1}
         alt=""
@@ -68,7 +68,7 @@ export default function PublicationsPage() {
       />
 
         {/* Cinematic Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-black/55" />
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-black/55" /> */}
 
         {/* Hero Content */}
         {/* <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">

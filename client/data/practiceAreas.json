@@ -5,10 +5,11 @@
     "index": "01",
     "category": "Corporate & Commercial",
     "imgs": "https://www.ahabtoor.com/wp-content/uploads/2024/03/Corporate-Commercial.jpeg",
-    "description": "We advise companies, investors and financial institutions on corporate and commercial matters in Bangladesh, including transactions, governance, mergers and acquisitions, private equity, financing, insurance and regulatory issues, with a focus on clear and commercially grounded advice.",
+    "description": "We advise companies, investors and financial institutions on corporate and commercial matters in Bangladesh, including transactions, governance, mergers & acquisitions, private equity, financing, insurance and regulatory issues, with a focus on clear and commercially grounded advice.",
     "areas": [
       "Commercial Transactions",
       "Corporate Governance",
+      "Company Formation",
       "Debt & Equity Financing",
       "Insurance",
       "Mergers & Acquisitions",
@@ -69,16 +70,17 @@
     "id": "cessation-of-employment",
     "index": "05",
     "category": "Employment",
-    "imgs": "https://api.industryinsiderbd.com/images/articles/1779617455853.webp",
+    "imgs": "/images/services/IMG_5270.webp",
     "description": "We advise employers on employment matters, including cessation, labour laws, employment regulations, service rules, workplace conduct and workforce restructuring, helping organisations manage employment decisions with clarity and compliance.",
     "areas": [
       "Cessation of Employment",
       "Compliance with Labour Laws",
+      "Compliance with Corrective Action Plan",
       "Disciplinary Proceedings",
       "Employment Laws",
       "Investigations",
       "Service Rules (Employment Handbook)",
-      "Sexual Harassment",
+      "Anti Harassment & Discrimination Policy",
       "Workforce Restructuring"
     ]
   },
@@ -87,18 +89,22 @@
     "index": "06",
     "category": "IP & Technology",
     "imgs": "https://hetheringtongroup.com/wp-content/uploads/2026/03/shutterstock_2567251255.jpg",
-    "description": "We advise businesses on intellectual property, technology and digital matters, including IP rights, data protection, cyber law, digital infrastructure, telecommunications and emerging technologies such as artificial intelligence.",
+    "description": "We advise businesses on intellectual property, technology & digital matters, including IP rights, data protection, cyber law, digital infrastructure, telecommunications and emerging technologies such as artificial intelligence.",
     "areas": [
       "Artificial Intelligence (AI) & Technology Law",
-      "Copyright & Patent Law",
+     
       "Cyber Law",
+      "Copyright",
+      
       "Data Privacy & Data Protection",
       "Digital Infrastructure",
+      "Digital Signatures",
       "Industrial Design Rights",
       "Media, Technology & Telecommunications",
       "Technology Regulatory Issues",
       "Trade Secrets",
-      "Trademarks"
+      "Trademarks",
+      "Patent"
     ]
   }
 ]

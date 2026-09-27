@@ -8,11 +8,11 @@ import TestimonialSpotlight from "@/components/sections/TestimonialSpotlight";
 import RecognitionMarquee from "@/components/sections/RecognitionMarquee";
 import ImageSlider from "@/components/sections/ImageSlider";
 import firm from "@/data/firm.json";
-import heroImg from "../../public/images/IMG_5002.jpg";
+import heroImg from "../../public/images/IMG_5268.webp";
 import founderImg from "../../public/images/sattar.webp";
 import officeImg from "../../public/images/Firm-rotate-2.jpg";
 // TIP: rename this file to firm-rotate-3.jpg (no spaces / brackets) — cleaner URLs.
-import meetingRoomImg from "../../public/images/Firm-rotate-3 (1).jpg";
+import meetingRoomImg from "../../public/images/IMG_5268.webp";
 import teamImg from "../../public/images/about.webp";
 
 /* -------------------------------------------------------------------------- */
@@ -125,7 +125,7 @@ function Hero() {
         sizes="100vw"
         className="object-cover object-center"
       />
-      <div className="absolute inset-0 bg-black/20" />
+      {/* <div className="absolute inset-0 bg-black/20" /> */}
 
       {/* <div className={`${CONTAINER} relative z-10 text-center`}>
         <RevealText as="h1" immediate className="font-display text-display-lg text-white">
@@ -222,7 +222,7 @@ function LifeAtTheFirm() {
   return (
     <section aria-labelledby="life-heading" className={`bg-white ${SECTION_Y}`}>
       <div className={CONTAINER}>
-        <SectionLabel label="Life At The Firm" className="mb-8" />
+        <SectionLabel label="Life At The Firm" className="mb-10" />
         <h2 id="life-heading" className="sr-only">
           Life at {SITE_NAME}
         </h2>
@@ -236,7 +236,7 @@ function Approach() {
   return (
     <section aria-labelledby="approach-heading" className="bg-white pb-14 sm:pb-20 lg:pb-24">
       <div className={CONTAINER}>
-        <SectionLabel label="Approach" className="mb-8" />
+        <SectionLabel label="Approach" className="mb-10" />
         <h2 id="approach-heading" className="sr-only">
           Our approach
         </h2>

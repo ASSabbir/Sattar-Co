@@ -23,75 +23,7 @@
       { "date": "Jul 2002", "institution": "Queen Mary and Westfield College, University of London, London", "course": "Bachelor of Laws (LL.B)" }
     ]
   },
-  {
-    "slug": "mamun-chowdhury",
-    "name": "Mamun Chowdhury",
-    "role": "Consultant",
-    "image": "/team/Mamun-Chowdhury-1.jpg",
-    "group": "Consultants",
-    "practiceAreas": ["Banking & Finance", "Corporate Advisory"],
-    "bio": [
-      "Mamun Chowdhury is an Advocate of the Bangladesh Supreme Court with specific expertise in domestic litigation and procedural issues. He is an experienced litigator and an excellent strategist. Mr. Chowdhury's practice primarily involves domestic litigation with a focus on banking, property and civil litigation. This includes representing various banks and companies before the Bangladeshi Courts.",
-      "Mr. Chowdhury's areas of interest include arbitration, banking, company, anti-corruption laws, judicial review and property laws."
-    ],
-    "education": [
-      { "date": "Jan 2006", "description": "Admitted as Advocate in the High Court Division, Supreme Court of Bangladesh" },
-      { "date": "Oct 2002", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" },
-      { "date": "Sep 2001", "institution": "University of Dhaka, Bangladesh", "course": "Master of Laws (LL.M)" },
-      { "date": "Jul 2000", "institution": "University of Dhaka, Bangladesh", "course": "Bachelor of Laws (LL.B)" }
-    ]
-  },
-  {
-    "slug": "rafiqul-alam",
-    "name": "Rafiqul Alam",
-    "role": "Consultant",
-    "image": "/team/DSC_9863.JPG",
-    "group": "Consultants",
-    "practiceAreas": ["Litigation", "Admiralty"],
-    "bio": [
-      "Mr. Alam is an Advocate of the Dhaka Judge Court with specific expertise in company laws and related matters such as company registration and filings. Mr. Alam's areas of interest include company and intellectual property laws."
-    ],
-    "education": [
-      { "date": "Oct 2008", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" },
-      { "date": "Jul 2006", "institution": "National University, Bangladesh", "course": "Bachelor of Laws (LL.B)" }
-    ]
-  },
-  {
-    "slug": "yadnan-rafique",
-    "name": "Md. Yadnan Rafique Rossy",
-    "role": "Consultant",
-    "image": "/team/Yadnan-Rafique.jpg",
-    "group": "Consultants",
-    "practiceAreas": ["Corporate", "Regulatory"],
-    "bio": [
-      "Md. Yadnan Rafique Rossy is an Advocate of the Bangladesh Supreme Court with specific expertise in commercial and criminal litigation. Mr. Rafique also has a vast array of experience in corporate matters working with renowned national and international companies, and has represented various banks and companies before the Bangladeshi Courts.",
-      "Mr. Rafique's areas of interest include company and commercial law, constitutional matters, civil litigation, banking disputes and property matters."
-    ],
-    "education": [
-      { "date": "2015", "description": "Admitted as Advocate in the High Court Division, Supreme Court of Bangladesh" },
-      { "date": "2012", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" },
-      { "date": "2009", "institution": "University of Dhaka, Bangladesh", "course": "Master of Laws (LL.M)" },
-      { "date": "2008", "institution": "University of Dhaka, Bangladesh", "course": "Bachelor of Laws (LL.B)" }
-    ]
-  },
-  {
-    "slug": "khademul-islam-choyon",
-    "name": "Md. Khademul Islam Choyon",
-    "role": "Senior Associate",
-    "image": "/team/khc.jpg",
-    "group": "Associates",
-    "practiceAreas": ["Corporate Transactions", "M&A"],
-    "bio": [
-      "Md. Khademul Islam Choyon is a Senior Associate in the Corporate department of Sattar&Co. After completing his studies, he started his legal career at a leading law firm in Bangladesh. As part of the team of Sattar&Co., he assists in advising local and international clients across a broad range of the firm's practice areas including, inter alia, aviation, corporate & commercial (including M&A), energy, information technology, cyber and telecommunications laws, etc.",
-      "While working at Sattar&Co., Choyon has gained notable experience in structuring foreign direct investments, vetting and negotiating contracts and conducting due diligence on target companies for local or cross-border acquisitions. He routinely liaises with regulators and keeps the firm up-to-date with practical and procedural matters of law and regulations.",
-      "As part of the team, Choyon was involved in dealing with numerous significant matters, which include, inter alia, working with one of the largest aircraft leasing companies in the world which provides leasing and lease management services to airlines worldwide; a prominent American-Canadian entertainment company on the entertainment laws of Bangladesh which include laws relating to on-demand services, video services as well as OTT, broadcasting, etc.; a prominent and popular international online gaming company on the gaming laws of Bangladesh; a leading international solar power company on the risk matrix in relation to power purchase agreements, etc."
-    ],
-    "education": [
-      { "date": "Aug 2022", "description": "Admitted as Advocate in the High Court Division, Supreme Court of Bangladesh" },
-      { "date": "Dec 2018", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" },
-      { "date": "Aug 2014", "institution": "University of Northumbria", "course": "Bachelor of Laws (LL.B)" }
-    ]
-  },
+ 
   {
     "slug": "mahbub-hasan",
     "name": "Mahbub Hasan",
@@ -109,6 +41,142 @@
       { "date": "Dec 2018", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" },
       { "date": "Jun 2015", "institution": "University of Rajshahi, Bangladesh", "course": "Master of Laws (LL.M)" },
       { "date": "Jun 2014", "institution": "BRAC University, Bangladesh", "course": "Bachelor of Laws (LL.B)" }
+    ]
+  },
+  {
+    "slug": "neyamul-chowdhury",
+    "name": "Neyamul Chowdhury",
+    "role": "Associate",
+    "image": "/team/Neyamul-Chowdhury-1.jpg",
+    "group": "Associates",
+    "practiceAreas": [
+      "Corporate & Commercial Law",
+      "Commercial Contracts",
+      "Constitutional and Writ Litigation",
+      "Civil and Commercial Litigation",
+      "Dispute Resolution",
+      "Banking & Finance"
+    ],
+    "bio": [
+      "Neyamul Chowdhury is a Barrister-at-Law and Advocate of the Supreme Court of Bangladesh, with experience in Corporate & Commercial Law, Commercial Contracts, Constitutional and Writ Litigation, Civil and Commercial Litigation, Dispute Resolution, and Banking & Finance. He is involved in advising and assisting clients on a range of contentious and non-contentious matters, including High Court Division proceedings, writ petitions, commercial and contractual disputes, banking matters, and corporate advisory work.",
+      "His practice involves legal research, drafting and reviewing commercial agreements, pleadings, writ petitions, affidavits, written submissions and legal opinions. He approaches each matter with careful legal analysis, attention to detail and a practical understanding of clients' legal requirements."
+    ],
+    "education": [
+      { "date": "2026", "description": "Admitted as Advocate in the High Court Division, Supreme Court of Bangladesh (Authorised to practise before the Honourable High Court Division)" },
+      { "date": "2024", "description": "Enrolled as an Advocate, District & Sessions Court, Dhaka Bar Association (Membership No. 30699)" },
+      { "date": "2021", "institution": "The Honourable Society of Lincoln's Inn, United Kingdom", "course": "Called to the Bar — Barrister-at-Law" },
+      { "date": "2018–2021", "institution": "Nottingham Trent University, United Kingdom", "course": "Bar Professional Training Course (BPTC)" },
+      { "date": "2018–2021", "institution": "Bangladesh University of Professionals", "course": "Master of Laws (LLM)", "result": "First Class" },
+      { "date": "2012–2016", "institution": "University of London International Programme", "course": "Bachelor of Laws (LLB Hons)" }
+    ]
+  },
+  {
+    "slug": "tareq-hasan",
+    "name": "Tareq Hasan",
+    "role": "Associate",
+    "image": "/team/Tareq-Hasan-1.jpg",
+    "group": "Associates",
+    "practiceAreas": [
+      "Labour & Employment",
+      "Corporate & Commercial",
+      "Banking & Finance",
+      "Energy",
+      "Telecommunications",
+      "Competition & Cyber Laws"
+    ],
+    "bio": [
+      "Tareq Hasan is an Associate at Sattar&Co. Tareq started his legal career at Sattar&Co. and is an integral part of the team, regularly assisting in litigation and corporate matters. His practice encompasses a broad range of areas, including labour and employment, corporate and commercial, banking and finance, energy, telecommunications, competition and cyber laws.",
+      "While working at Sattar&Co., Tareq has gained experience in advising local and international clients on a diverse range of legal and regulatory matters. He has been involved in drafting and reviewing pleadings, contracts and legal documents, conducting legal research, and advising on regulatory compliance and corporate matters.",
+      "As part of the team, Tareq has assisted in a number of significant matters involving companies, financial institutions and multinational corporate groups, with a focus on providing practical and commercially oriented legal advice."
+    ],
+    "education": [
+      { "date": "April 2026", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" }
+    ]
+  },
+  {
+    "slug": "fatema-tuz-zohora",
+    "name": "Fatema Tuz Zohora",
+    "role": "Associate",
+    "image": "/team/Fatema-Tuz-Zohora-1.jpg",
+    "group": "Associates",
+    "practiceAreas": [
+      "Corporate & Commercial",
+      "Regulatory Matters",
+      "Employment & Labour Law",
+      "Telecommunications & Technology",
+      "Foreign Investment",
+      "Competition Law"
+    ],
+    "bio": [
+      "Fatema Tuz Zohora is an Associate at Sattar & Co., with a practice focused on corporate, commercial and regulatory matters. She holds an LLB and an LLM with a specialization in Commercial Law from the University of Dhaka.",
+      "Her practice encompasses the drafting and vetting of corporate and commercial instruments, as well as the preparation of legal opinions on a range of corporate and commercial matters. She has experience in matters involving corporate and commercial transactions, corporate governance, employment and labour law, telecommunications and technology, foreign investment, and competition law.",
+      "She also has a keen interest in legal research and writing, particularly in the areas of corporate and commercial matters, human rights, intellectual property, competition law, and emerging legal issues relating to technology."
+    ],
+    "education": [
+      { "date": "May 2023", "institution": "University of Dhaka", "course": "Master of Laws (LLM)" },
+      { "date": "Dec 2022", "institution": "University of Dhaka", "course": "Bachelor of Laws (LLB)" }
+    ]
+  },
+  {
+    "slug": "samia-sayeed",
+    "name": "Samia Sayeed",
+    "role": "Intern",
+    "image": "/team/Samia-Sayeed-1.jpg",
+    "group": "Interns",
+    "practiceAreas": [
+      "Constitutional & Public Law",
+      "Human Rights",
+      "International Law",
+      "Humanitarian Law",
+      "Gender Equality"
+    ],
+    "bio": [
+      "Samia Sayeed is an Intern at Sattar&Co. She obtained her Bachelor of Laws (LLB) from BRAC University in January 2026.",
+      "Before joining the firm, she completed an internship at the Attorney General's Office under the UNDP–AGO Internship Programme, where she developed experience in legal research, legal writing, and constitutional and public law. She has also participated in national and international moot court competitions, with a particular interest in research and advocacy. Her areas of interest include constitutional and public law, human rights, international law, humanitarian law, and gender equality."
+    ],
+    "education": [
+      { "date": "January 2026", "institution": "BRAC University", "course": "Bachelor of Laws (LLB)" }
+    ]
+  },
+  {
+    "slug": "samia-rahman",
+    "name": "Samia Rahman",
+    "role": "Intern",
+    "image": "/team/Samia-Rahman-1.jpg",
+    "group": "Interns",
+    "practiceAreas": [
+      "Litigation",
+      "Corporate & Commercial Law",
+      "Labour Law",
+      "Criminal Law",
+      "Human Rights"
+    ],
+    "bio": [
+      "Samia Rahman is an Intern at Sattar&Co. She completed her Bachelor of Laws (LLB) from BRAC University in July 2026 with High Distinction.",
+      "At Sattar&Co., she assists senior lawyers with legal research, drafting, legal opinions, litigation, and corporate and commercial matters, with exposure to banking, labour and employment, and dispute resolution. Her areas of interest include litigation, corporate and commercial law, labour law, criminal law, and human rights."
+    ],
+    "education": [
+      { "date": "July 2026", "institution": "BRAC University, Bangladesh", "course": "Bachelor of Laws (LLB)", "result": "High Distinction" }
+    ]
+  },
+  {
+    "slug": "rakasmo-ahmmed",
+    "name": "Rakasmo Ahmmed",
+    "role": "Intern",
+    "image": "/team/Rakasmo-Ahmmed-1.jpg",
+    "group": "Interns",
+    "practiceAreas": [
+      "Constitutional & Public Law",
+      "Human Rights",
+      "Civil Rights",
+      "Public Policy"
+    ],
+    "bio": [
+      "Rakasmo Ahmmed is an Intern at Sattar&Co. He completed his Bachelor of Laws (LLB) from North South University in 2026.",
+      "Prior to joining the firm, he served as a Research Assistant and Teaching Assistant at the Department of Law, North South University, gaining experience in legal research, legal writing, and public law. His areas of interest include constitutional and public law, human rights, civil rights, and public policy."
+    ],
+    "education": [
+      { "date": "May 2026", "institution": "North South University, Bangladesh", "course": "Bachelor of Laws (LLB)" }
     ]
   },
   {

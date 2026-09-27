@@ -4,10 +4,10 @@ import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const FIELDS = [
-  { name: "name", label: "Name", type: "text", required: true, p:"Mahbub Hossain" },
-  { name: "email", label: "Email", type: "email", required: true,p:"mahbubhossin@gmail.com" },
-  { name: "company", label: "Company", type: "text", required: false,p:"TechOf Solution" },
-  { name: "subject", label: "Subject", type: "text", required: true,p:"Its Urgent" },
+  { name: "name", label: "Name", type: "text", required: true, p:"e.g. Takeshi Makoto" },
+  { name: "email", label: "Email", type: "email", required: true,p:"e.g. takeshimakoto11@gmail.com" },
+  { name: "company", label: "Company", type: "text", required: false,p:"e.g. TechOf Solution" },
+  { name: "subject", label: "Subject", type: "text", required: true,p:"e.g. Its Urgent" },
 ] as const;
 
 /**
@@ -73,7 +73,7 @@ export default function ContactForm() {
         <textarea
           id="message"
           name="message"
-          placeholder="its"
+          placeholder="your message"
           required
           rows={5}
           className="bg-transparent border-b border-zinc-900/25 focus:border-red-600 outline-none py-2 text-zinc-950 placeholder:text-zinc-950/30 resize-none transition-colors duration-300"

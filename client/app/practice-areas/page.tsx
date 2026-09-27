@@ -26,7 +26,7 @@ export default function PracticeAreasPage() {
         sizes="100vw"
         className="object-cover object-center"
       />
-        <div className="absolute inset-0 bg-black/20" />
+        {/* <div className="absolute inset-0 bg-black/20" /> */}
 
         {/* <div className="relative z-10 max-w-content mx-auto  px-6 md:px-10">
           
