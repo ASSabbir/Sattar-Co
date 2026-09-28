@@ -3,7 +3,7 @@
     "slug": "sameer-sattar",
     "name": "Sameer Sattar",
     "role": "Head of Firm",
-    "image": "/team/Sameer-Sattar-2.jpg",
+    "image": "/team/Sameer-Sattar.webp",
     "group": "Head of Firm",
     "practiceAreas": ["Corporate & Commercial", "Dispute Resolution", "Banking & Finance"],
     "email": "",
@@ -28,7 +28,7 @@
     "slug": "mahbub-hasan",
     "name": "Mahbub Hasan",
     "role": "Senior Associate",
-    "image": "/team/Mahbub-Hasan-1.jpg",
+    "image": "/team/Mahbub-Hasan.webp",
     "group": "Associates",
     "practiceAreas": ["Dispute Resolution", "Banking Litigation"],
     "bio": [
@@ -47,7 +47,7 @@
     "slug": "neyamul-chowdhury",
     "name": "Neyamul Chowdhury",
     "role": "Associate",
-    "image": "/team/Neyamul-Chowdhury-1.jpg",
+    "image": "/team/IMG_5296.JPG.webp",
     "group": "Associates",
     "practiceAreas": [
       "Corporate & Commercial Law",
@@ -74,7 +74,7 @@
     "slug": "tareq-hasan",
     "name": "Tareq Hasan",
     "role": "Associate",
-    "image": "/team/Tareq-Hasan-1.jpg",
+    "image": "/team/tareq-hasan.webp",
     "group": "Associates",
     "practiceAreas": [
       "Labour & Employment",
@@ -97,7 +97,7 @@
     "slug": "fatema-tuz-zohora",
     "name": "Fatema Tuz Zohora",
     "role": "Associate",
-    "image": "/team/Fatema-Tuz-Zohora-1.jpg",
+    "image": "/team/fatema-tuz-zohora.webp",
     "group": "Associates",
     "practiceAreas": [
       "Corporate & Commercial",
@@ -121,8 +121,8 @@
     "slug": "samia-sayeed",
     "name": "Samia Sayeed",
     "role": "Intern",
-    "image": "/team/Samia-Sayeed-1.jpg",
-    "group": "Interns",
+    "image": "/team/samia-sayeed.webp",
+    "group": "Intern",
     "practiceAreas": [
       "Constitutional & Public Law",
       "Human Rights",
@@ -142,8 +142,8 @@
     "slug": "samia-rahman",
     "name": "Samia Rahman",
     "role": "Intern",
-    "image": "/team/Samia-Rahman-1.jpg",
-    "group": "Interns",
+    "image": "/team/samia-rahman.webp",
+    "group": "Intern",
     "practiceAreas": [
       "Litigation",
       "Corporate & Commercial Law",
@@ -163,8 +163,8 @@
     "slug": "rakasmo-ahmmed",
     "name": "Rakasmo Ahmmed",
     "role": "Intern",
-    "image": "/team/Rakasmo-Ahmmed-1.jpg",
-    "group": "Interns",
+    "image": "/team/rakasmo-ahmmed.webp",
+    "group": "Intern",
     "practiceAreas": [
       "Constitutional & Public Law",
       "Human Rights",
@@ -178,95 +178,6 @@
     "education": [
       { "date": "May 2026", "institution": "North South University, Bangladesh", "course": "Bachelor of Laws (LLB)" }
     ]
-  },
-  {
-    "slug": "mariha-zaman-khan",
-    "name": "Mariha Zaman Khan",
-    "role": "Associate",
-    "image": "/team/Team-Mariha-Zaman-Khan.jpg",
-    "group": "Associates",
-    "practiceAreas": ["Employment", "Corporate"],
-    "bio": [
-      "Mariha Zaman Khan is a Barrister and works with Sattar&Co. After being called to the Bar, Mariha returned to Bangladesh and started her legal career at Sattar&Co. Mariha assists in advising clients on corporate laws and foreign investment matters at Sattar&Co.",
-      "She is also a lecturer at a leading law school in Bangladesh."
-    ],
-    "education": [
-      { "date": "Oct 2014", "institution": "City Law School, City University London, London", "course": "Bar Professional Training Course" },
-      { "date": "Aug 2013", "institution": "University of London (International Programmes)", "course": "Bachelor of Laws (LL.B)" }
-    ]
-  },
-  {
-    "slug": "sajid-hossain",
-    "name": "Sajid Hossain",
-    "role": "Associate",
-    "image": "/team/sajid-hossain.jpg",
-    "group": "Associates",
-    "practiceAreas": ["Energy", "Project Finance"],
-    "bio": [
-      "Sajid Hossain is an Associate at Sattar&Co. Sajid began his legal career at Sattar&Co. and gained his preliminary exposure to corporate and commercial law practice at the firm. On completing his Master's Degree in Corporate Law (MCL) from the University of Cambridge, Sajid returned to Sattar&Co. as a full-fledged Associate.",
-      "Sajid is admitted to practice law in Bangladesh. At Sattar&Co., he routinely assists in advising both local and international clients across a range of key practice areas which include, inter alia, M&A, employment, projects and energy, oil and gas, cross-border transactions, disputes and arbitration matters and various other corporate advisory and litigious matters.",
-      "As part of the team, Sajid has been involved in a number of significant matters and transactions, which include, inter alia, advising a globally reputed investment conglomerate on complex tax law issues pertaining to multiple turnkey projects in Bangladesh; a leading Bangladeshi corporate giant on the share acquisition and structuring of an SPV for the implementation of a power project; a local company engaged in oil and gas pipeline construction works in a cross-border contractual dispute with its employer in a turnkey project; advising a leading international airline on queries pertaining to various information technology, telecommunications, e-commerce and data protection laws of Bangladesh; assisting in representing a local buying house in an arbitration application filed against it before the High Court Division."
-    ],
-    "education": [
-      { "date": "Mar 2024", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" },
-      { "date": "Jul 2023", "institution": "University of Cambridge", "course": "Master of Corporate Law (MCL)" },
-      { "date": "Dec 2018", "institution": "North South University", "course": "Bachelor of Laws (LL.B)" }
-    ]
-  },
-  {
-    "slug": "tareq-hasan",
-    "name": "Tareq Hasan",
-    "role": "Research Associate",
-    "image": "/team/tareq-hasan.jpg",
-    "group": "Associates",
-    "practiceAreas": ["Research", "Regulatory"],
-    "bio": [
-      "Tareq Hasan is a Research Associate at Sattar&Co. He has prior experience working with a reputed law firm in Bangladesh. At Sattar&Co., Tareq is currently assisting with litigation matters."
-    ],
-    "education": [
-      { "date": "May 2023", "institution": "University of Dhaka", "course": "Master of Laws (LL.M)" },
-      { "date": "Dec 2021", "institution": "University of Dhaka", "course": "Bachelor of Laws (LL.B)" }
-    ]
-  },
-{
-    "slug": "sadat-islam",
-    "name": "Sadat Islam",
-    "role": "Research Associate",
-    "image": "/team/sadat-islam.jpg",
-    "group": "Associates",
-    "practiceAreas": ["Research", "Litigation"],
-    "bio": [
-      "Sadat Islam became a Research Associate at Sattar&Co. after successfully completing his internship at the firm. Sadat is currently assisting the Associates in advising clients on various corporate and litigation matters."
-    ],
-    "education": [
-      { "date": "January 2022", "institution": "BRAC University", "course": "Bachelor of Laws (LL.B)" }
-    ]
-  },
-  {
-    "slug": "francis-gomes",
-    "name": "Francis Gomes",
-    "role": "Senior Office Manager",
-    "image": "/team/francis-gomes.jpg",
-    "group": "Administration",
-    "practiceAreas": [],
-    "bio": "Francis Gomes oversees the firm's administrative and office management functions."
-  },
-  {
-    "slug": "martin-pritom-gomes",
-    "name": "Martin Pritom Gomes",
-    "role": "Office Manager",
-    "image": "/team/martin-pritom-gomes.jpg",
-    "group": "Administration",
-    "practiceAreas": [],
-    "bio": "Martin Pritom Gomes manages daily office operations and administrative coordination."
-  },
-  {
-    "slug": "palash-sarker",
-    "name": "Palash Sarker",
-    "role": "Clerk",
-    "image": "/team/palash-sarker.jpg",
-    "group": "Administration",
-    "practiceAreas": [],
-    "bio": "Palash Sarker supports the firm's administrative and clerical operations."
   }
+  
 ]

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RevealText from "@/components/ui/RevealText";
 import CareersInteractive from "@/components/sections/CareersInteractive";
 import Image from "next/image";
-import img1 from "../../public/images/DSC_9836.webp";
+import img1 from "../../public/images/career.png";
 export const metadata: Metadata = {
   title: "Careers",
   description:

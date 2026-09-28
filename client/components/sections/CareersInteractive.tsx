@@ -14,52 +14,47 @@ type Position = {
 
 const positions: Position[] = [
   {
-    id: "associate",
-    title: "Associate",
+    id: "intern",
+    title: "Intern",
     eligibility:
-      "An LLB and LLM degree from a reputed University, along with membership with the Bangladesh Bar Council. All three qualifications are required.",
+      "The candidate should be a fresh law graduate from any reputed university in Bangladesh or hold an equivalent law degree, with a strong interest in legal research and the practice of law, and a willingness to learn and develop practical legal skills in a professional environment.",
     role:
-      "Primarily involved in providing legal opinions, drafting pleadings and commercial documents, and independently handling cases. Associates are expected to take responsibility for their matters while having access to guidance and assistance from senior lawyers when required.",
+      "To assist with legal research, preparation of legal documents, case law research, and other legal and administrative tasks while gaining practical exposure to legal practice.",
   },
   {
     id: "research-associate",
     title: "Research Associate",
     eligibility:
-      "An LLB and LLM degree from a reputed University. Membership with the Bangladesh Bar Council is preferable but not mandatory.",
+      "The candidate should hold an LL.B. and LL.M., or equivalent law degree(s), from any reputed university in Bangladesh or abroad, with strong legal research, analytical, and legal writing skills. Enrolment with the Bangladesh Bar Council will be preferred.",
     role:
-      "Primarily involved in legal research, preparing legal opinions, and assisting senior lawyers with research and drafting assignments. Strong analytical, research, and legal writing skills are expected, with guidance and support from senior lawyers available throughout.",
+      "The Research Associate will conduct legal and regulatory research, and assist in preparing legal opinions, memoranda. The role will also involve drafting and vetting legal documents and supporting senior lawyers and Associates in corporate, commercial, civil, regulatory, and litigation matters.",
   },
-  
   {
-    id: "internship",
-    title: "Internship",
+    id: "associate",
+    title: "Associate",
     eligibility:
-      "Applicants having completed an LLB degree from a reputed University are encouraged to apply. An LLM degree is preferable but not mandatory.",
+      "The candidate should hold an LL.B. and LL.M., or equivalent law degree(s), from any reputed university in Bangladesh or abroad, and be enrolled with the Bangladesh Bar Council. Relevant experience in corporate, commercial, civil, or regulatory matters will be preferred.",
     role:
-      "Primarily involved in assisting members of the firm with legal research, drafting, and other legal assignments. A good command of both English and Bengali is required, with continuous guidance and support from senior lawyers.",
-    extra:
-      "The internship generally lasts 3 months. Applicants wishing to move to a Trainee or Research Associate position may be required to attend an interview with the Practice Manager.",
+      "The Associate will be responsible for conducting legal research, drafting and vetting contracts, pleadings, legal notices, opinions, and other legal documents, and assisting with corporate, commercial, civil, regulatory, and litigation matters. The role will also involve assisting senior lawyers, communicating with clients, and appearing before relevant courts and authorities, as appropriate.",
   },
 ];
 
-
-
-const TO_EMAIL = "practicemanager@sattarandcobd.com";
+const TO_EMAILS = ["info@sattarandco.com", "practicemanager@sattarandcobd.com"];
 const CC_EMAIL = "ssattar@sattarandco.com";
 
 export function buildGmailLink(position: string): string {
   const subject = "Application for " + position + " — Sattar&Co.";
   const body =
-    "Dear Practice Manager,\n\n" +
+    "Dear Sir/Madam,\n\n" +
     "I am writing to apply for the position of " + position + " at Sattar&Co.\n\n" +
-    "Please find attached my CV, covering letter, and a letter of recommendation from my University professor / previous employer.\n\n" +
+    "Please find attached my updated CV and a brief cover letter outlining my qualifications and relevant experience.\n\n" +
     "I look forward to hearing from you.\n\n" +
     "Kind regards,\n";
 
   const params = new URLSearchParams({
     view: "cm",
     fs: "1",
-    to: TO_EMAIL,
+    to: TO_EMAILS.join(","),
     cc: CC_EMAIL,
     su: subject,
     body: body,
@@ -152,7 +147,6 @@ export default function CareersInteractive() {
                             <p className="text-charcoal  leading-relaxed text-lg md:text-[22px]">{pos.extra}</p>
                           )}
                         </div>
-                        
                       </div>
                     </motion.div>
                   )}
@@ -169,32 +163,16 @@ export default function CareersInteractive() {
             <div className="lg:col-span-8  space-y-5">
               <h3 className="font-display text-3xl md:text-4xl text-ivory">How to Apply</h3>
               <p className="text-ivory/70   leading-relaxed text-lg md:text-[22px]  w-full">
-                Applications should be addressed to the Practice Manager in the HR team, with a
-                copy to Barrister Sattar. Interested applicants must submit their CV, a covering
-                letter, and a letter of recommendation from their University professor or previous
-                employer. Short-listed applicants will be called for an interview with the
-                Practice Manager.
+                Interested candidates are invited to submit their updated CV along with a brief
+                cover letter outlining their qualifications and relevant experience to{" "}
+                {TO_EMAILS[0]} or {TO_EMAILS[1]}, with a copy to {CC_EMAIL}. Please mention the
+                position applied for in the subject line of the email. Only shortlisted
+                candidates will be contacted.
               </p>
               <p className="text-ivory/50 text-pretty text-sm">
-                {TO_EMAIL} &nbsp;·&nbsp; cc: {CC_EMAIL}
+                {TO_EMAILS.join(" · ")} &nbsp;·&nbsp; cc: {CC_EMAIL}
               </p>
             </div>
-            {/* <div className="lg:col-span-4 flex lg:justify-end">
-              <a
-                href={buildGmailLink("Vacancy")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2.5 px-8 py-4 bg-ivory text-charcoal text-sm tracking-wide hover:bg-red-600 hover:text-ivory transition-colors duration-300"
-              >
-                <Mail size={16} strokeWidth={1.5} />
-                Send Us Your CV
-                <ArrowUpRight
-                  size={14}
-                  strokeWidth={1.5}
-                  className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
-              </a>
-            </div> */}
           </div>
         </div>
       </section>

@@ -4,7 +4,7 @@
     "id": "corporate-commercial",
     "index": "01",
     "category": "Corporate & Commercial",
-    "imgs": "https://www.ahabtoor.com/wp-content/uploads/2024/03/Corporate-Commercial.jpeg",
+    "imgs": "/images/services/1.webp",
     "description": "We advise companies, investors and financial institutions on corporate and commercial matters in Bangladesh, including transactions, governance, mergers & acquisitions, private equity, financing, insurance and regulatory issues, with a focus on clear and commercially grounded advice.",
     "areas": [
       "Commercial Transactions",
@@ -22,7 +22,7 @@
     "id": "banking-finance",
     "index": "02",
     "category": "Banking & Finance",
-    "imgs": "https://vtn-partners.com/data/uploads/2023/03/nganh-tai-chinh-ngan-hang-la-gi-hinh-anh3.jpg",
+    "imgs": "/images/services/2.webp",
     "description": "We advise banks, financial institutions, investors and businesses on banking and finance matters, including structured finance, lending, project and asset finance, loan transactions and emerging FinTech matters.",
     "areas": [
       "Asset Finance",
@@ -38,7 +38,7 @@
     "id": "dispute-resolution",
     "index": "03",
     "category": "Dispute Resolution",
-    "imgs": "https://www.mmaadvocates.co.ke/wp-content/uploads/2024/07/Dispute-Resolution-in-Business.png.webp",
+    "imgs": "/images/services/3.webp",
     "description": "We represent clients in complex commercial disputes in Bangladesh and internationally, covering litigation, arbitration, negotiation and mediation, supported by rigorous legal analysis and strategic judgment.",
     "areas": [
       "Domestic Arbitration",
@@ -88,7 +88,7 @@
     "id": "ip-technology",
     "index": "06",
     "category": "IP & Technology",
-    "imgs": "https://hetheringtongroup.com/wp-content/uploads/2026/03/shutterstock_2567251255.jpg",
+    "imgs": "/images/services/6.webp",
     "description": "We advise businesses on intellectual property, technology & digital matters, including IP rights, data protection, cyber law, digital infrastructure, telecommunications and emerging technologies such as artificial intelligence.",
     "areas": [
       "Artificial Intelligence (AI) & Technology Law",

@@ -165,7 +165,7 @@ export default async function TeamMemberPage({ params }: Props) {
                     alt={`Portrait of ${member.name}${member.role ? `, ${member.role}` : ""}`}
                     fill
                     sizes="(max-width: 1023px) 100vw, 42vw"
-                    className="object-cover object-top"
+                    className="object-cover object-center"
                     priority
                   />
 

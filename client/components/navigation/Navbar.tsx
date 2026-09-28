@@ -8,7 +8,7 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { gsap } from "@/lib/gsap";
 import { onHeroIntroComplete } from "@/lib/heroEvents";
-import wlogo from '../../public/wlogo.png'
+
 import blogo from '../../public/blogo.png'
 import TopBar from "../layout/TopBar";
 
