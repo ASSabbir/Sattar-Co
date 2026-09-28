@@ -24,7 +24,7 @@ export default function ImageSlider({ images }: ImageSliderProps) {
 
   return (
     <div
-      className="relative aspect-[16/9] md:aspect-[21/9] w-full overflow-hidden"
+      className="relative aspect-[16/9] md:aspect-[18/9] w-full overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -41,10 +41,10 @@ export default function ImageSlider({ images }: ImageSliderProps) {
             src={images[active].src}
             alt={images[active].label}
             fill
-            className="object-cover"
-            sizes="100vw"
+            className="object-cover h-screen"
+            
           />
-          <div className="absolute inset-0 bg-black/25" />
+          {/* <div className="absolute inset-0 bg-black/25" /> */}
         </motion.div>
       </AnimatePresence>
 

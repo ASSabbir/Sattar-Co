@@ -17,7 +17,7 @@ interface TeamMember {
   practiceAreas?: string[];
 }
 
-const GROUP_ORDER = ["Consultants", "Associates", "Administration"];
+const GROUP_ORDER = ["Associates","Intern", "Administration"];
 const ROW_SIZE = 3;
 
 interface RosterRow {
@@ -180,7 +180,7 @@ export default function TeamRoster() {
                   alt={`Portrait of ${leader?.name || "Sameer Sattar"}, Head of Firm`}
                   fill
                   sizes="(max-width: 1023px) 100vw, 40vw"
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                   priority
                 />
               </div>
@@ -274,7 +274,7 @@ export default function TeamRoster() {
                                   isViewable ? "cursor-pointer" : "cursor-default",
                                 ].join(" ")}
                               >
-                                <div className="relative w-full aspect-[4/5] lg:max-h-[clamp(120px,24svh,260px)] bg-charcoal/10 overflow-hidden">
+                                <div className="relative w-full aspect-[4/5] lg:max-h-[clamp(200px,24svh,260px)] bg-charcoal/10 overflow-hidden">
                                   <Image
                                     src={member.image || "/team/placeholder.jpg"}
                                     alt={`Portrait of ${member.name}${
@@ -283,7 +283,7 @@ export default function TeamRoster() {
                                     fill
                                     sizes="(max-width: 639px) 45vw, (max-width: 1023px) 30vw, 18vw"
                                     className={[
-                                      "object-cover object-top transition-all duration-500",
+                                      "object-cover object-center  transition-all duration-500",
                                       
                                     ].join(" ")}
                                   />

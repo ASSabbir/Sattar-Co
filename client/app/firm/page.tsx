@@ -9,8 +9,16 @@ import RecognitionMarquee from "@/components/sections/RecognitionMarquee";
 import ImageSlider from "@/components/sections/ImageSlider";
 import firm from "@/data/firm.json";
 import heroImg from "../../public/images/IMG_5268.webp";
-import founderImg from "../../public/images/sattar.webp";
+import founderImg from "../../public/firm/sattar.webp";
 import officeImg from "../../public/images/Firm-rotate-2.jpg";
+import img1 from "../../public/firm/firm1.webp";
+import img2 from "../../public/firm/firm2.webp";
+import img3 from "../../public/firm/firm3.webp";
+import img4 from "../../public/firm/firm4.webp";
+import img5 from "../../public/firm/firm5.webp";
+import img6 from "../../public/firm/firm26.webp";
+import img7 from "../../public/firm/firm27.webp";
+import img8 from "../../public/firm/firm8.webp";
 // TIP: rename this file to firm-rotate-3.jpg (no spaces / brackets) — cleaner URLs.
 import meetingRoomImg from "../../public/images/IMG_5268.webp";
 import teamImg from "../../public/images/about.webp";
@@ -34,9 +42,15 @@ const FOUNDER_MESSAGE = [
 ];
 
 const SLIDER_IMAGES = [
-  { src: officeImg, label: "Sattar&Co. — Office" },
-  { src: meetingRoomImg, label: "Sattar&Co. — Meeting Room" },
-  { src: teamImg, label: "Sattar&Co. — Team" },
+  
+  { src: img1, label: "Sattar&Co. — Team" },
+  { src: img2, label: "Sattar&Co. — Team" },
+  { src: img3, label: "Sattar&Co. — Team" },
+  { src: img4, label: "Sattar&Co. — Team" },
+  { src: img5, label: "Sattar&Co. — Team" },
+  { src: img6, label: "Sattar&Co. — Team" },
+  { src: img7, label: "Sattar&Co. — Team" },
+  { src: img8, label: "Sattar&Co. — Team" },
 ];
 
 const APPROACH_ITEMS = [
@@ -150,7 +164,7 @@ function FounderMessage() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 lg:gap-24">
           {/* Portrait */}
           <div className="md:col-span-6">
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden md:sticky md:top-28 md:max-h-[calc(100svh-9rem)] md:max-w-none lg:top-32 lg:max-h-[calc(100svh-10rem)]">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden md:sticky md:top-28 md:max-h-[calc(100svh-9rem)] md:max-w-none lg:top-32 lg:max-h-[calc(120svh-10rem)]">
               <Image
                 src={founderImg}
                 alt={`Portrait of ${FOUNDER.prefix} ${FOUNDER.name}, ${FOUNDER.title} at ${SITE_NAME}`}
@@ -175,7 +189,7 @@ function FounderMessage() {
             </blockquote>
 
             <figcaption className="eyebrow mt-2 text-red-600 !text-base sm:!text-lg md:mt-4">
-              {FOUNDER.prefix} {FOUNDER.name} — {FOUNDER.title}
+              {FOUNDER.prefix} {FOUNDER.name} <br></br> — {FOUNDER.title}
             </figcaption>
           </figure>
         </div>
