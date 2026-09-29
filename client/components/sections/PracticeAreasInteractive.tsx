@@ -217,7 +217,7 @@ function PracticeAreaPanel({ area, isActive }: PanelProps) {
         {area.areas.map((item: string, j: number) => (
           <span key={item} className="flex justify-center items-center gap-2">
             <div aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-600" />
-            <span>{item}</span></span>
+            <span className="text-[22px]">{item}</span></span>
         ))}
       </ul>
     </div>
