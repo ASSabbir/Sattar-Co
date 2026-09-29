@@ -71,28 +71,39 @@
     ]
   },
   {
-    "slug": "tareq-hasan",
-    "name": "Tareq Hasan",
-    "role": "Associate",
-    "image": "/team/tareq-hasan.webp",
-    "group": "Associates",
-    "practiceAreas": [
-      "Labour & Employment",
-      "Corporate & Commercial",
-      "Banking & Finance",
-      "Energy",
-      "Telecommunications",
-      "Competition & Cyber Laws"
-    ],
-    "bio": [
-      "Tareq Hasan is an Associate at Sattar&Co. Tareq started his legal career at Sattar&Co. and is an integral part of the team, regularly assisting in litigation and corporate matters. His practice encompasses a broad range of areas, including labour and employment, corporate and commercial, banking and finance, energy, telecommunications, competition and cyber laws.",
-      "While working at Sattar&Co., Tareq has gained experience in advising local and international clients on a diverse range of legal and regulatory matters. He has been involved in drafting and reviewing pleadings, contracts and legal documents, conducting legal research, and advising on regulatory compliance and corporate matters.",
-      "As part of the team, Tareq has assisted in a number of significant matters involving companies, financial institutions and multinational corporate groups, with a focus on providing practical and commercially oriented legal advice."
-    ],
-    "education": [
-      { "date": "April 2026", "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)" }
-    ]
-  },
+  "slug": "tareq-hasan",
+  "name": "Tareq Hasan",
+  "role": "Associate",
+  "image": "/team/tareq-hasan.webp",
+  "group": "Associates",
+  "practiceAreas": [
+    "Labour & Employment",
+    "Corporate & Commercial",
+    "Banking & Finance",
+    "Energy",
+    "Telecommunications",
+    "Competition & Cyber Laws"
+  ],
+  "bio": [
+    "Tareq Hasan is an Associate at Sattar&Co. Tareq started his legal career at Sattar&Co. and is an integral part of the team, regularly assisting in litigation and corporate matters. His practice encompasses a broad range of areas, including labour and employment, corporate and commercial, banking and finance, energy, telecommunications, competition and cyber laws.",
+    "While working at Sattar&Co., Tareq has gained experience in advising local and international clients on a diverse range of legal and regulatory matters. He has been involved in drafting and reviewing pleadings, contracts and legal documents, conducting legal research, and advising on regulatory compliance and corporate matters.",
+    "As part of the team, Tareq has assisted in a number of significant matters involving companies, financial institutions and multinational corporate groups, with a focus on providing practical and commercially oriented legal advice."
+  ],
+  "education": [
+    {
+      "date": "April 2026",
+      "description": "Enrolled as an Advocate (Dhaka Bar, Bangladesh)"
+    },
+    {
+      "date": "May 2022",
+      "description": "University of Dhaka — Master of Laws (LLM)"
+    },
+    {
+      "date": "Dec 2021",
+      "description": "University of Dhaka — Bachelor of Laws (LLB)"
+    }
+  ]
+},
   {
     "slug": "fatema-tuz-zohora",
     "name": "Fatema Tuz Zohora",
