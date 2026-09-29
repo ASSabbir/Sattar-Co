@@ -18,24 +18,24 @@ export default function DisclaimerPage() {
 
         <div className="max-w-2xl flex flex-col gap-10 text-charcoal/70 leading-relaxed">
           <div>
-            <h2 className="font-display text-xl text-charcoal mb-3">No Legal Advice</h2>
-            <p>
+            <h2 className="text-charcoal font-semibold leading-relaxed text-lg md:text-[22px]  mb-3">No Legal Advice</h2>
+            <p className="text-charcoal  leading-relaxed text-lg md:text-[22px]">
               This is placeholder disclaimer copy for the demo build. The final text should be
               supplied and approved by Sattar&amp;Co. before launch — content on this website is for
               general informational purposes only and does not constitute legal advice.
             </p>
           </div>
           <div>
-            <h2 className="font-display text-xl text-charcoal mb-3">No Attorney–Client Relationship</h2>
-            <p>
+            <h2 className="text-charcoal font-semibold leading-relaxed text-lg md:text-[22px] mb-3">No Attorney–Client Relationship</h2>
+            <p className="text-charcoal  leading-relaxed text-lg md:text-[22px]">
               Contacting the firm through this website does not, on its own, create an
               attorney–client relationship. Replace this section with the firm&rsquo;s approved
               language.
             </p>
           </div>
           <div>
-            <h2 className="font-display text-xl text-charcoal mb-3">Privacy</h2>
-            <p>
+            <h2 className="text-charcoal font-semibold  leading-relaxed text-lg md:text-[22px] mb-3">Privacy</h2>
+            <p className="text-charcoal  leading-relaxed text-lg md:text-[22px]">
               Details on how enquiry-form and cookie data are collected and used will be added
               here once the firm&rsquo;s privacy policy is finalised.
             </p>

@@ -35,9 +35,9 @@ export default async function InsightArticlePage({ params }: Props) {
 
   return (
     <article className="bg-white pt-40 pb-24 md:pt-52 md:pb-32">
-      <div className="max-w-content mx-auto px-6 md:px-10">
+      <div className=" mx-auto   px-6 md:px-10">
         <SectionLabel label="Insights" className="mb-8" />
-        <p className="eyebrow text-red-600 mb-6">
+        <p className=" !text-[16px] eyebrow  uppercase text-red-600 mb-6">
           {item.category} · {formatDate(item)}
         </p>
         <h1 className="font-display text-display-md text-charcoal max-w-3xl mb-10">
@@ -46,11 +46,8 @@ export default async function InsightArticlePage({ params }: Props) {
         {item.author && <p className="text-charcoal/40 text-sm mb-14">By {item.author}</p>}
 
         <div className={item.author ? "max-w-2xl" : "max-w-2xl mt-14"}>
-          <p className="text-charcoal/85 text-lg leading-relaxed mb-8">{item.excerpt}</p>
-          <p className="text-charcoal/80 leading-relaxed mb-6">
-            This is placeholder body copy for the demo build. Replace this section with the
-            approved article content from the firm&rsquo;s editorial team.
-          </p>
+          <p className="text-charcoal  leading-relaxed text-lg md:text-[22px] mb-8">{item.excerpt}</p>
+          
         </div>
 
         <div className="mt-16">
