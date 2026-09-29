@@ -31,10 +31,13 @@
     "image": "/team/Mahbub-Hasan.webp",
     "group": "Associates",
     "practiceAreas": ["Dispute Resolution", "Banking Litigation"],
-    "bio": [
-      "Mahbub Hasan is an Associate in the Litigation department of Sattar&Co. Mahbub started his legal career at Sattar&Co., and currently is an integral part of the team and regularly assists in litigation matters.",
-      "While working at Sattar&Co., Mahbub has gained significant experience while assisting in several complex corporate cases before the High Court Division and the Companies Court, including on, inter alia, banking matters, admiralty matters, recovery of loans and acting against defaulter borrowers, as well as a good number of critical company matters including shareholders' disputes. Mahbub also has substantial experience on arbitration-related matters.",
-      "As part of the team, Mahbub was involved in assisting with several significant disputes, which includes, inter alia, cases relating to shareholder protection, cases relating to share rectification; banking disputes relating to recovery of money and other related banking disputes relating to L/Cs and injunctions; cases relating to unlawful classification by the central bank and recovery suits against companies. Mahbub is also involved in arbitration matters arising from breach of contracts."
+        "bio": [
+      "Mahbub Hasan is a Senior Associate in the Corporate Department of Sattar&Co. He began his legal career with the firm and has since become an integral member of its corporate and commercial practice. Mahbub regularly advises and assists local and international clients on a broad range of corporate, commercial, regulatory, and contentious matters.",
+      "As part of the Sattar&Co. team, Mahbub advises clients across several areas of the firm’s practice, including corporate and commercial law, mergers and acquisitions, foreign direct investment, energy, information technology, cyber and telecommunications laws, port and maritime matters, labour and employment law, competition law, banking and financial laws, and other regulatory matters.",
+      "Mahbub has developed significant experience in structuring foreign direct investments, conducting legal and regulatory assessments. His transactional practice also includes drafting, reviewing, vetting and negotiating a wide range of commercial and corporate agreements, as well as preparing legal opinions on matters arising under the Companies Act, labour laws, securities and capital market laws, competition laws, banking laws, and other applicable legislation and regulations.",
+      "He regularly liaises with relevant government authorities, regulators, and other institutions and assists in navigating regulatory and procedural requirements. His work also involves monitoring practical developments in the implementation of laws and regulations and advising the firm and its clients on relevant procedural and regulatory considerations.",
+      "During his practice at Sattar&Co., Mahbub has been involved in a number of significant and complex matters for prominent local and international clients. His experience includes advising one of the largest container terminal operators in Bangladesh on drafting and vetting various commercial contracts and providing legal opinions on labour and employment matters. He has also advised a Singaporean company on issues relating to the recovery of payments due under Letters of Credit. Mahbub has further assisted a telecommunications company in relation to alleged anti-competitive conduct by another telecommunications company, including advising on applicable competition law issues and assisting with appropriate legal and regulatory measures. He has also advised an American company on issues concerning the conduct of a majority shareholder and the potential impact of such conduct on the rights and interests of minority shareholders. His experience additionally includes advising a renowned power plant company on labour and employment issues and other regulatory matters, including providing legal opinions and practical guidance on compliance with applicable laws and regulatory requirements.",
+      "Mahbub’s practice combines corporate and commercial advisory, transactional work, regulatory compliance, corporate litigation, and dispute resolution. His experience across both contentious and non-contentious matters enables him to provide clients with practical and commercially focused advice on complex legal and regulatory issues."
     ],
     "education": [
       { "date": "Aug 2022", "description": "Admitted as Advocate in the High Court Division, Supreme Court of Bangladesh" },
@@ -192,7 +195,7 @@
   },  {
     "slug": "martin-pritom-gomes",
     "name": "Martin Pritom Gomes",
-    "role": "Manager",
+    "role": "Office Manager",
     "image": "/team/IMG_5265.webp",
     "group": "Administration",
     "noProfile": true

@@ -129,11 +129,7 @@ export default function Navbar() {
                     href={link.href}
                     className={cn("link-underline", isActive && "text-red-600")}
                   >
-                    {link.label && link.label === "Careers" ? (
-                      <span className="text-[19px] ">Careers</span>
-                    ) : (
-                      link.label
-                    )}
+                    {link.label}
                   </Link>
                 </li>
               );
