@@ -62,7 +62,7 @@ export default function InsightsPreview() {
   }, [paused, testimonials.length]);
 
   return (
-    <section className="bg-white pt-2 pb-24 md:pb-36">
+    <section className="bg-white pt-2 pb-24 ">
       <div className="max-w-content mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-20  items-stretch">
           {/* ── Left: autoplay testimonial card ── */}
