@@ -197,14 +197,7 @@
     "group": "Administration",
     "noProfile": true
   },
-  {
-    "slug": "palash-sarker",
-    "name": "Palash Sarker",
-    "role": "Clerk",
-    "image": "/team/DSC_9893.webp",
-    "group": "Administration",
-    "noProfile": true
-  },
+  
   {
     "slug": "md-sulaiman-haque",
     "name": "Md. Sulaiman Haque",
@@ -218,6 +211,14 @@
     "name": "Md. Khorshed Alam",
     "role": "Office Assistant",
     "image": "/team/s.jpeg",
+    "group": "Administration",
+    "noProfile": true
+  },
+  {
+    "slug": "palash-sarker",
+    "name": "Palash Sarker",
+    "role": "Clerk",
+    "image": "/team/DSC_9893.webp",
     "group": "Administration",
     "noProfile": true
   }
