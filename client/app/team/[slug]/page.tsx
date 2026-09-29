@@ -22,7 +22,8 @@ interface TeamMember {
   image?: string;
   group?: string;
   practiceAreas?: string[];
-  bio: string | string[];
+  bio?: string | string[];
+  noProfile?: boolean;
   email?: string;
   education?: EducationEntry[];
 }
@@ -34,7 +35,7 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
-const toParagraphs = (bio: TeamMember["bio"]): string[] =>
+const toParagraphs = (bio?: TeamMember["bio"]): string[] =>
   Array.isArray(bio) ? bio : typeof bio === "string" ? bio.split("\n\n") : [];
 
 const clamp = (text: string, max = 160) =>
@@ -42,14 +43,14 @@ const clamp = (text: string, max = 160) =>
 
 export function generateStaticParams() {
   return team
-    .filter((member) => member.group !== "Administration & Accounts")
+    .filter((member) => !member.noProfile)
     .map((member) => ({ slug: member.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const member = team.find((m) => m.slug === slug);
-  if (!member || member.group === "Administration & Accounts") {
+  if (!member || member.noProfile) {
     return { title: "Profile Not Found", robots: { index: false, follow: false } };
   }
 
@@ -91,7 +92,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function TeamMemberPage({ params }: Props) {
   const { slug } = await params;
   const member = team.find((m) => m.slug === slug);
-  if (!member || member.group === "Administration & Accounts") notFound();
+  if (!member || member.noProfile) notFound();
 
   const bioParagraphs = toParagraphs(member.bio);
   const memberIndex = team.findIndex((m) => m.slug === member.slug);

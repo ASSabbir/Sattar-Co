@@ -60,7 +60,7 @@ const APPROACH_ITEMS = [
   },
   {
     title: "Practical, not theoretical",
-    body: "Advice is built for how business actually operates in Bangladesh — grounded in the regulatory reality, not abstract legal principle alone.",
+    body: "Advice is built for how business actually operates in Bangladesh  grounded in the regulatory reality, not abstract legal principle alone.",
   },
   {
     title: "Commercially focused",

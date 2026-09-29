@@ -37,6 +37,7 @@ interface TeamMemberSeo {
   name: string;
   role?: string;
   group?: string;
+  noProfile?: boolean;
 }
 
 export default function TeamRoutePage() {
@@ -53,7 +54,7 @@ export default function TeamRoutePage() {
       url: SITE_URL,
       areaServed: "BD",
       employee: members
-        .filter((m) => m.group !== "Administration & Accounts")
+        .filter((m) => !m.noProfile)
         .map((m) => ({
           "@type": "Person",
           name: m.name,

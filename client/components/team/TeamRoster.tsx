@@ -15,6 +15,7 @@ interface TeamMember {
   image?: string;
   group?: string;
   practiceAreas?: string[];
+  noProfile?: boolean;
 }
 
 const GROUP_ORDER = ["Associates","Intern", "Administration"];
@@ -40,7 +41,12 @@ export default function TeamRoster() {
   const allMembers = team as TeamMember[];
   const leader = allMembers[0];
   const rosterRows = buildRows(allMembers.slice(1));
-
+ console.log("total members:", allMembers.length);
+  console.log(
+    rosterRows.map(
+      (r) => `${r.groupName}: ${r.members.map((m) => m.name).join(", ")}`
+    )
+  );
   const [activeIndex, setActiveIndex] = useState(0);
   const itemRefs = useRef<Array<HTMLDivElement | null>>([]);
   const scrollerRef = useRef<HTMLDivElement | null>(null);
@@ -221,7 +227,7 @@ export default function TeamRoster() {
                 </div>
               </div>
 
-              <div className="lg:flex-shrink-0 pb-2  -mt-1 bg-white">
+              <div className="lg:flex-shrink-0 pb-2  bg-white">
                 <span className="eyebrow !text-sm text-red-600 block">{activeGroupName == 'Intern'? "Associates": activeGroupName}</span>
               </div>
 
@@ -249,8 +255,7 @@ export default function TeamRoster() {
                       >
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-6  w-full">
                           {row.members.map((member) => {
-                            const isViewable =
-                              member.group !== "Administration & Accounts";
+                            const isViewable = !member.noProfile;
                             const Wrapper = (isViewable
                               ? Link
                               : "div") as React.ElementType;

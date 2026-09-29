@@ -157,7 +157,7 @@ function PracticeAreaHeader({ area, isActive, setRef, onSelect }: HeaderProps) {
     <div
       id={`practice-${area.id}`}
       ref={setRef}
-      className="scroll-mt-24 lg:col-span-6 lg:col-start-1 lg:flex lg:min-h-[100vh] lg:items-center"
+      className="scroll-mt-24 lg:col-span-3 lg:col-start-1 lg:flex lg:min-h-[100vh] lg:items-center"
     >
       <div className="w-full">
         <span className="eyebrow inline-block border-b-2 border-red-600 px-2 pb-1 text-red-600 !text-base sm:!text-lg">
@@ -199,32 +199,25 @@ function PracticeAreaPanel({ area, isActive }: PanelProps) {
 
   return (
     <div
-      className={`mt-8 grid  gap-6 sm:gap-8 md:mt-10 md:grid-cols-2 md:items-center lg:sticky lg:top-24 lg:col-span-6 lg:col-start-7 lg:mt-0 lg:block lg:self-start lg:row-start-1 lg:[grid-row-end:span_var(--pa-rows)] lg:transition-[opacity,transform] lg:ease-editorial lg:motion-reduce:transition-none ${visibility}`}
+      className={`mt-8 grid  gap-6 sm:gap-8 md:mt-10 md:grid-cols-2 md:items-center lg:sticky lg:top-24 lg:col-span-9 lg:col-start-7 lg:mt-0 lg:block lg:self-start lg:row-start-1 lg:[grid-row-end:span_var(--pa-rows)] lg:transition-[opacity,transform] lg:ease-editorial lg:motion-reduce:transition-none ${visibility}`}
     >
-      <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[16/9] md:aspect-[4/3] lg:mb-8 lg:aspect-[22/10] lg:max-h-[55vh]">
+      <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[16/9] md:aspect-[4/3] lg:mb-8 lg:aspect-[22/10] lg:max-h-[40vh]">
         <Image
           src={area.imgs}
           alt={`${area.category} — Sattar&Co. practice area`}
           fill
           sizes="(min-width: 768px) 45vw, 100vw"
-          className={`object-cover lg:transition-transform lg:duration-[900ms] lg:ease-editorial lg:motion-reduce:transition-none ${
+          className={`object-cover object-bottom lg:transition-transform lg:duration-[900ms] lg:ease-editorial lg:motion-reduce:transition-none ${
             isActive ? "lg:scale-100" : "lg:scale-[1.06]"
           }`}
         />
       </div>
 
-      <ul className="flex flex-row flex-wrap gap-x-6 gap-y-3">
+      <ul className="flex flex-row flex-wrap list gap-x-6 gap-y-3">
         {area.areas.map((item: string, j: number) => (
-          <li
-            key={item}
-            style={{ transitionDelay: isActive ? `${150 + Math.min(j, 8) * 50}ms` : "0ms" }}
-            className={`flex items-center  gap-2 text-base text-charcoal/90 sm:text-lg lg:text-xl lg:transition-[opacity,transform] lg:duration-500 lg:motion-reduce:transition-none 2xl:text-2xl ${
-              isActive ? "lg:translate-y-0 lg:opacity-100" : "lg:translate-y-2 lg:opacity-0"
-            }`}
-          >
-            <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-600" />
-            <span>{item}</span>
-          </li>
+          <span key={item} className="flex justify-center items-center gap-2">
+            <div aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-600" />
+            <span>{item}</span></span>
         ))}
       </ul>
     </div>
