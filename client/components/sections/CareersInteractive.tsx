@@ -97,7 +97,7 @@ export default function CareersInteractive() {
   return (
     <>
       <section className="bg-white ">
-        <div className="max-w-content mx-auto py-20 px-6 md:px-10">
+        <div className="max-w-content mx-auto pt-20 pb-[72px] px-6 md:px-10">
           {positions.map((pos) => {
             const isOpen = openId === pos.id;
             return (
