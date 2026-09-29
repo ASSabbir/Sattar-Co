@@ -234,7 +234,7 @@ export default function TeamRoster() {
                 </div>
               </div>
 
-              <div className="lg:flex-shrink-0 pb-2  bg-white">
+              <div className="lg:flex-shrink-0 py-2  bg-white">
                 <span className="eyebrow !text-sm text-red-600 block">{activeGroupName == 'Intern'? "Associates": activeGroupName}</span>
               </div>
 
