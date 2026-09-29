@@ -221,8 +221,8 @@ export default function TeamRoster() {
                 </div>
               </div>
 
-              <div className="lg:flex-shrink-0 pt-6 pb-5 bg-white lg:pt-[clamp(0.75rem,2.5svh,1.5rem)]">
-                <span className="eyebrow !text-sm text-red-600 block">{activeGroupName}</span>
+              <div className="lg:flex-shrink-0 pb-2  -mt-1 bg-white">
+                <span className="eyebrow !text-sm text-red-600 block">{activeGroupName == 'Intern'? "Associates": activeGroupName}</span>
               </div>
 
               <div
@@ -243,11 +243,11 @@ export default function TeamRoster() {
                           itemRefs.current[rowIndex] = el;
                         }}
                         className={[
-                          "min-h-[38vh] lg:min-h-[clamp(220px,40svh,440px)] flex flex-col justify-center border-b border-charcoal/15 last:border-b-0 py-[clamp(0.75rem,2svh,1.5rem)]",
-                          isFirstOfGroup ? "-mt-6" : "",
+                          "min-h-[38vh] lg:min-h-[clamp(220px,40svh,440px)] flex flex-col justify-center py-[clamp(0.75rem,2svh,1.5rem)]",
+                          isFirstOfGroup ? "" : "",
                         ].join(" ")}
                       >
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-[clamp(1rem,2vw,2rem)] w-full">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6  w-full">
                           {row.members.map((member) => {
                             const isViewable =
                               member.group !== "Administration & Accounts";
@@ -270,7 +270,7 @@ export default function TeamRoster() {
                                 key={member.slug}
                                 {...(wrapperProps as Record<string, unknown>)}
                                 className={[
-                                  "group flex flex-col items-start gap-3 lg:gap-[clamp(0.35rem,1.2svh,0.75rem)]",
+                                  "group flex flex-col items-start gap-3  lg:gap-[clamp(0.35rem,1.2svh,0.75rem)]",
                                   isViewable ? "cursor-pointer" : "cursor-default",
                                 ].join(" ")}
                               >
