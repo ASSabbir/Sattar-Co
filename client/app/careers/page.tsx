@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RevealText from "@/components/ui/RevealText";
 import CareersInteractive from "@/components/sections/CareersInteractive";
 import Image from "next/image";
-import img1 from "../../public/images/career.png";
+import img1 from "../../public/images/carreer1.png";
 export const metadata: Metadata = {
   title: "Careers",
   description:
@@ -21,7 +21,7 @@ export default function CareersPage() {
         sizes="100vw"
         className="object-cover object-center"
       />
-        <div className="absolute inset-0 bg-black/15" />
+        {/* <div className="absolute inset-0 bg-black/15" /> */}
 
         
       </section>

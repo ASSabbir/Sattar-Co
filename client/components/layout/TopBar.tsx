@@ -12,9 +12,9 @@ import { FaLinkedinIn } from "react-icons/fa";
 const SOCIAL_LINKS = [
   { href: "https://facebook.com/sattarandco", label:<RiFacebookFill /> },
   // { href: "https://linkedin.com/company/sattarandco", label: <BsLinkedin /> },
-  { href: "https://linkedin.com/company/sattarandco", label: <FaLinkedinIn /> },
-  { href: "https://linkedin.com/company/sattarandco", label: <MdLocalPhone /> },
-  { href: "https://linkedin.com/company/sattarandco", label: <MdAlternateEmail /> },
+  { href: "https://www.linkedin.com/company/sattar-co", label: <FaLinkedinIn /> },
+  { href: "+88 (02) 883 6629", label: <MdLocalPhone /> },
+  { href: "info@sattarandco.com", label: <MdAlternateEmail /> },
   
 ];
 
