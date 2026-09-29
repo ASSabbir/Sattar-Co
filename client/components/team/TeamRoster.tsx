@@ -20,7 +20,7 @@ interface TeamMember {
 
 const GROUP_ORDER = ["Associates","Intern", "Administration"];
 const ROW_SIZE = 3;
-const GROUP_ROW_SIZE: Record<string, number> = { Administration: 2 };
+const GROUP_ROW_PATTERN: Record<string, number[]> = { Administration: [1, 3] };
 
 interface RosterRow {
   groupName: string;
@@ -31,9 +31,14 @@ const buildRows = (members: TeamMember[]): RosterRow[] => {
   const rows: RosterRow[] = [];
   GROUP_ORDER.forEach((groupName) => {
     const groupMembers = members.filter((m) => m.group === groupName);
-    const size = GROUP_ROW_SIZE[groupName] ?? ROW_SIZE;
-    for (let i = 0; i < groupMembers.length; i += size) {
+    const pattern = GROUP_ROW_PATTERN[groupName];
+    let i = 0;
+    let p = 0;
+    while (i < groupMembers.length) {
+      const size = pattern ? pattern[Math.min(p, pattern.length - 1)] : ROW_SIZE;
       rows.push({ groupName, members: groupMembers.slice(i, i + size) });
+      i += size;
+      p += 1;
     }
   });
   return rows;
