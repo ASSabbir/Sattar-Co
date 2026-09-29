@@ -21,7 +21,7 @@ export default function CareersPage() {
         sizes="100vw"
         className="object-cover object-center"
       />
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-black/15" />
 
         
       </section>
