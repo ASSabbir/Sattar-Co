@@ -21,6 +21,11 @@ const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 const SPY_START = "top 55%";
 const SPY_END = "bottom 55%";
 
+/** Minimum time between two active-item changes (ms). Roughly the length of
+ *  the panel's enter transition (200ms delay + 500ms duration).
+ *  Boro korle aro slow, choto korle aro responsive. */
+const STEP_DELAY = 650;
+
 const INTRO_PARAGRAPHS = [
   "Sattar&Co. provides strategic, full-service legal counsel to the Bangladeshi business community, as well as international investors and foreign law firms. Built upon specialized legal expertise and a sophisticated understanding of local regulatory landscape, the firm delivers decisive, high-stakes judgment under pressure.",
   "Our practice spans a diverse array of industries and sectors, focusing primarily on complex corporate transactions, international disputes and commercial litigation.",
@@ -61,6 +66,28 @@ function usePracticeScrollSpy() {
   const [active, setActive] = useState(0);
   const itemRefs = useRef<Array<HTMLDivElement | null>>([]);
 
+  const activeRef = useRef(0); // what's currently shown
+  const targetRef = useRef(0); // what the scroll position says should be shown
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Move one step toward the target, then wait before the next step.
+  const step = () => {
+    if (activeRef.current === targetRef.current) return;
+
+    activeRef.current += Math.sign(targetRef.current - activeRef.current);
+    setActive(activeRef.current);
+
+    timerRef.current = setTimeout(() => {
+      timerRef.current = null;
+      step();
+    }, STEP_DELAY);
+  };
+
+  const requestActive = (i: number) => {
+    targetRef.current = i;
+    if (!timerRef.current) step();
+  };
+
   useEffect(() => {
     const mm = gsap.matchMedia();
 
@@ -73,8 +100,8 @@ function usePracticeScrollSpy() {
           trigger: el,
           start: SPY_START,
           end: SPY_END,
-          onEnter: () => setActive(i),
-          onEnterBack: () => setActive(i),
+          onEnter: () => requestActive(i),
+          onEnterBack: () => requestActive(i),
         });
       });
 
@@ -86,7 +113,14 @@ function usePracticeScrollSpy() {
       return () => window.removeEventListener("load", refresh);
     });
 
-    return () => mm.revert();
+    return () => {
+      mm.revert();
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+        timerRef.current = null;
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const setItemRef = (i: number) => (el: HTMLDivElement | null) => {
@@ -94,8 +128,7 @@ function usePracticeScrollSpy() {
   };
 
   // Clicking a title scrolls its item into the middle of the screen; the
-  // scroll-spy then activates it. (Setting state directly here would get
-  // overridden by the next scroll event.)
+  // scroll-spy then activates it.
   const scrollToItem = (i: number) => {
     if (!window.matchMedia(DESKTOP_QUERY).matches) return;
     const reduceMotion = window.matchMedia(REDUCED_MOTION_QUERY).matches;
@@ -124,7 +157,7 @@ function PracticeAreaHeader({ area, isActive, setRef, onSelect }: HeaderProps) {
     <div
       id={`practice-${area.id}`}
       ref={setRef}
-      className="scroll-mt-24 lg:col-span-6 lg:col-start-1 lg:flex lg:min-h-[40vh] lg:items-center"
+      className="scroll-mt-24 lg:col-span-6 lg:col-start-1 lg:flex lg:min-h-[100vh] lg:items-center"
     >
       <div className="w-full">
         <span className="eyebrow inline-block border-b-2 border-red-600 px-2 pb-1 text-red-600 !text-base sm:!text-lg">
@@ -252,7 +285,7 @@ export default function PracticeAreasInteractive() {
           ))}
 
           {/* Desktop-only spacer: lets the last panel dwell before it releases */}
-          <div aria-hidden="true" className="hidden lg:col-span-6 lg:col-start-1 lg:block lg:h-[45vh]" />
+          <div aria-hidden="true" className="hidden lg:col-span-6 lg:col-start-1 lg:block lg:h-[60vh]" />
         </div>
       </div>
     </section>

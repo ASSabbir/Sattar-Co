@@ -45,7 +45,7 @@ export default async function InsightArticlePage({ params }: Props) {
         </h1>
         {item.author && <p className="text-charcoal/40 text-sm mb-14">By {item.author}</p>}
 
-        <div className={item.author ? "max-w-2xl" : "max-w-2xl mt-14"}>
+        <div className={item.author ? "max-w-full" : "max-w-full mt-14"}>
           <p className="text-charcoal  leading-relaxed text-lg md:text-[22px] mb-8">{item.excerpt}</p>
           
         </div>

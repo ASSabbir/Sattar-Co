@@ -1,39 +1,32 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Suspense, useMemo } from "react";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import SectionLabel from "@/components/ui/SectionLabel";
-import RevealText from "@/components/ui/RevealText";
 import insights from "@/data/insights.json";
-import img1 from '../../public/images/101.webp'
+import img1 from "../../public/images/101.webp";
 
-function formatDate(item: { date: string | null; year: number }) {
-  if (!item.date) return String(item.year);
-  return new Date(item.date).toLocaleDateString("en-GB", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  });
-}
+function InsightsContent() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-export default function InsightsPage() {
   // Years derived from the data itself, newest first.
   const years = useMemo(() => {
     return Array.from(new Set(insights.map((i) => i.year))).sort((a, b) => b - a);
   }, []);
 
-  const [active, setActive] = useState<number>(years[0]);
+  // Active year URL theke ashe (?year=2023), na thakle sobcheye notun year
+  const yearParam = Number(searchParams.get("year"));
+  const active = years.includes(yearParam) ? yearParam : years[0];
 
-  const counts = useMemo(() => {
-    const map: Record<string, number> = {};
-    for (const item of insights) {
-      map[item.year] = (map[item.year] ?? 0) + 1;
-    }
-    return map;
-  }, []);
+  const handleSelect = (year: number) => {
+    // replace: tab click e history te extra entry jomabe na
+    router.replace(`${pathname}?year=${year}`, { scroll: false });
+  };
 
   const filtered = useMemo(() => {
     const items = insights.filter((i) => i.year === active);
@@ -45,40 +38,34 @@ export default function InsightsPage() {
 
   return (
     <>
-      <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16  pt-32 sm:pb-24 md:pb-52 mt-24  ">
-      <Image
-        src={img1}
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center"
-      />
-      {/* <div className="absolute inset-0 bg-black/20" /> */}
-
-      {/* <div className={`${CONTAINER} relative z-10 text-center`}>
-        <RevealText as="h1" immediate className="font-display text-display-lg text-white">
-          Trusted Excellence
-        </RevealText>
-      </div> */}
-    </section>
+      <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 mt-24">
+        <Image
+          src={img1}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </section>
 
       <section className="bg-white">
-        
         {/* Year tabs */}
-        <div className="sticky top-14  z-30 bg-white backdrop-blur-sm border-b pt-4  border-charcoal/10">
+        <div className="sticky top-14 z-30 bg-white backdrop-blur-sm border-b pt-4 border-charcoal/10">
           <div className="max-w-content mx-auto px-6 md:px-10">
             <div className="flex items-center justify-between gap-8 md:gap-10 overflow-x-auto no-scrollbar py-6">
               {years.map((year) => (
                 <button
                   key={year}
-                  onClick={() => setActive(year)}
-                  className={`relative shrink-0 uppercase tracking-wide pb-3   duration-300 ${
-                    active === year ? "text-charcoal text-2xl" : "text-charcoal/40 text-xl  hover:text-charcoal/70"
+                  onClick={() => handleSelect(year)}
+                  className={`relative shrink-0 uppercase tracking-wide pb-3 duration-300 ${
+                    active === year
+                      ? "text-charcoal text-2xl"
+                      : "text-charcoal/40 text-xl hover:text-charcoal/70"
                   }`}
                 >
                   {year}
-                  
+
                   {active === year && (
                     <motion.span
                       layoutId="insights-tab-underline"
@@ -93,7 +80,7 @@ export default function InsightsPage() {
         </div>
 
         {/* List */}
-        <div className="max-w-content mx-auto bg-white  px-6 md:px-10 ">
+        <div className="max-w-content mx-auto bg-white px-6 md:px-10">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
@@ -101,7 +88,7 @@ export default function InsightsPage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
-              className="flex flex-col pb-14 sm:pb-20 "
+              className="flex flex-col pb-14 sm:pb-20"
             >
               {filtered.map((item, i) => (
                 <motion.div
@@ -114,12 +101,8 @@ export default function InsightsPage() {
                     href={`/insights/${item.slug}`}
                     className="group grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-8 items-start lg:items-center py-5 border-t border-charcoal/10"
                   >
-                    {/* <div className="lg:col-span-2 order-2 lg:order-1">
-                      <p className="text-charcoal/40 text-xl">{formatDate(item)}</p>
-                    </div> */}
-
                     <div className="lg:col-span-4 order-1 lg:order-2">
-                      <p className="eyebrow !text-sm ">{item.category}</p>
+                      <p className="eyebrow !text-sm">{item.category}</p>
                     </div>
 
                     <div className="lg:col-span-7 border-l-2 pl-10 order-3">
@@ -146,5 +129,14 @@ export default function InsightsPage() {
         </div>
       </section>
     </>
+  );
+}
+
+export default function InsightsPage() {
+  // useSearchParams er jonno Suspense boundary lagbe
+  return (
+    <Suspense fallback={null}>
+      <InsightsContent />
+    </Suspense>
   );
 }

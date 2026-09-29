@@ -18,7 +18,7 @@ export default function ContactPage() {
 
       <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
         {/* <SectionLabel label="Contact" light className="mb-8" /> */}
-        <RevealText as="h1" immediate className="font-display text-display-lg text-zinc-800  mb-16 md:mb-20">
+        <RevealText as="h1" immediate className="font-display text-display-lg relative -ml-[3px] text-zinc-800  mb-16 md:mb-20">
           Start a Conversation
         </RevealText>
 
