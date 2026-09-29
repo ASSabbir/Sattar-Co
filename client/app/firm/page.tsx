@@ -60,7 +60,7 @@ const APPROACH_ITEMS = [
   },
   {
     title: "Practical, not theoretical",
-    body: "Advice is built for how business actually operates in Bangladesh  grounded in the regulatory reality, not abstract legal principle alone.",
+    body: "Advice is built for how business actually operates in Bangladesh — grounded in the regulatory reality, not abstract legal principle alone.",
   },
   {
     title: "Commercially focused",
@@ -236,7 +236,7 @@ function LifeAtTheFirm() {
   return (
     <section aria-labelledby="life-heading" className={`bg-white ${SECTION_Y}`}>
       <div className={CONTAINER}>
-        <SectionLabel label="Life At The Firm" className="mb-10" />
+        <SectionLabel label="Life At The Firm" className="mb-11" />
         <h2 id="life-heading" className="sr-only">
           Life at {SITE_NAME}
         </h2>
@@ -250,7 +250,7 @@ function Approach() {
   return (
     <section aria-labelledby="approach-heading" className="bg-white pb-14 sm:pb-20 lg:pb-24">
       <div className={CONTAINER}>
-        <SectionLabel label="Approach" className="mb-10" />
+        <SectionLabel label="Approach" className="mb-11" />
         <h2 id="approach-heading" className="sr-only">
           Our approach
         </h2>
