@@ -101,7 +101,7 @@ export default function TestimonialSpotlight() {
               onClick={() => setActive(i)}
               aria-label={`Show testimonial ${i + 1}`}
               aria-current={i === active ? "true" : undefined}
-              className="group flex h-9 min-w-[1.5rem] items-center justify-center px-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+              className="group flex h-3 min-w-[1.5rem] items-center justify-center px-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
             >
               <span
                 className={`h-1.5 rounded-full transition-all duration-300 motion-reduce:transition-none ${

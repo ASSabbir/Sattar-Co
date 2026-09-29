@@ -26,7 +26,7 @@ const logos = [
 export default function RecognitionMarquee() {
   return (
     <section className="bg-white py-10  border-y border-charcoal/10">
-      <div className="max-w-content mx-auto px-6 md:px-10 mb-10">
+      <div className="max-w-content mx-auto px-6 md:px-10 mb-11">
         <p className="eyebrow text-charcoal/40 !text-xl text-center">Recognised By</p>
       </div>
 

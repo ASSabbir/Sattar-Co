@@ -200,7 +200,7 @@ function FounderMessage() {
 
 function Stats() {
   return (
-    <section aria-labelledby="stats-heading" className="grain bg-charcoal py-14 sm:py-20 lg:py-28">
+    <section aria-labelledby="stats-heading" className="grain bg-charcoal pt-14 sm:pt-20 lg:pt-28 pb-[54px] sm:pb-[78px] lg:pb-[110px] ">
       <div className={CONTAINER}>
         <h2 id="stats-heading" className="sr-only">
           {SITE_NAME} in numbers
