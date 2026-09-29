@@ -10,36 +10,26 @@ export const metadata: Metadata = {
 export default function DisclaimerPage() {
   return (
     <section className="bg-white pt-40 pb-24 md:pt-52 md:pb-36">
-      <div className="max-w-content mx-auto px-6 md:px-10">
-        <SectionLabel label="Legal Disclaimer" className="mb-8" />
-        <RevealText as="h1" immediate className="font-display py-6 text-display-md text-charcoal max-w-2xl mb-10">
+      <div className=" mx-auto px-6 md:px-10">
+        <SectionLabel label="Legal Disclaimer & Privacy" className="mb-8" />
+        {/* <RevealText as="h1" immediate className="font-display py-6 text-display-md text-charcoal max-w-2xl mb-10">
           Legal Disclaimer &amp; Privacy
-        </RevealText>
+        </RevealText> */}
 
-        <div className="max-w-2xl flex flex-col gap-10 text-charcoal/70 leading-relaxed">
+        <div className=" flex flex-col gap-10 text-charcoal/70 leading-relaxed">
           <div>
-            <h2 className="text-charcoal font-semibold leading-relaxed text-lg md:text-[22px]  mb-3">No Legal Advice</h2>
+            
             <p className="text-charcoal  leading-relaxed text-lg md:text-[22px]">
-              This is placeholder disclaimer copy for the demo build. The final text should be
-              supplied and approved by Sattar&amp;Co. before launch — content on this website is for
-              general informational purposes only and does not constitute legal advice.
+              The information provided on this website is not a means for advertisement or for solicitation of client work. It is for general information purposes only. Sattar&Co. is not advertising for or soliciting clients through this website.
             </p>
           </div>
           <div>
-            <h2 className="text-charcoal font-semibold leading-relaxed text-lg md:text-[22px] mb-3">No Attorney–Client Relationship</h2>
+            {/* <h2 className="text-charcoal font-semibold leading-relaxed text-lg md:text-[22px] mb-3">No Attorney–Client Relationship</h2> */}
             <p className="text-charcoal  leading-relaxed text-lg md:text-[22px]">
-              Contacting the firm through this website does not, on its own, create an
-              attorney–client relationship. Replace this section with the firm&rsquo;s approved
-              language.
+              You agree that any decision taken by you from the information provided in this website is your sole responsibility. Sattar&Co. shall not be liable for any decision you take relying on the information provided on this website or any other third party web-link referred to or contained in this website.
             </p>
           </div>
-          <div>
-            <h2 className="text-charcoal font-semibold  leading-relaxed text-lg md:text-[22px] mb-3">Privacy</h2>
-            <p className="text-charcoal  leading-relaxed text-lg md:text-[22px]">
-              Details on how enquiry-form and cookie data are collected and used will be added
-              here once the firm&rsquo;s privacy policy is finalised.
-            </p>
-          </div>
+          
         </div>
       </div>
     </section>

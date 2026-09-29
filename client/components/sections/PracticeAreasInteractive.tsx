@@ -199,9 +199,9 @@ function PracticeAreaPanel({ area, isActive }: PanelProps) {
 
   return (
     <div
-      className={`mt-8 grid  gap-6 sm:gap-8 md:mt-10 md:grid-cols-2 md:items-center lg:sticky lg:top-24 lg:col-span-9 lg:col-start-7 lg:mt-0 lg:block lg:self-start lg:row-start-1 lg:[grid-row-end:span_var(--pa-rows)] lg:transition-[opacity,transform] lg:ease-editorial lg:motion-reduce:transition-none ${visibility}`}
+      className={`mt-8 grid  md:mt-5 md:grid-cols-2 md:items-center lg:sticky lg:top-24 lg:col-span-9 lg:col-start-7 lg:mt-0 lg:block lg:self-start lg:row-start-1 lg:[grid-row-end:span_var(--pa-rows)] lg:transition-[opacity,transform] lg:ease-editorial lg:motion-reduce:transition-none ${visibility}`}
     >
-      <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[16/9] md:aspect-[4/3] lg:mb-8 lg:aspect-[22/10] lg:max-h-[40vh]">
+      <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[16/9] md:aspect-[4/3] lg:mb-3 lg:aspect-[22/10] lg:max-h-[40vh]">
         <Image
           src={area.imgs}
           alt={`${area.category} — Sattar&Co. practice area`}
@@ -213,7 +213,7 @@ function PracticeAreaPanel({ area, isActive }: PanelProps) {
         />
       </div>
 
-      <ul className="flex flex-row flex-wrap list gap-x-6 gap-y-3">
+      <ul className="flex flex-row flex-wrap list gap-x-6 gap-y-1">
         {area.areas.map((item: string, j: number) => (
           <span key={item} className="flex justify-center items-center gap-2">
             <div aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-600" />
