@@ -21,11 +21,12 @@ export default function ContactPage() {
         <RevealText as="h1" immediate className=" font-display pb-2 bg text-4xl spay   md:text-6xl text-display-lg relative -ml-[3px]   mb-16 md:mb-[32px]">
           Start a Conversation
         </RevealText>
+        <p className="eyebrow text-red-600 !text-xl mb-3">Office</p>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
           <div className="lg:col-span-4 flex flex-col gap-10">
             <div>
-              <p className="eyebrow text-red-600 !text-xl mb-3">Office</p>
+              
               <img src="/blogo.png" alt="Sattar&Co. Logo" className=" !w-[240px]  -ml-1 mb-4" />
               {/* <p className="font-display text-5xl text-zinc-800 mt-6">Sattar&amp;Co.</p> */}
               <p className="text-zinc-800 text-xl mt-2">Unit E3, House No. 1/A, Road No. 35
