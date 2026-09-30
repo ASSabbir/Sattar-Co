@@ -75,7 +75,7 @@ export default function ContactForm() {
           name="message"
           placeholder="your message"
           required
-          rows={5}
+          rows={3}
           className="bg-transparent border-b border-zinc-900/25 focus:border-red-600 outline-none py-2 text-zinc-950 placeholder:text-zinc-950/30 resize-none transition-colors duration-300"
         />
       </div>
