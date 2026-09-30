@@ -154,7 +154,7 @@ function FounderMessage() {
   return (
     <section
       aria-labelledby="about-heading"
-      className="bg-white py-14 sm:py-20 "
+      className="bg-white py-14 sm:py-24 "
     >
       <div className={CONTAINER}>
         <h2 id="about-heading" className="sr-only">

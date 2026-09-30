@@ -97,14 +97,14 @@ export default function CareersInteractive() {
   return (
     <>
       <section className="bg-white ">
-        <div className="max-w-content mx-auto pt-20 pb-[72px] px-6 md:px-10">
+        <div className="max-w-content mx-auto py-10  md:py-20 px-6 md:px-10">
           {positions.map((pos) => {
             const isOpen = openId === pos.id;
             return (
               <div key={pos.id} className="">
                 <button
                   onClick={() => setOpenId(isOpen ? "" : pos.id)}
-                  className="w-full flex items-center justify-between gap-6 pb-6 py-4 text-left group"
+                  className="w-full flex items-center justify-between gap-6 pb-4 pt-4  text-left group"
                 >
                   <span
                     className={
@@ -157,7 +157,7 @@ export default function CareersInteractive() {
         </div>
       </section>
 
-      <section className="bg-white  pb-24 md:pb-32">
+      <section className="bg-white  pb-24 ">
         <div className="max-w-content mx-auto px-6 md:px-10">
           <div className="bg-navy px-8 py-14 md:px-16  grid grid-cols-1 lg:grid-cols-9 gap-10 items-center">
             <div className="lg:col-span-8  space-y-5">

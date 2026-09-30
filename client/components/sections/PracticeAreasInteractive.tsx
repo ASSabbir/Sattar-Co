@@ -238,7 +238,7 @@ export default function PracticeAreasInteractive() {
     <section
       id="practice-areas"
       aria-labelledby="practice-areas-heading"
-      className="bg-white   sm:pb-16 lg:pb-20 "
+      className="bg-white   sm:pb-16 lg:pb-24 "
     >
       <script
         type="application/ld+json"

@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="grain relative overflow-hidden bg-white pt-40 pb-24 ">
+    <section className="grain relative overflow-hidden bg-white pt-52 pb-24 ">
       {/* <FloatingBookImages /> */}
 
       <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
         {/* <SectionLabel label="Contact" light className="mb-8" /> */}
-        <RevealText as="h1" immediate className="font-display text-display-lg relative -ml-[3px] text-zinc-800  mb-16 md:mb-[32px]">
+        <RevealText as="h1" immediate className=" font-display pb-2 bg text-4xl spay   md:text-6xl text-display-lg relative -ml-[3px]   mb-16 md:mb-[32px]">
           Start a Conversation
         </RevealText>
 
@@ -26,7 +26,7 @@ export default function ContactPage() {
           <div className="lg:col-span-4 flex flex-col gap-10">
             <div>
               <p className="eyebrow text-red-600 !text-xl mb-3">Office</p>
-              <img src="/blogo.png" alt="Sattar&Co. Logo" className=" !w-[250px]  -ml-1 mb-4" />
+              <img src="/blogo.png" alt="Sattar&Co. Logo" className=" !w-[240px]  -ml-1 mb-4" />
               {/* <p className="font-display text-5xl text-zinc-800 mt-6">Sattar&amp;Co.</p> */}
               <p className="text-zinc-800 text-xl mt-2">Unit E3, House No. 1/A, Road No. 35
                 Gulshan 2, Dhaka 1212

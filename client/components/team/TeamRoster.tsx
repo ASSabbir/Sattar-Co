@@ -256,11 +256,11 @@ export default function TeamRoster() {
                           itemRefs.current[rowIndex] = el;
                         }}
                         className={[
-                          "min-h-[38vh] lg:min-h-[clamp(220px,40svh,440px)] flex flex-col justify-center py-[clamp(0.75rem,2svh,1.5rem)]",
+                          "min-h-[38vh]  lg:min-h-[clamp(220px,40svh,440px)] flex flex-col justify-center ",
                           isFirstOfGroup ? "" : "",
                         ].join(" ")}
                       >
-                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6  w-full">
+                        <div className="grid grid-cols-2 sm:grid-cols-3   w-full">
                           {row.members.map((member) => {
                             const isViewable = !member.noProfile;
                             const Wrapper = (isViewable
