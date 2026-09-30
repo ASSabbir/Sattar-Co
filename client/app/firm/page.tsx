@@ -8,7 +8,7 @@ import TestimonialSpotlight from "@/components/sections/TestimonialSpotlight";
 import RecognitionMarquee from "@/components/sections/RecognitionMarquee";
 import ImageSlider from "@/components/sections/ImageSlider";
 import firm from "@/data/firm.json";
-import heroImg from "../../public/images/ssd.jpeg";
+import heroImg from "../../public/images/5.webp";
 import founderImg from "../../public/firm/sattar.webp";
 import officeImg from "../../public/images/Firm-rotate-2.jpg";
 import img1 from "../../public/firm/firm1.webp";

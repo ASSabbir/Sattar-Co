@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="grain relative overflow-hidden bg-white pt-52 pb-24 ">
+    <section className="grain relative overflow-hidden bg-white pt-[180px] pb-24 ">
       {/* <FloatingBookImages /> */}
 
       <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">

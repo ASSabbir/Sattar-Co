@@ -10,12 +10,26 @@ import { MdAlternateEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 
 const SOCIAL_LINKS = [
-  { href: "https://facebook.com/sattarandco", label:<RiFacebookFill /> },
-  // { href: "https://linkedin.com/company/sattarandco", label: <BsLinkedin /> },
-  { href: "https://www.linkedin.com/company/sattar-co", label: <FaLinkedinIn /> },
-  { href: "+88 (02) 883 6629", label: <MdLocalPhone /> },
-  { href: "info@sattarandco.com", label: <MdAlternateEmail /> },
-  
+  {
+    href: "https://facebook.com/sattarandco",
+    label: <RiFacebookFill />,
+    external: true,
+  },
+  {
+    href: "https://www.linkedin.com/company/sattar-co",
+    label: <FaLinkedinIn />,
+    external: true,
+  },
+  {
+    href: "tel:+880288366629",
+    label: <MdLocalPhone />,
+    external: false,
+  },
+  {
+    href: "mailto:info@sattarandco.com",
+    label: <MdAlternateEmail />,
+    external: false,
+  },
 ];
 
 export default function TopBar() {
@@ -53,12 +67,13 @@ export default function TopBar() {
         </div> */}
 
         <div className="flex items-center gap-2 mt-[2px]">
-          {SOCIAL_LINKS.map(({ href, label }) => (
+          {SOCIAL_LINKS.map(({ href, label, external }) => (
             <a
-              
+              key={href}
               href={href}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(external
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
               className={
                 isHome
                   ? "text-black text-xl hover:text-red-600 transition-colors duration-300"
