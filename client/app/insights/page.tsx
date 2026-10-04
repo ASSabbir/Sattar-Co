@@ -53,7 +53,7 @@ function InsightsContent() {
         {/* Year tabs */}
         <div className="sticky top-14 z-30 bg-white backdrop-blur-sm border-b pt-4 border-charcoal/10">
           <div className="max-w-content mx-auto px-6 md:px-10">
-            <div className="flex items-center justify-between gap-8 md:gap-10 overflow-x-auto no-scrollbar py-6">
+            <div className="flex items-center justify-between gap-8 md:gap-10 overflow-x-auto no-scrollbar pb-6 pt-5">
               {years.map((year) => (
                 <button
                   key={year}

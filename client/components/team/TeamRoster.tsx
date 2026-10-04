@@ -164,14 +164,14 @@ export default function TeamRoster() {
       <section
         ref={sectionRef as React.RefObject<HTMLElement>}
         aria-label="Our team"
-        className="mt-20 relative bg-white text-charcoal pt-10 pb-24 px-6 md:px-12 lg:px-20 overflow-hidden font-sans md:pt-[clamp(1.5rem,5svh,5rem)] md:pb-[clamp(1rem,3svh,2.5rem)] lg:sticky lg:top-0 lg:h-[100svh] lg:max-h-[100svh]"
+        className="mt-20 relative bg-white text-charcoal pt-10 pb-24 px-6 md:px-12 lg:px-[43px] overflow-hidden font-sans md:pt-[clamp(1.5rem,5svh,5rem)] md:pb-[clamp(1rem,3svh,2.5rem)] lg:sticky lg:top-0 lg:h-[100svh] lg:max-h-[100svh]"
       >
         {/* <div className="eyebrow hidden xl:block absolute right-6 top-2/3 -translate-y-1/2 rotate-90 origin-right text-charcoal/40 pointer-events-none select-none">
           COUNSEL • STRATEGY • REPRESENTATION
         </div> */}
 
         <div className="max-w-[1280px] mx-auto lg:h-full lg:flex lg:flex-col">
-          <div className="mb-10 md:mb-[clamp(1.25rem,4svh,1rem)] lg:flex-shrink-0">
+          <div className="mb-8  lg:flex-shrink-0">
             <SectionLabel label="THE PEOPLE" className="mb-[clamp(0.5rem,1.2svh,1rem)] text-red-600" />
             <h1 className="font-display  text-3xl text-[clamp(1.5rem,3.2svh,2.25rem)] text-charcoal font-normal tracking-tight leading-[1.15]">
               Leadership with Perspective.

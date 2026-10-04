@@ -11,14 +11,12 @@ import firm from "@/data/firm.json";
 import heroImg from "../../public/images/5.webp";
 import founderImg from "../../public/firm/sattar.webp";
 import officeImg from "../../public/images/Firm-rotate-2.jpg";
-import img1 from "../../public/firm/firm1.webp";
-import img2 from "../../public/firm/firm2.webp";
-import img3 from "../../public/firm/firm3.webp";
-import img4 from "../../public/firm/firm4.webp";
-import img5 from "../../public/firm/firm5.jpeg";
-import img6 from "../../public/firm/firm26.webp";
-import img7 from "../../public/firm/firm27.webp";
-import img8 from "../../public/firm/firm8.webp";
+import img1 from "../../public/firm/a.webp";
+import img2 from "../../public/firm/firm3.webp";
+import img3 from "../../public/firm/firm8.webp";
+import img4 from "../../public/firm/IMG_5478.JPG.webp";
+import img5 from "../../public/firm/firm27.webp";
+
 // TIP: rename this file to firm-rotate-3.jpg (no spaces / brackets) — cleaner URLs.
 import meetingRoomImg from "../../public/images/IMG_5268.webp";
 import teamImg from "../../public/images/about.webp";
@@ -47,10 +45,7 @@ const SLIDER_IMAGES = [
   { src: img2, label: "Sattar&Co. — Team" },
   { src: img3, label: "Sattar&Co. — Team" },
   { src: img4, label: "Sattar&Co. — Team" },
-  { src: img5, label: "Sattar&Co. — Team" },
-  { src: img6, label: "Sattar&Co. — Team" },
-  { src: img7, label: "Sattar&Co. — Team" },
-  { src: img8, label: "Sattar&Co. — Team" },
+  { src: img5, label: "Sattar&Co. — Team" }
 ];
 
 const APPROACH_ITEMS = [

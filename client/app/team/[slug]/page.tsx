@@ -138,7 +138,7 @@ export default async function TeamMemberPage({ params }: Props) {
           </div> */}
 
           <div className="max-w-[1380px] mx-auto h-full flex flex-col lg:h-full">
-            <nav aria-label="Breadcrumb" className="flex-shrink-0 mb-5 md:mb-6">
+            <nav aria-label="Breadcrumb" className="flex-shrink-0 mb-5 md:mb-8">
               <Link
                 href="/team"
                 className="eyebrow inline-flex  !text-[14px] items-center gap-2 text-charcoal hover:text-red-600 transition-colors"

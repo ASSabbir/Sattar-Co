@@ -3,7 +3,7 @@ import Image from "next/image";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
 import practiceAreas from "@/data/practiceAreas.json";
-import img1 from "../../public/images/WhatsApp Image 2026-09-30 at 5.18.30 PM.jpeg";
+import img1 from "../../public/images/IMG_5488.JPG.png";
 
 import PracticeAreasInteractive from "@/components/sections/PracticeAreasInteractive";
 

@@ -91,7 +91,7 @@ export default function PublicationsPage() {
         {/* Tabs */}
         <div className="sticky top-14  z-30 bg-white backdrop-blur-sm border-b border-charcoal/10">
           <div className="max-w-content mx-auto px-6 md:px-10">
-            <div className="flex items-center gap-8 md:gap-10 overflow-x-auto no-scrollbar pt-10 pb-4">
+            <div className="flex items-center gap-8 md:gap-10 overflow-x-auto no-scrollbar pt-9 pb-4">
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat}
