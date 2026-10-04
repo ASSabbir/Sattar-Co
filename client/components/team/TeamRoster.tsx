@@ -338,7 +338,7 @@ export default function TeamRoster() {
         <div
           aria-hidden
           className={[
-            "absolute bottom-8 right-6 md:right-10 z-20 hidden sm:flex flex-col items-center gap-3 text-charcoal/50 transition-opacity duration-500",
+            "absolute bottom-8 right-6 md:right-3 z-20 hidden sm:flex flex-col items-center gap-3 text-charcoal/50 transition-opacity duration-500",
             isLastRow ? "opacity-0 pointer-events-none" : "opacity-100",
           ].join(" ")}
         >
