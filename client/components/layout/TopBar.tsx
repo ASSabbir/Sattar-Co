@@ -40,13 +40,13 @@ export default function TopBar() {
     <div
       className={
         isHome
-          ? "w-full bg-transparent"
-          : "w-full bg-white border-b border-charcoal/10"
+          ? "w-full bg-transparent mt-1"
+          : "w-full bg-white border-b  border-charcoal/10"
       }
     >
       <div
       
-      className={` mx-auto px-4 sm:px-6 md:px-10   ${isHome? 'items-end' :'items-center'} h-11 flex  justify-end text-sm
+      className={` mx-auto px-4 sm:px-6 md:px-10   ${isHome? 'items-end ' :'items-center'} h-11 flex  justify-end text-sm
        text-charcoal/80`}>
         {/* <div className="flex items-center gap-5">
           

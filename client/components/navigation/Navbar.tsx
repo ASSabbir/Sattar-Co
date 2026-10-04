@@ -91,7 +91,7 @@ export default function Navbar() {
         ref={headerRef}
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ease-editorial",
-          solid ? "bg-white backdrop-blur-sm border-b border-charcoal/10" : "bg-transparent"
+          solid ? "bg-white   backdrop-blur-sm border-b border-charcoal/10" : "bg-transparent"
         )}
       >
         <div
@@ -103,7 +103,7 @@ export default function Navbar() {
           <TopBar />
         </div>
 
-        <nav className="max-w-content font-bold mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 h-16 sm:h-[4.75rem] lg:h-19 py-3 sm:py-4">
+        <nav className="max-w-content font-bold mx-auto flex items-center justify-between px-4 sm:px-6 md:px-10 h-16 sm:h-[4.75rem] lg:h-16 py-3 ">
           <Link
             href="/"
             className={cn(

@@ -27,7 +27,7 @@ const positions: Position[] = [
     eligibility:
       "The candidate should hold an LL.B. and LL.M., or equivalent law degree(s), from any reputed university in Bangladesh or abroad, with strong legal research, analytical, and legal writing skills. Enrolment with the Bangladesh Bar Council will be preferred.",
     role:
-      "The Research Associate will conduct legal and regulatory research, and assist in preparing legal opinions, memoranda. The role will also involve drafting and vetting legal documents and supporting senior lawyers and Associates in corporate, commercial, civil, regulatory, and litigation matters.",
+      "The Research Associate will conduct legal and regulatory research, and assist in preparing legal opinions, memoranda. The role will also involve drafting and vetting legal documents and supporting senior lawyers and Associates in corporate, and litigation matters.",
   },
   {
     id: "associate",
@@ -133,7 +133,7 @@ export default function CareersInteractive() {
                       transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="  grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+                      <div className="  grid grid-cols-1 border-b-[1px] pb-5  lg:grid-cols-12 gap-8 lg:gap-16">
                         <div className="lg:col-span-6 space-y-4">
                           <p className="text-charcoal/40 text-xs uppercase tracking-wide">
                             Eligibility
@@ -165,13 +165,13 @@ export default function CareersInteractive() {
               <p className="text-gray-900   leading-relaxed text-lg md:text-[22px]  w-full">
                 Interested candidates are invited to submit their updated CV along with a brief
                 cover letter outlining their qualifications and relevant experience to{" "}
-                {TO_EMAILS[0]} or {TO_EMAILS[1]}, with a copy to {CC_EMAIL}. Please mention the
+                <span className="text-red-600">{TO_EMAILS[0]}</span>, with a copy to <span className="text-red-600">{CC_EMAIL}</span>. Please mention the
                 position applied for in the subject line of the email. Only shortlisted
                 candidates will be contacted.
               </p>
-              <p className="text-gray-900/50 text-pretty text-sm">
+              {/* <p className="text-gray-900/50 text-pretty text-sm">
                 {TO_EMAILS.join(" · ")} &nbsp;·&nbsp; cc: {CC_EMAIL}
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

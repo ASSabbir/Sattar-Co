@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import insights from "@/data/insights.json";
-import img1 from "../../public/images/sa.jpeg";
+import img1 from "../../public/images/Picsart_26-10-04_17-46-50-856.jpg.jpeg";
 
 function InsightsContent() {
   const router = useRouter();
