@@ -159,17 +159,17 @@ export default function CareersInteractive() {
 
       <section className="bg-white  pb-24 ">
         <div className="max-w-content mx-auto px-6 md:px-10">
-          <div className="bg-navy px-8 py-14 md:px-16  grid grid-cols-1 lg:grid-cols-9 gap-10 items-center">
+          <div className=" px-8 py-14 border-[1px] border-gray-500 md:px-16  grid grid-cols-1 lg:grid-cols-9 gap-10 items-center">
             <div className="lg:col-span-8  space-y-5">
-              <h3 className="font-display text-3xl md:text-4xl text-ivory">How to Apply</h3>
-              <p className="text-ivory/70   leading-relaxed text-lg md:text-[22px]  w-full">
+              <h3 className="font-display text-3xl md:text-4xl text-gray-900">How to Apply</h3>
+              <p className="text-gray-900   leading-relaxed text-lg md:text-[22px]  w-full">
                 Interested candidates are invited to submit their updated CV along with a brief
                 cover letter outlining their qualifications and relevant experience to{" "}
                 {TO_EMAILS[0]} or {TO_EMAILS[1]}, with a copy to {CC_EMAIL}. Please mention the
                 position applied for in the subject line of the email. Only shortlisted
                 candidates will be contacted.
               </p>
-              <p className="text-ivory/50 text-pretty text-sm">
+              <p className="text-gray-900/50 text-pretty text-sm">
                 {TO_EMAILS.join(" · ")} &nbsp;·&nbsp; cc: {CC_EMAIL}
               </p>
             </div>

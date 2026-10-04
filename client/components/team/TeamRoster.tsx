@@ -256,7 +256,7 @@ export default function TeamRoster() {
                           itemRefs.current[rowIndex] = el;
                         }}
                         className={[
-                          "min-h-[38vh] lg:min-h-[clamp(220px,40svh,440px)] flex flex-col justify-center py-[clamp(0.75rem,2svh,1.5rem)]",
+                          " flex flex-col justify-center pb-5",
                           isFirstOfGroup ? "" : "",
                         ].join(" ")}
                       >
