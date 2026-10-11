@@ -117,7 +117,7 @@ export default function TeamMemberScroller({
   return (
     <div
       ref={viewportRef}
-      className="lg:col-span-7 z-10 lg:h-full lg:overflow-hidden no-scrollbar"
+      className="lg:col-span-8 z-10 lg:h-full lg:overflow-hidden no-scrollbar"
     >
       <div ref={trackRef} className="lg:will-change-transform">
         {children}

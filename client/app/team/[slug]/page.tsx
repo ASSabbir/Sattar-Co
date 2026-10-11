@@ -152,7 +152,7 @@ export default async function TeamMemberPage({ params }: Props) {
               data-profile-grid
               className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start lg:items-stretch relative flex-1 min-h-0 overflow-y-auto lg:overflow-hidden no-scrollbar"
             >
-              <div className="lg:col-span-5 relative lg:h-full lg:sticky lg:top-0">
+              <div className="lg:col-span-4 relative lg:h-full lg:sticky lg:top-0">
                 {/* <span
                   aria-hidden
                   className="absolute -left-16 -bottom-16 md:-left-24 md:-bottom-24 font-display text-[180px] md:text-[240px] text-charcoal/[0.06] leading-none pointer-events-none select-none -z-0"
@@ -166,11 +166,11 @@ export default async function TeamMemberPage({ params }: Props) {
                     alt={`Portrait of ${member.name}${member.role ? `, ${member.role}` : ""}`}
                     fill
                     sizes="(max-width: 1023px) 100vw, 42vw"
-                    className="object-cover object-center"
+                    className="object-cover object-top"
                     priority
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 md:p-8 flex flex-col justify-end text-white">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/5 to-transparent p-6 md:p-8 flex flex-col justify-end text-white">
                     <h1 className="font-display text-3xl md:text-4xl font-normal leading-tight mb-2">
                       {member.name}
                     </h1>
