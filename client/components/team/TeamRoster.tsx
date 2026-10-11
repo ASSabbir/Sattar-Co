@@ -193,7 +193,7 @@ export default function TeamRoster() {
                   alt={`Portrait of ${leader?.name || "Sameer Sattar"}, Head of Firm`}
                   fill
                   sizes="(max-width: 1023px) 100vw, 40vw"
-                  className="object-cover object-center"
+                  className="object-cover object-top"
                   priority
                 />
               </div>
@@ -295,7 +295,7 @@ export default function TeamRoster() {
                                     fill
                                     sizes="(max-width: 639px) 45vw, (max-width: 1023px) 30vw, 18vw"
                                     className={[
-                                      "object-cover object-center  transition-all duration-500",
+                                      "object-cover object-top  transition-all duration-500",
                                       
                                     ].join(" ")}
                                   />
