@@ -154,7 +154,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={wrapperRef} className="relative h-screen w-full overflow-hidden bg-navy">
+    <section ref={wrapperRef} className="relative h-screen w-full overflow-hidden bg-white">
       <video
         ref={videoRef}
         src={VIDEO_SRC}
@@ -164,7 +164,7 @@ export default function Hero() {
         className="absolute inset-0 h-full w-full object-cover"
       />
 
-      {/* <div className="absolute inset-0 z-10 bg-navy/25 pointer-events-none" /> */}
+      {/* <div className="absolute inset-0 z-10 bg-white/25 pointer-events-none" /> */}
 
       <div className="relative z-20 h-full max-w-content mx-auto px-6 md:px-20 flex flex-col justify-end pb-20 ">
         <div ref={logoRef}>

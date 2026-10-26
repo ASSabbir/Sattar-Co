@@ -16,7 +16,7 @@ import img2 from "../../public/firm/firm3.webp";
 import img3 from "../../public/firm/firm8.webp";
 import img4 from "../../public/firm/IMG_5478.JPG.webp";
 import img5 from "../../public/firm/firm27.webp";
-
+import PageHeader from "@/components/sections/PageHeader";
 // TIP: rename this file to firm-rotate-3.jpg (no spaces / brackets) — cleaner URLs.
 import meetingRoomImg from "../../public/images/IMG_5268.webp";
 import teamImg from "../../public/images/about.webp";
@@ -125,23 +125,11 @@ const SECTION_Y = "py-11";
 
 function Hero() {
   return (
-    <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 mt-24  ">
-      <Image
-        src={heroImg}
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center"
-      />
-      {/* <div className="absolute inset-0 bg-black/20" /> */}
-
-      {/* <div className={`${CONTAINER} relative z-10 text-center`}>
-        <RevealText as="h1" immediate className="font-display text-display-lg text-white">
-          Trusted Excellence
-        </RevealText>
-      </div> */}
-    </section>
+    <PageHeader
+  title="Counsel Built on Trust"
+  description="Sattar&Co. advises multinational and domestic clients on their most consequential matters in Bangladesh, from boardroom transactions to the Supreme Court."
+  image={heroImg}
+/>
   );
 }
 

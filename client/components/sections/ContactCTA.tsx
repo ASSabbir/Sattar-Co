@@ -4,7 +4,7 @@ import firm from "@/data/firm.json";
 
 export default function ContactCTA() {
   return (
-    <section className="grain bg-navy py-28 md:py-44">
+    <section className="grain bg-white py-28 md:py-44">
       <div className="max-w-content mx-auto px-6 md:px-10 text-center">
         <p className="eyebrow text-red-600 mb-8">06 — Start a Conversation</p>
         <RevealText as="h2" className="font-display text-display-lg text-ivory mb-10 mx-auto max-w-3xl">

@@ -8,7 +8,7 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import insights from "@/data/insights.json";
 import img1 from "../../public/images/image1.jpeg";
-
+import PageHeader from "@/components/sections/PageHeader";
 function InsightsContent() {
   const router = useRouter();
   const pathname = usePathname();
@@ -38,16 +38,12 @@ function InsightsContent() {
 
   return (
     <>
-      <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 mt-24">
-        <Image
-          src={img1}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-      </section>
+      <PageHeader
+        title="Mandates That Moved Markets"
+        description="A record of the transactions, disputes and advisory work we have led across energy, banking, technology and beyond."
+        image={img1}
+        
+      />
 
       <section className="bg-white">
         {/* Year tabs */}
@@ -58,11 +54,10 @@ function InsightsContent() {
                 <button
                   key={year}
                   onClick={() => handleSelect(year)}
-                  className={`relative shrink-0 uppercase tracking-wide pb-3 duration-300 ${
-                    active === year
+                  className={`relative shrink-0 uppercase tracking-wide pb-3 duration-300 ${active === year
                       ? "text-charcoal text-2xl"
                       : "text-charcoal/40 text-xl hover:text-charcoal/70"
-                  }`}
+                    }`}
                 >
                   {year}
 

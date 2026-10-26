@@ -15,7 +15,7 @@ import TopBar from "../layout/TopBar";
 
 const NAV_LINKS = [
   { href: "/team", label: "People" },
-  { href: "/practice-areas", label: "Expertise" },
+  { href: "/expertise", label: "Expertise" },
   { href: "/firm", label: "The Firm" },
   { href: "/insights", label: "Work Done" },
   { href: "/publications", label: "Publications" },

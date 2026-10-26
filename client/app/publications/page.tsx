@@ -6,9 +6,9 @@ import { ArrowUpRight } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
 import publications from "@/data/publications.json";
-import img1 from "../../public/images/publication.jpeg";
+import img1 from "../../public/images/banner-newsletter.jpg";
 import Image from "next/image";
-
+import PageHeader from "@/components/sections/PageHeader";
 // Fixed order rather than deriving from the data, so the tab order never
 // shuffles if entries get added/removed later.
 const CATEGORIES = [
@@ -54,35 +54,11 @@ export default function PublicationsPage() {
 
   return (
     <>
-      {/* =========================================================
-          PUBLICATIONS HERO
-      ========================================================== */}
-      <section className="grain relative flex items-center justify-center overflow-hidden  pb-16 pt-32 sm:pb-24 md:pb-52 mt-24  ">
-      <Image
-        src={img1}
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center"
-      />
-
-        {/* Cinematic Gradient */}
-        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-black/55" /> */}
-
-        {/* Hero Content */}
-        {/* <div className="relative z-10 max-w-content mx-auto px-6 md:px-10">
-          
-
-          <RevealText
-            as="h1"
-            immediate
-            className="font-display text-display-lg text-ivory max-w-3xl"
-          >
-            Publications &amp; Commentary
-          </RevealText>
-        </div> */}
-      </section>
+      <PageHeader
+  title="Perspectives on Law and Business"
+  description="Commentary, interviews and features from our lawyers on the legal questions shaping commerce in Bangladesh."
+  image={img1}
+/>
 
       {/* =========================================================
           PUBLICATIONS CONTENT

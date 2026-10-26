@@ -2,29 +2,23 @@ import type { Metadata } from "next";
 import RevealText from "@/components/ui/RevealText";
 import CareersInteractive from "@/components/sections/CareersInteractive";
 import Image from "next/image";
-import img1 from "../../public/images/IMG_5471.JPG.jpeg";
+import img1 from "../../public/images/banner-gown.jpg";
 export const metadata: Metadata = {
   title: "Careers",
   description:
     "Join Sattar&Co. as a Junior Associate, Trainee, or Intern in Dhaka, Bangladesh.",
 };
+import PageHeader from "@/components/sections/PageHeader";
 
 export default function CareersPage() {
   return (
     <>
-      <section className="grain relative flex items-center justify-center overflow-hidden bg-navy pb-16 pt-32 sm:pb-24 md:pb-52 mt-24  ">
-      <Image
-        src={img1}
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center"
-      />
-        {/* <div className="absolute inset-0 bg-black/15" /> */}
-
-        
-      </section>
+      <PageHeader
+  title="Where Careers Begin Well"
+  description="We attract exceptional young lawyers and invest in their growth, with senior guidance from the first day, whether you join as an intern, trainee or associate."
+  image={img1}
+  
+/>
 
       {/* <section className="bg-white pt-10 pb-4">
         <div className="max-w-content mx-auto px-6 md:px-10">
