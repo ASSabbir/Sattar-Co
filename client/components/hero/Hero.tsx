@@ -153,6 +153,7 @@ export default function Hero() {
     };
   }, []);
 
+  
   return (
     <section ref={wrapperRef} className="relative h-screen w-full overflow-hidden bg-white">
       <video
